@@ -109,6 +109,46 @@
       "performance": 47,
       "accessibility": 88,
       "tech_count": 15
+    },
+    {
+      "ts": "2026-07-17T10:42:54+00:00",
+      "scope": "page",
+      "overall": 66,
+      "seo": 82,
+      "security": 51,
+      "performance": 52,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-17T10:44:30+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-17T11:21:31+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-17T11:22:01+00:00",
+      "scope": "page",
+      "overall": 66,
+      "seo": 82,
+      "security": 51,
+      "performance": 52,
+      "accessibility": 88,
+      "tech_count": 14
     }
   ],
   "https://example.com/": [
@@ -279,6 +319,54 @@
       "performance": 70,
       "accessibility": 90,
       "tech_count": 8
+    }
+  ],
+  "https://github.com/": [
+    {
+      "ts": "2026-07-17T11:25:58+00:00",
+      "scope": "page",
+      "overall": 71,
+      "seo": 80,
+      "security": 77,
+      "performance": 57,
+      "accessibility": 70,
+      "tech_count": 9
+    }
+  ],
+  "https://petstore.swagger.io/": [
+    {
+      "ts": "2026-07-17T11:26:19+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 45,
+      "security": 50,
+      "performance": 85,
+      "accessibility": 84,
+      "tech_count": 5
+    }
+  ],
+  "https://graphql.org/": [
+    {
+      "ts": "2026-07-17T11:26:43+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 84,
+      "security": 35,
+      "performance": 85,
+      "accessibility": 59,
+      "tech_count": 9
+    }
+  ],
+  "https://stripe.com/": [
+    {
+      "ts": "2026-07-17T11:27:22+00:00",
+      "scope": "page",
+      "overall": 73,
+      "seo": 95,
+      "security": 77,
+      "performance": 48,
+      "accessibility": 70,
+      "tech_count": 9
     }
   ]
 }
