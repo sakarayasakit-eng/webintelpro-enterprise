@@ -44,6 +44,13 @@ class TechnologyReport:
 
     errors: List[str] = field(default_factory=list)
 
+    # Populated only when TechnologyDetector.detect(analyze_runtime=True):
+    # structured JavaScript runtime intelligence (hydration, API discovery,
+    # runtime config, env vars, state management, dynamic imports, PWA) as
+    # produced by technology.runtime.RuntimeReport.to_dict(). Stays None on the
+    # default path, so to_dict() output is unchanged when the stage is off.
+    runtime: Optional[Dict[str, object]] = None
+
     def add(self, technology: Technology) -> None:
         self.technologies.append(technology)
 
@@ -80,4 +87,5 @@ class TechnologyReport:
                 }
                 for tech in self.technologies
             ],
+            **({"runtime": self.runtime} if self.runtime else {}),
         }

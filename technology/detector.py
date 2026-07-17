@@ -33,6 +33,10 @@ class TechnologyDetector:
         # default, network-free path so existing callers (and benchmark.py) are
         # completely unaffected; only detect(analyze_js=True) constructs it.
         self._js_analyzer = None
+        # Lazily-built JavaScript runtime analyzer (Phase 2B). Same contract as
+        # the bundle analyzer above: stays None unless detect(analyze_runtime=
+        # True) asks for it, so the default path is untouched.
+        self._runtime_analyzer = None
         # Category lookup so an *implied* technology (one that has no direct
         # signal on the page but is entailed by another detected tech, e.g.
         # Next.js -> React) can be materialised with the right category.
@@ -45,7 +49,21 @@ class TechnologyDetector:
                cookies: Dict[str, str] | None = None,
                debug: bool = False,
                analyze_js: bool = False,
-               js_config=None) -> TechnologyReport:
+               js_config=None,
+               analyze_runtime: bool = False,
+               runtime_config=None) -> TechnologyReport:
+        """Detect the technologies behind ``url``.
+
+        The static pipeline (headers/cookies/HTML/DOM) always runs. Two opt-in
+        stages may then *add* to it, and are skipped entirely when off:
+
+        * ``analyze_js``      - Phase 2A: download and scan JS bundle contents.
+        * ``analyze_runtime`` - Phase 2B: read the page's runtime surface
+          (globals, hydration payloads, embedded JSON) without a browser, and
+          attach structured findings to ``report.runtime``.
+
+        With both flags False, detection is byte-for-byte identical to Phase 1.
+        """
         start = time.perf_counter()
         headers = normalize_headers(headers or {})
         cookies = cookies or {}
@@ -177,6 +195,16 @@ class TechnologyDetector:
         if analyze_js:
             self._apply_js_bundles(parsed, url, detected, js_config)
 
+        # ----------------------------------------------------------
+        # JavaScript runtime intelligence (Phase 2B) -- opt-in stage.
+        # Browser-free: reads globals, hydration payloads and embedded JSON
+        # already present in the fetched HTML. Like the bundle stage it only
+        # adds to what came before, and with analyze_runtime=False it is
+        # skipped entirely, leaving Phase 1 behaviour byte-for-byte intact.
+        # ----------------------------------------------------------
+        if analyze_runtime:
+            self._apply_runtime(parsed, url, detected, report, runtime_config)
+
         for tech in detected.values():
              tech.evidence = sorted(set(tech.evidence))
 
@@ -213,16 +241,51 @@ class TechnologyDetector:
             return
 
         for tech in bundle_techs:
-            existing = detected.get(tech.name)
-            if existing is None:
-                detected[tech.name] = tech
-                continue
-            if tech.confidence > existing.confidence:
-                existing.confidence = tech.confidence
-            if existing.version is None and tech.version:
-                existing.version = tech.version
-            existing.evidence.extend(tech.evidence)
-            existing.evidence = sorted(set(existing.evidence))
+            self._merge_detection(detected, tech)
+
+    def _apply_runtime(self, parsed, url, detected, report, runtime_config):
+        """Merge runtime detections into ``detected`` and attach the report.
+
+        Runs :class:`technology.runtime.RuntimeAnalyzer` over the page's
+        runtime surface, folds any technologies it identifies into the running
+        detection map with the same merge rules the other stages use, and
+        stores the structured findings (hydration, API discovery, runtime
+        config, env vars, state management, dynamic imports, PWA) on
+        ``report.runtime``. Never raises: any failure leaves both the detection
+        map and the report untouched.
+        """
+        try:
+            if self._runtime_analyzer is None:
+                # Imported here so the sub-system is only loaded when used.
+                from .runtime import RuntimeAnalyzer
+                self._runtime_analyzer = RuntimeAnalyzer(
+                    confidence=self.confidence, config=runtime_config)
+            analysis = self._runtime_analyzer.analyze(parsed, url)
+        except Exception:  # noqa: BLE001 -- runtime intel must fail gracefully
+            return
+
+        for tech in analysis.technologies:
+            self._merge_detection(detected, tech)
+        report.runtime = analysis.report.to_dict()
+
+    @staticmethod
+    def _merge_detection(detected, tech):
+        """Fold one technology into ``detected``: keep the highest confidence,
+        the first known version, and the union of evidence.
+
+        Shared by the opt-in stages so a detection means the same thing no
+        matter which stage produced it.
+        """
+        existing = detected.get(tech.name)
+        if existing is None:
+            detected[tech.name] = tech
+            return
+        if tech.confidence > existing.confidence:
+            existing.confidence = tech.confidence
+        if existing.version is None and tech.version:
+            existing.version = tech.version
+        existing.evidence.extend(tech.evidence)
+        existing.evidence = sorted(set(existing.evidence))
 
     def _collect_evidence(self, matches):
         evidence = []

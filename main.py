@@ -65,6 +65,11 @@ def parse_args(argv=None):
     p.add_argument("--js-bundles", action="store_true",
                    help="Also download and inspect JavaScript bundles "
                         "(Phase 2A JS bundle intelligence; adds network cost)")
+    p.add_argument("--runtime-analysis", action="store_true",
+                   help="Also analyze the JavaScript runtime surface -- "
+                        "globals, hydration, API endpoints, runtime config, "
+                        "state management, PWA (Phase 2B; no browser, no "
+                        "extra requests)")
     return p.parse_args(argv)
 
 
@@ -106,7 +111,8 @@ def _run_single(url, args) -> int:
         print(f"\nTarget: {url}\n")
     engine = AnalysisEngine(timeout=args.timeout, use_cache=args.cache,
                             site_checks=True, debug=args.debug,
-                            analyze_js=args.js_bundles)
+                            analyze_js=args.js_bundles,
+                            analyze_runtime=args.runtime_analysis)
     reporter = ReportGenerator()
     try:
         result = engine.analyze_url(url)

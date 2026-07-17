@@ -25,7 +25,8 @@ class AnalysisEngine:
 
     def __init__(self, timeout: int = 20, user_agent: str = "",
                  use_cache: bool = False, site_checks: bool = False,
-                 debug: bool = False, analyze_js: bool = False):
+                 debug: bool = False, analyze_js: bool = False,
+                 analyze_runtime: bool = False):
         self.crawler = WebCrawler(timeout=timeout, user_agent=user_agent)
         self.detector = TechnologyDetector()
         self.seo = TechnicalSEOAnalyzer()
@@ -39,6 +40,10 @@ class AnalysisEngine:
         # Phase 2A: when True, detection additionally downloads and inspects
         # JavaScript bundles. Off by default so behaviour is unchanged.
         self.analyze_js = analyze_js
+        # Phase 2B: when True, detection additionally reads the page's
+        # JavaScript runtime surface (no browser, no extra requests) and
+        # attaches structured findings. Off by default.
+        self.analyze_runtime = analyze_runtime
 
     def analyze(self, url: str, html: str = "", headers: dict | None = None,
                 cookies: dict | None = None, crawl=None) -> dict:
@@ -50,7 +55,8 @@ class AnalysisEngine:
             set_cookie = [headers["Set-Cookie"]]
 
         technology = self.detector.detect(url, html, headers, cookies,
-                                           debug=self.debug, analyze_js=self.analyze_js)
+                                           debug=self.debug, analyze_js=self.analyze_js,
+                                           analyze_runtime=self.analyze_runtime)
         parsed = self.detector.parser.parse(html)
 
         seo = self.seo.analyze(parsed, url)

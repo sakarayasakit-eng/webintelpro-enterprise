@@ -35,6 +35,13 @@ class ConfidenceEngine:
     # direct evidence. Only fingerprints from the JS-bundle stage use this
     # source key, so it never affects HTML/header/cookie scoring.
     "js_bundle": 0.50,
+    # Runtime markers read out of inline JS / embedded payloads (Phase 2B
+    # runtime intelligence). Weighed like "js_bundle": an explicit
+    # `window.__NEXT_DATA__` or `hydrateRoot(` is the page declaring what it
+    # runs. Only fingerprints from the runtime stage use this source key, so
+    # existing HTML/header/cookie scoring is untouched. (Weaker, inferred
+    # runtime findings are graded through the existing "inline" weight.)
+    "js_runtime": 0.50,
     "meta": 0.45,
     "stylesheets": 0.40,
     "inline": 0.35,
