@@ -1,0 +1,4631 @@
+{
+  "generated": "2026-07-14T20:44:45.439070+00:00",
+  "site_count": 41,
+  "results": [
+    {
+      "url": "https://wordpress.org",
+      "expect": "WordPress",
+      "status": 200,
+      "elapsed": 2.7,
+      "server": "Nginx",
+      "cms": "WordPress",
+      "total_detected": 5,
+      "technologies": [
+        {
+          "name": "WordPress",
+          "category": "cms",
+          "confidence": 0.725,
+          "version": null,
+          "evidence": [
+            "meta:wordpress",
+            "scripts:wp-content"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Nginx",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:nginx"
+          ]
+        },
+        {
+          "name": "Remix",
+          "category": "framework",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:/build/"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://en.wikipedia.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 2.82,
+      "server": null,
+      "cms": "Webflow",
+      "total_detected": 6,
+      "technologies": [
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "hCaptcha",
+          "category": "security",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:hcaptcha"
+          ]
+        },
+        {
+          "name": "Webflow",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:w-nav"
+          ]
+        },
+        {
+          "name": "Alpine.js",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:x-show"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "hCaptcha",
+          "category": "security",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:hcaptcha"
+          ]
+        },
+        {
+          "name": "Webflow",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:w-nav"
+          ]
+        },
+        {
+          "name": "Alpine.js",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:x-show"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://techcrunch.com",
+      "expect": "WordPress",
+      "status": 200,
+      "elapsed": 3.09,
+      "server": "Nginx",
+      "cms": "WordPress VIP",
+      "total_detected": 11,
+      "technologies": [
+        {
+          "name": "WordPress VIP",
+          "category": "cms",
+          "confidence": 0.8,
+          "version": null,
+          "evidence": [
+            "headers:wpvip",
+            "scripts:wp-content/themes"
+          ]
+        },
+        {
+          "name": "WordPress",
+          "category": "cms",
+          "confidence": 0.766,
+          "version": "6.9.4",
+          "evidence": [
+            "meta:wordpress",
+            "scripts:wp-content",
+            "scripts:wp-includes"
+          ]
+        },
+        {
+          "name": "Cloudflare Turnstile",
+          "category": "security",
+          "confidence": 0.675,
+          "version": null,
+          "evidence": [
+            "inline:turnstile",
+            "scripts:challenges.cloudflare.com/turnstile"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Nginx",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:nginx"
+          ]
+        },
+        {
+          "name": "Google reCAPTCHA",
+          "category": "security",
+          "confidence": 0.575,
+          "version": null,
+          "evidence": [
+            "scripts:google.com/recaptcha",
+            "scripts:recaptcha/api.js"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:/dist/"
+          ]
+        },
+        {
+          "name": "Preact",
+          "category": "framework",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:preact"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Angular",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ng-app"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Angular",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ng-app"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.theguardian.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 4.54,
+      "server": null,
+      "cms": null,
+      "total_detected": 3,
+      "technologies": [
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.shopify.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 3.48,
+      "server": null,
+      "cms": "Shopify",
+      "total_detected": 6,
+      "technologies": [
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Shopify",
+          "category": "cms",
+          "confidence": 0.624,
+          "version": null,
+          "evidence": [
+            "cookies:_shopify_s",
+            "cookies:_shopify_y"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "BigCommerce",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:bigcommerce"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "BigCommerce",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:bigcommerce"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.allbirds.com",
+      "expect": "Shopify",
+      "status": 200,
+      "elapsed": 2.96,
+      "server": null,
+      "cms": "Shopify",
+      "total_detected": 18,
+      "technologies": [
+        {
+          "name": "Shopify",
+          "category": "cms",
+          "confidence": 0.812,
+          "version": null,
+          "evidence": [
+            "cookies:_shopify_s",
+            "cookies:_shopify_y",
+            "scripts:cdn.shopify.com"
+          ]
+        },
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Shopify Plus",
+          "category": "ecommerce",
+          "confidence": 0.675,
+          "version": null,
+          "evidence": [
+            "inline:shopify.shop",
+            "scripts:shopifycloud"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Magento",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:window.checkout"
+          ]
+        },
+        {
+          "name": "jQuery",
+          "category": "framework",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:jquery("
+          ]
+        },
+        {
+          "name": "Immer",
+          "category": "javascript",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:produce("
+          ]
+        },
+        {
+          "name": "Iterable",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:iterable"
+          ]
+        },
+        {
+          "name": "Yotpo Reviews",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:yotpo"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "hCaptcha",
+          "category": "security",
+          "confidence": 0.35,
+          "version": "1.5.2",
+          "evidence": [
+            "inline:hcaptcha"
+          ]
+        },
+        {
+          "name": "Helpscout Beacon",
+          "category": "support",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:beacon("
+          ]
+        },
+        {
+          "name": "Swiper",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:swiper-slide"
+          ]
+        },
+        {
+          "name": "Vue.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:v-cloak"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Magento",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:window.checkout"
+          ]
+        },
+        {
+          "name": "jQuery",
+          "category": "framework",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:jquery("
+          ]
+        },
+        {
+          "name": "Immer",
+          "category": "javascript",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:produce("
+          ]
+        },
+        {
+          "name": "Iterable",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:iterable"
+          ]
+        },
+        {
+          "name": "Yotpo Reviews",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:yotpo"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "hCaptcha",
+          "category": "security",
+          "confidence": 0.35,
+          "version": "1.5.2",
+          "evidence": [
+            "inline:hcaptcha"
+          ]
+        },
+        {
+          "name": "Helpscout Beacon",
+          "category": "support",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:beacon("
+          ]
+        },
+        {
+          "name": "Swiper",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:swiper-slide"
+          ]
+        },
+        {
+          "name": "Vue.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:v-cloak"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.gymshark.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 27.82,
+      "server": null,
+      "cms": null,
+      "total_detected": 13,
+      "technologies": [
+        {
+          "name": "CloudFront",
+          "category": "cdn",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cloudfront",
+            "headers:x-amz-cf-id"
+          ]
+        },
+        {
+          "name": "AWS",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:amazon",
+            "headers:x-amz"
+          ]
+        },
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "AWS Amplify",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-amz-cf-pop"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.575,
+          "version": null,
+          "evidence": [
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:webpack"
+          ]
+        },
+        {
+          "name": "Braze",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:appboy"
+          ]
+        },
+        {
+          "name": "Afterpay",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:afterpay"
+          ]
+        },
+        {
+          "name": "Klarna",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klarna"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "Slick",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:slick-slider"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Braze",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:appboy"
+          ]
+        },
+        {
+          "name": "Afterpay",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:afterpay"
+          ]
+        },
+        {
+          "name": "Klarna",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klarna"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "Slick",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:slick-slider"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.bigcommerce.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 7.49,
+      "server": null,
+      "cms": null,
+      "total_detected": 14,
+      "technologies": [
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.82,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-vercel-id"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.575,
+          "version": null,
+          "evidence": [
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "Segment",
+          "category": "marketing",
+          "confidence": 0.55,
+          "version": null,
+          "evidence": [
+            "cookies:ajs_anonymous_id"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:webpack"
+          ]
+        },
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.googleapis.com"
+          ]
+        },
+        {
+          "name": "BigCommerce",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:bigcommerce"
+          ]
+        },
+        {
+          "name": "Klaviyo",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klaviyo"
+          ]
+        },
+        {
+          "name": "Wistia",
+          "category": "media",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:wistia"
+          ]
+        },
+        {
+          "name": "Klarna",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klarna"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.googleapis.com"
+          ]
+        },
+        {
+          "name": "BigCommerce",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:bigcommerce"
+          ]
+        },
+        {
+          "name": "Klaviyo",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klaviyo"
+          ]
+        },
+        {
+          "name": "Wistia",
+          "category": "media",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:wistia"
+          ]
+        },
+        {
+          "name": "Klarna",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klarna"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.wix.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 16.82,
+      "server": "Varnish",
+      "cms": "Wix",
+      "total_detected": 13,
+      "technologies": [
+        {
+          "name": "Wix Stores",
+          "category": "ecommerce",
+          "confidence": 0.919,
+          "version": null,
+          "evidence": [
+            "dom:wix-",
+            "headers:x-wix-request-id",
+            "inline:window.wix",
+            "inline:wixbisession",
+            "scripts:static.parastorage.com"
+          ]
+        },
+        {
+          "name": "Wix",
+          "category": "cms",
+          "confidence": 0.8,
+          "version": null,
+          "evidence": [
+            "headers:x-wix-request-id",
+            "scripts:static.parastorage.com"
+          ]
+        },
+        {
+          "name": "Sentry",
+          "category": "analytics",
+          "confidence": 0.753,
+          "version": "7.120.3",
+          "evidence": [
+            "inline:__sentry__",
+            "inline:sentry.init",
+            "scripts:browser.sentry-cdn.com",
+            "scripts:sentry-cdn"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.675,
+          "version": null,
+          "evidence": [
+            "inline:webpackjsonp",
+            "scripts:/dist/"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Varnish",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:varnish"
+          ]
+        },
+        {
+          "name": "React",
+          "category": "javascript",
+          "confidence": 0.575,
+          "version": "18.3.1",
+          "evidence": [
+            "scripts:react",
+            "scripts:react-dom"
+          ]
+        },
+        {
+          "name": "Laravel",
+          "category": "framework",
+          "confidence": 0.55,
+          "version": null,
+          "evidence": [
+            "cookies:xsrf-token"
+          ]
+        },
+        {
+          "name": "Lodash",
+          "category": "javascript",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:lodash.min.js"
+          ]
+        },
+        {
+          "name": "Service Worker",
+          "category": "pwa",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:navigator.serviceworker",
+            "inline:serviceworker.register"
+          ]
+        },
+        {
+          "name": "Sentry Replay",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:replayintegration"
+          ]
+        },
+        {
+          "name": "Iterable",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:iterable"
+          ]
+        },
+        {
+          "name": "Helpscout Beacon",
+          "category": "support",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:beacon("
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Service Worker",
+          "category": "pwa",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:navigator.serviceworker",
+            "inline:serviceworker.register"
+          ]
+        },
+        {
+          "name": "Sentry Replay",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:replayintegration"
+          ]
+        },
+        {
+          "name": "Iterable",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:iterable"
+          ]
+        },
+        {
+          "name": "Helpscout Beacon",
+          "category": "support",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:beacon("
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.squarespace.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 3.88,
+      "server": null,
+      "cms": "Squarespace",
+      "total_detected": 7,
+      "technologies": [
+        {
+          "name": "Squarespace Commerce",
+          "category": "ecommerce",
+          "confidence": 0.709,
+          "version": null,
+          "evidence": [
+            "inline:squarespace",
+            "inline:static.squarespace",
+            "scripts:squarespace"
+          ]
+        },
+        {
+          "name": "Squarespace Hosting",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:server:squarespace"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Square",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:window.square"
+          ]
+        },
+        {
+          "name": "Squarespace",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:sqs-"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Square",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:window.square"
+          ]
+        },
+        {
+          "name": "Squarespace",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:sqs-"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://webflow.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 4.91,
+      "server": null,
+      "cms": "Webflow",
+      "total_detected": 18,
+      "technologies": [
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "GSAP",
+          "category": "javascript",
+          "confidence": 0.724,
+          "version": "3.15.0",
+          "evidence": [
+            "inline:gsap.to",
+            "scripts:gsap",
+            "scripts:gsap.min.js"
+          ]
+        },
+        {
+          "name": "jsDelivr",
+          "category": "cdn",
+          "confidence": 0.7,
+          "version": null,
+          "evidence": [
+            "scripts:cdn.jsdelivr.net",
+            "stylesheets:cdn.jsdelivr.net"
+          ]
+        },
+        {
+          "name": "Swiper",
+          "category": "javascript",
+          "confidence": 0.675,
+          "version": null,
+          "evidence": [
+            "inline:new swiper",
+            "scripts:swiper-bundle"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "CloudFront",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cloudfront"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Google Hosted Libraries",
+          "category": "cdn",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:ajax.googleapis.com/ajax/libs"
+          ]
+        },
+        {
+          "name": "cdnjs",
+          "category": "cdn",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:cdnjs.cloudflare.com"
+          ]
+        },
+        {
+          "name": "jQuery",
+          "category": "framework",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:jquery"
+          ]
+        },
+        {
+          "name": "Three.js",
+          "category": "javascript",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:three.min.js"
+          ]
+        },
+        {
+          "name": "Video.js",
+          "category": "javascript",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:video.min.js"
+          ]
+        },
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:webfont.load"
+          ]
+        },
+        {
+          "name": "Webflow",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:w-nav"
+          ]
+        },
+        {
+          "name": "Ionicons",
+          "category": "font",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ion-icon"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:webfont.load"
+          ]
+        },
+        {
+          "name": "Webflow",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:w-nav"
+          ]
+        },
+        {
+          "name": "Ionicons",
+          "category": "font",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ion-icon"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://react.dev",
+      "expect": null,
+      "status": 200,
+      "elapsed": 0.89,
+      "server": null,
+      "cms": "Webflow",
+      "total_detected": 7,
+      "technologies": [
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.724,
+          "version": null,
+          "evidence": [
+            "inline:gtag(",
+            "scripts:googletagmanager.com/gtag",
+            "scripts:gtag/js"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.675,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "scripts:googletagmanager.com"
+          ]
+        },
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:server:vercel",
+            "headers:x-vercel-id"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.575,
+          "version": null,
+          "evidence": [
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:webpack"
+          ]
+        },
+        {
+          "name": "Webflow",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:w-nav"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Webflow",
+          "category": "cms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:w-nav"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://vuejs.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 0.89,
+      "server": null,
+      "cms": null,
+      "total_detected": 5,
+      "technologies": [
+        {
+          "name": "Netlify",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:server:netlify",
+            "headers:x-nf-request-id"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Fathom",
+          "category": "analytics",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:cdn.usefathom.com"
+          ]
+        },
+        {
+          "name": "Vue.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-v-"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Vue.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-v-"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://nextjs.org",
+      "expect": "Next.js",
+      "status": 200,
+      "elapsed": 2.53,
+      "server": null,
+      "cms": null,
+      "total_detected": 6,
+      "technologies": [
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.724,
+          "version": null,
+          "evidence": [
+            "inline:__next",
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:server:vercel",
+            "headers:x-vercel-id"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Turbopack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack"
+          ]
+        },
+        {
+          "name": "Turbopack Runtime",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack-"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://svelte.dev",
+      "expect": null,
+      "status": 200,
+      "elapsed": 0.87,
+      "server": null,
+      "cms": null,
+      "total_detected": 4,
+      "technologies": [
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:server:vercel",
+            "headers:x-vercel-id"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "SvelteKit",
+          "category": "framework",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:__sveltekit"
+          ]
+        },
+        {
+          "name": "Svelte",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:svelte-"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "SvelteKit",
+          "category": "framework",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:__sveltekit"
+          ]
+        },
+        {
+          "name": "Svelte",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:svelte-"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://angular.dev",
+      "expect": null,
+      "status": 200,
+      "elapsed": 3.96,
+      "server": null,
+      "cms": null,
+      "total_detected": 5,
+      "technologies": [
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Material Icons",
+          "category": "font",
+          "confidence": 0.58,
+          "version": null,
+          "evidence": [
+            "dom:material-symbols",
+            "stylesheets:material+symbols"
+          ]
+        },
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.googleapis.com"
+          ]
+        },
+        {
+          "name": "Angular",
+          "category": "framework",
+          "confidence": 0.363,
+          "version": "22.0.6",
+          "evidence": [
+            "dom:ng-app",
+            "dom:ng-version"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.googleapis.com"
+          ]
+        },
+        {
+          "name": "Angular",
+          "category": "framework",
+          "confidence": 0.363,
+          "version": "22.0.6",
+          "evidence": [
+            "dom:ng-app",
+            "dom:ng-version"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://stripe.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 8.35,
+      "server": "Nginx",
+      "cms": null,
+      "total_detected": 7,
+      "technologies": [
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Nginx",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:nginx"
+          ]
+        },
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.575,
+          "version": null,
+          "evidence": [
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:webpack"
+          ]
+        },
+        {
+          "name": "Klarna",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klarna"
+          ]
+        },
+        {
+          "name": "WooCommerce",
+          "category": "ecommerce",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:woocommerce"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Klarna",
+          "category": "payment",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klarna"
+          ]
+        },
+        {
+          "name": "WooCommerce",
+          "category": "ecommerce",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:woocommerce"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://github.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 4.89,
+      "server": null,
+      "cms": null,
+      "total_detected": 7,
+      "technologies": [
+        {
+          "name": "GitHub Pages",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:server:github.com"
+          ]
+        },
+        {
+          "name": "Microsoft Azure",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:azure"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "React",
+          "category": "javascript",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:react"
+          ]
+        },
+        {
+          "name": "Ionicons",
+          "category": "font",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ion-icon"
+          ]
+        },
+        {
+          "name": "Turbo",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-turbo"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Ionicons",
+          "category": "font",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ion-icon"
+          ]
+        },
+        {
+          "name": "Turbo",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-turbo"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://about.gitlab.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 3.03,
+      "server": null,
+      "cms": null,
+      "total_detected": 13,
+      "technologies": [
+        {
+          "name": "Nuxt.js",
+          "category": "framework",
+          "confidence": 0.827,
+          "version": null,
+          "evidence": [
+            "dom:__nuxt",
+            "inline:__nuxt__",
+            "inline:window.__nuxt__",
+            "scripts:_nuxt/",
+            "scripts:nuxt"
+          ]
+        },
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.724,
+          "version": null,
+          "evidence": [
+            "inline:onetrust",
+            "scripts:cdn.cookielaw.org",
+            "scripts:onetrust"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Google Cloud CDN",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-goog-"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Marketo",
+          "category": "marketing",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:munchkin.marketo.net"
+          ]
+        },
+        {
+          "name": "Optimizely",
+          "category": "marketing",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:cdn.optimizely.com"
+          ]
+        },
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gtag("
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer"
+          ]
+        },
+        {
+          "name": "Vue.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-v-"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gtag("
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer"
+          ]
+        },
+        {
+          "name": "Vue.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-v-"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.cloudflare.com",
+      "expect": "Cloudflare",
+      "status": 200,
+      "elapsed": 19.55,
+      "server": null,
+      "cms": null,
+      "total_detected": 11,
+      "technologies": [
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.82,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Astro",
+          "category": "framework",
+          "confidence": 0.615,
+          "version": "6.3.7",
+          "evidence": [
+            "dom:astro-",
+            "meta:astro"
+          ]
+        },
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.55,
+          "version": null,
+          "evidence": [
+            "cookies:_ga"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://vercel.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 4.94,
+      "server": null,
+      "cms": null,
+      "total_detected": 6,
+      "technologies": [
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "confidence": 0.836,
+          "version": null,
+          "evidence": [
+            "headers:server:vercel",
+            "headers:x-vercel-id",
+            "scripts:vercel"
+          ]
+        },
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.724,
+          "version": null,
+          "evidence": [
+            "inline:__next",
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Turbopack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack"
+          ]
+        },
+        {
+          "name": "Turbopack Runtime",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack-"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.netlify.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 3.82,
+      "server": null,
+      "cms": null,
+      "total_detected": 9,
+      "technologies": [
+        {
+          "name": "Astro",
+          "category": "framework",
+          "confidence": 0.807,
+          "version": "5.18.2",
+          "evidence": [
+            "dom:astro-",
+            "meta:astro",
+            "scripts:astro"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.675,
+          "version": null,
+          "evidence": [
+            "inline:onetrust",
+            "scripts:cdn.cookielaw.org"
+          ]
+        },
+        {
+          "name": "Netlify",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:server:netlify",
+            "headers:x-nf-request-id"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "HubSpot",
+          "category": "marketing",
+          "confidence": 0.575,
+          "version": null,
+          "evidence": [
+            "scripts:js.hs-scripts.com",
+            "scripts:js.hsforms.net"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gtag("
+          ]
+        },
+        {
+          "name": "YouTube IFrame API",
+          "category": "social",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:yt.player"
+          ]
+        },
+        {
+          "name": "Reveal.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:reveal"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gtag("
+          ]
+        },
+        {
+          "name": "YouTube IFrame API",
+          "category": "social",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:yt.player"
+          ]
+        },
+        {
+          "name": "Reveal.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:reveal"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.nytimes.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 26.62,
+      "server": "Envoy",
+      "cms": null,
+      "total_detected": 11,
+      "technologies": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.709,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js",
+            "scripts:googletagmanager.com"
+          ]
+        },
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:fastly",
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "Envoy",
+          "category": "server",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:envoy",
+            "headers:x-envoy"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "DataDome",
+          "category": "security",
+          "confidence": 0.55,
+          "version": null,
+          "evidence": [
+            "cookies:datadome"
+          ]
+        },
+        {
+          "name": "Datadog RUM",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:dd_rum"
+          ]
+        },
+        {
+          "name": "Sentry",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:sentry.init"
+          ]
+        },
+        {
+          "name": "SvelteKit",
+          "category": "framework",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:__sveltekit"
+          ]
+        },
+        {
+          "name": "Helpscout Beacon",
+          "category": "support",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:beacon("
+          ]
+        },
+        {
+          "name": "Svelte",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:svelte-"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Datadog RUM",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:dd_rum"
+          ]
+        },
+        {
+          "name": "Sentry",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:sentry.init"
+          ]
+        },
+        {
+          "name": "SvelteKit",
+          "category": "framework",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:__sveltekit"
+          ]
+        },
+        {
+          "name": "Helpscout Beacon",
+          "category": "support",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:beacon("
+          ]
+        },
+        {
+          "name": "Svelte",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:svelte-"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.bbc.com",
+      "expect": null,
+      "error": "ConnectionError: HTTPSConnectionPool(host='www.bbc.com', port=443): Read timed out."
+    },
+    {
+      "url": "https://developer.mozilla.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 2.12,
+      "server": "Varnish",
+      "cms": null,
+      "total_detected": 5,
+      "technologies": [
+        {
+          "name": "Google Cloud CDN",
+          "category": "cdn",
+          "confidence": 0.672,
+          "version": "1.1",
+          "evidence": [
+            "headers:via:1.1 google",
+            "headers:x-goog-"
+          ]
+        },
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Varnish",
+          "category": "server",
+          "confidence": 0.6,
+          "version": "1.1",
+          "evidence": [
+            "headers:varnish"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://docs.python.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 4.78,
+      "server": "Nginx",
+      "cms": null,
+      "total_detected": 5,
+      "technologies": [
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Nginx",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:nginx"
+          ]
+        },
+        {
+          "name": "Varnish",
+          "category": "server",
+          "confidence": 0.6,
+          "version": "1.1",
+          "evidence": [
+            "headers:varnish"
+          ]
+        },
+        {
+          "name": "highlight.js",
+          "category": "javascript",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:highlight.js"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.usa.gov",
+      "expect": null,
+      "status": 200,
+      "elapsed": 1.19,
+      "server": null,
+      "cms": "Drupal",
+      "total_detected": 8,
+      "technologies": [
+        {
+          "name": "CloudFront",
+          "category": "cdn",
+          "confidence": 0.672,
+          "version": "1.1",
+          "evidence": [
+            "headers:cloudfront",
+            "headers:x-amz-cf-id"
+          ]
+        },
+        {
+          "name": "AWS",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-amz"
+          ]
+        },
+        {
+          "name": "AWS Amplify",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-amz-cf-pop"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Crazy Egg",
+          "category": "analytics",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:script.crazyegg.com"
+          ]
+        },
+        {
+          "name": "Drupal",
+          "category": "cms",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:/sites/default/"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:lazyload"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:lazyload"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.harvard.edu",
+      "expect": null,
+      "status": 200,
+      "elapsed": 2.74,
+      "server": "Nginx",
+      "cms": "WordPress",
+      "total_detected": 11,
+      "technologies": [
+        {
+          "name": "Nginx",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:nginx"
+          ]
+        },
+        {
+          "name": "WordPress",
+          "category": "cms",
+          "confidence": 0.575,
+          "version": null,
+          "evidence": [
+            "scripts:wp-content",
+            "scripts:wp-includes"
+          ]
+        },
+        {
+          "name": "Parse.ly",
+          "category": "analytics",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:cdn.parsely.com/keys"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:/dist/"
+          ]
+        },
+        {
+          "name": "WordPress VIP",
+          "category": "cms",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:wp-content/themes"
+          ]
+        },
+        {
+          "name": "Remix",
+          "category": "framework",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:/build/"
+          ]
+        },
+        {
+          "name": "jQuery",
+          "category": "framework",
+          "confidence": 0.5,
+          "version": "3.4.1",
+          "evidence": [
+            "scripts:jquery"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.363,
+          "version": null,
+          "evidence": [
+            "dom:data-src",
+            "dom:lazyload"
+          ]
+        },
+        {
+          "name": "Ionicons",
+          "category": "font",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ion-icon"
+          ]
+        },
+        {
+          "name": "Angular",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ng-app"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.363,
+          "version": null,
+          "evidence": [
+            "dom:data-src",
+            "dom:lazyload"
+          ]
+        },
+        {
+          "name": "Ionicons",
+          "category": "font",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ion-icon"
+          ]
+        },
+        {
+          "name": "Angular",
+          "category": "framework",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:ng-app"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.hubspot.com",
+      "expect": "HubSpot",
+      "status": 200,
+      "elapsed": 5.65,
+      "server": null,
+      "cms": "HubSpot CMS",
+      "total_detected": 7,
+      "technologies": [
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.82,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "HubSpot",
+          "category": "marketing",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:_hsq",
+            "inline:hbspt"
+          ]
+        },
+        {
+          "name": "HubSpot CMS",
+          "category": "cms",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:_hsq"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "HubSpot",
+          "category": "marketing",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:_hsq",
+            "inline:hbspt"
+          ]
+        },
+        {
+          "name": "HubSpot CMS",
+          "category": "cms",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:_hsq"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://mailchimp.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 5.64,
+      "server": "Envoy",
+      "cms": null,
+      "total_detected": 15,
+      "technologies": [
+        {
+          "name": "Akamai Bot Manager",
+          "category": "security",
+          "confidence": 0.852,
+          "version": null,
+          "evidence": [
+            "cookies:_abck",
+            "headers:akamai",
+            "headers:x-akamai"
+          ]
+        },
+        {
+          "name": "Optimizely",
+          "category": "marketing",
+          "confidence": 0.675,
+          "version": null,
+          "evidence": [
+            "inline:window.optimizely",
+            "scripts:cdn.optimizely.com"
+          ]
+        },
+        {
+          "name": "Envoy",
+          "category": "server",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:envoy",
+            "headers:x-envoy"
+          ]
+        },
+        {
+          "name": "Akamai",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:akamai"
+          ]
+        },
+        {
+          "name": "AWS",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-amz"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:/dist/"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Bugsnag",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:bugsnagclient"
+          ]
+        },
+        {
+          "name": "FullStory",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:window['_fs_"
+          ]
+        },
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gtag("
+          ]
+        },
+        {
+          "name": "Klaviyo",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klaviyo"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "WooCommerce",
+          "category": "ecommerce",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:woocommerce"
+          ]
+        },
+        {
+          "name": "Calendly",
+          "category": "forms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:calendly-"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Bugsnag",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:bugsnagclient"
+          ]
+        },
+        {
+          "name": "FullStory",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:window['_fs_"
+          ]
+        },
+        {
+          "name": "Google Analytics 4",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gtag("
+          ]
+        },
+        {
+          "name": "Klaviyo",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:klaviyo"
+          ]
+        },
+        {
+          "name": "OneTrust",
+          "category": "privacy",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:onetrust"
+          ]
+        },
+        {
+          "name": "WooCommerce",
+          "category": "ecommerce",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:woocommerce"
+          ]
+        },
+        {
+          "name": "Calendly",
+          "category": "forms",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:calendly-"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.intercom.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 13.26,
+      "server": null,
+      "cms": null,
+      "total_detected": 10,
+      "technologies": [
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "confidence": 0.836,
+          "version": null,
+          "evidence": [
+            "headers:server:vercel",
+            "headers:x-vercel-id",
+            "scripts:vercel"
+          ]
+        },
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.724,
+          "version": null,
+          "evidence": [
+            "inline:__next",
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "CloudFront",
+          "category": "cdn",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cloudfront",
+            "headers:x-amz-cf-id"
+          ]
+        },
+        {
+          "name": "AWS",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-amz"
+          ]
+        },
+        {
+          "name": "AWS Amplify",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-amz-cf-pop"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Turbopack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack"
+          ]
+        },
+        {
+          "name": "Turbopack Runtime",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack-"
+          ]
+        },
+        {
+          "name": "Datadog RUM",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:datadogrum"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Datadog RUM",
+          "category": "analytics",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:datadogrum"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://medium.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 1.19,
+      "server": "Envoy",
+      "cms": null,
+      "total_detected": 8,
+      "technologies": [
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Express",
+          "category": "framework",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:express",
+            "headers:x-powered-by:express"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Envoy",
+          "category": "server",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:envoy",
+            "headers:x-envoy"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Google reCAPTCHA",
+          "category": "security",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:google.com/recaptcha"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.reddit.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 0.71,
+      "server": "Varnish",
+      "cms": null,
+      "total_detected": 3,
+      "technologies": [
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Varnish",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:varnish"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.joomla.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 1.56,
+      "server": "LiteSpeed",
+      "cms": "Joomla",
+      "total_detected": 11,
+      "technologies": [
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Joomla",
+          "category": "cms",
+          "confidence": 0.725,
+          "version": null,
+          "evidence": [
+            "meta:joomla",
+            "scripts:/media/system/"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "AWS",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:amazon"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "LiteSpeed",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:litespeed"
+          ]
+        },
+        {
+          "name": "Font Awesome",
+          "category": "font",
+          "confidence": 0.58,
+          "version": null,
+          "evidence": [
+            "dom: fa-",
+            "stylesheets:fontawesome"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.googleapis.com"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Google Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.googleapis.com"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.drupal.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 1.16,
+      "server": "Varnish",
+      "cms": null,
+      "total_detected": 4,
+      "technologies": [
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Varnish",
+          "category": "server",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:varnish"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://ghost.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 5.28,
+      "server": null,
+      "cms": null,
+      "total_detected": 5,
+      "technologies": [
+        {
+          "name": "Netlify",
+          "category": "hosting",
+          "confidence": 0.836,
+          "version": null,
+          "evidence": [
+            "headers:server:netlify",
+            "headers:x-nf-request-id",
+            "scripts:netlify"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Alpine.js",
+          "category": "framework",
+          "confidence": 0.363,
+          "version": null,
+          "evidence": [
+            "dom:x-data",
+            "dom:x-show"
+          ]
+        },
+        {
+          "name": "Vimeo",
+          "category": "media",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:vimeo"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Alpine.js",
+          "category": "framework",
+          "confidence": 0.363,
+          "version": null,
+          "evidence": [
+            "dom:x-data",
+            "dom:x-show"
+          ]
+        },
+        {
+          "name": "Vimeo",
+          "category": "media",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:vimeo"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.gatsbyjs.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 1.16,
+      "server": null,
+      "cms": null,
+      "total_detected": 7,
+      "technologies": [
+        {
+          "name": "Netlify",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:server:netlify",
+            "headers:x-nf-request-id"
+          ]
+        },
+        {
+          "name": "Gatsby",
+          "category": "framework",
+          "confidence": 0.615,
+          "version": "4.24.6",
+          "evidence": [
+            "dom:___gatsby",
+            "meta:gatsby"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Webpack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:webpack"
+          ]
+        },
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Segment",
+          "category": "marketing",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:analytics.load",
+            "inline:window.analytics"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Google Tag Manager",
+          "category": "analytics",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:dataLayer",
+            "inline:gtm.js"
+          ]
+        },
+        {
+          "name": "Segment",
+          "category": "marketing",
+          "confidence": 0.418,
+          "version": null,
+          "evidence": [
+            "inline:analytics.load",
+            "inline:window.analytics"
+          ]
+        },
+        {
+          "name": "LazySizes",
+          "category": "optimization",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:data-src"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.mozilla.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 4.45,
+      "server": "Varnish",
+      "cms": null,
+      "total_detected": 6,
+      "technologies": [
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "Google Cloud CDN",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": "1.1",
+          "evidence": [
+            "headers:via:1.1 google"
+          ]
+        },
+        {
+          "name": "Content Security Policy",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:content-security-policy"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Varnish",
+          "category": "server",
+          "confidence": 0.6,
+          "version": "1.1",
+          "evidence": [
+            "headers:varnish"
+          ]
+        },
+        {
+          "name": "Modernizr",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:no-js"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Modernizr",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:no-js"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://www.python.org",
+      "expect": null,
+      "status": 200,
+      "elapsed": 5.27,
+      "server": "Nginx",
+      "cms": null,
+      "total_detected": 9,
+      "technologies": [
+        {
+          "name": "Modernizr",
+          "category": "javascript",
+          "confidence": 0.65,
+          "version": null,
+          "evidence": [
+            "dom:no-js",
+            "scripts:modernizr"
+          ]
+        },
+        {
+          "name": "Fastly",
+          "category": "cdn",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-served-by"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Nginx",
+          "category": "server",
+          "confidence": 0.6,
+          "version": "1.1",
+          "evidence": [
+            "headers:nginx"
+          ]
+        },
+        {
+          "name": "Varnish",
+          "category": "server",
+          "confidence": 0.6,
+          "version": "1.1",
+          "evidence": [
+            "headers:varnish"
+          ]
+        },
+        {
+          "name": "Font Awesome",
+          "category": "font",
+          "confidence": 0.58,
+          "version": null,
+          "evidence": [
+            "dom: fa-",
+            "stylesheets:font-awesome"
+          ]
+        },
+        {
+          "name": "jQuery UI",
+          "category": "javascript",
+          "confidence": 0.575,
+          "version": "1.12.1",
+          "evidence": [
+            "scripts:jquery-ui",
+            "scripts:jqueryui"
+          ]
+        },
+        {
+          "name": "Google Hosted Libraries",
+          "category": "cdn",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:ajax.googleapis.com/ajax/libs"
+          ]
+        },
+        {
+          "name": "jQuery",
+          "category": "framework",
+          "confidence": 0.5,
+          "version": "1.8.2",
+          "evidence": [
+            "scripts:jquery"
+          ]
+        }
+      ],
+      "review": [],
+      "expect_hit": true
+    },
+    {
+      "url": "https://tailwindcss.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 9.0,
+      "server": null,
+      "cms": null,
+      "total_detected": 10,
+      "technologies": [
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Next.js",
+          "category": "javascript",
+          "confidence": 0.724,
+          "version": null,
+          "evidence": [
+            "inline:__next",
+            "scripts:_next/",
+            "scripts:next/static"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:x-vercel-id"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "HSTS",
+          "category": "security",
+          "confidence": 0.6,
+          "version": null,
+          "evidence": [
+            "headers:strict-transport-security"
+          ]
+        },
+        {
+          "name": "Turbopack",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack"
+          ]
+        },
+        {
+          "name": "Turbopack Runtime",
+          "category": "build",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:turbopack-"
+          ]
+        },
+        {
+          "name": "Gumroad",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gumroad"
+          ]
+        },
+        {
+          "name": "Prism.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:line-numbers"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Gumroad",
+          "category": "ecommerce",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:gumroad"
+          ]
+        },
+        {
+          "name": "Prism.js",
+          "category": "javascript",
+          "confidence": 0.3,
+          "version": null,
+          "evidence": [
+            "dom:line-numbers"
+          ]
+        }
+      ],
+      "expect_hit": true
+    },
+    {
+      "url": "https://laravel.com",
+      "expect": null,
+      "status": 200,
+      "elapsed": 10.53,
+      "server": null,
+      "cms": null,
+      "total_detected": 9,
+      "technologies": [
+        {
+          "name": "Laravel",
+          "category": "framework",
+          "confidence": 0.839,
+          "version": null,
+          "evidence": [
+            "cookies:xsrf-token",
+            "inline:laravel",
+            "meta:csrf-token"
+          ]
+        },
+        {
+          "name": "Cloudflare Bot Management",
+          "category": "security",
+          "confidence": 0.82,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Cloudflare",
+          "category": "cdn",
+          "confidence": 0.731,
+          "version": null,
+          "evidence": [
+            "cookies:__cf_bm",
+            "headers:cf-cache-status",
+            "headers:cf-ray",
+            "headers:cloudflare"
+          ]
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "confidence": 0.672,
+          "version": null,
+          "evidence": [
+            "headers:cf-cache-status",
+            "headers:cf-ray"
+          ]
+        },
+        {
+          "name": "Fathom",
+          "category": "analytics",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:cdn.usefathom.com"
+          ]
+        },
+        {
+          "name": "Remix",
+          "category": "framework",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:/build/"
+          ]
+        },
+        {
+          "name": "HubSpot",
+          "category": "marketing",
+          "confidence": 0.5,
+          "version": null,
+          "evidence": [
+            "scripts:js.hs-scripts.com"
+          ]
+        },
+        {
+          "name": "Bunny Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.bunny.net"
+          ]
+        },
+        {
+          "name": "Segment",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:analytics.load"
+          ]
+        }
+      ],
+      "review": [
+        {
+          "name": "Bunny Fonts",
+          "category": "font",
+          "confidence": 0.4,
+          "version": null,
+          "evidence": [
+            "stylesheets:fonts.bunny.net"
+          ]
+        },
+        {
+          "name": "Segment",
+          "category": "marketing",
+          "confidence": 0.35,
+          "version": null,
+          "evidence": [
+            "inline:analytics.load"
+          ]
+        }
+      ],
+      "expect_hit": true
+    }
+  ]
+}

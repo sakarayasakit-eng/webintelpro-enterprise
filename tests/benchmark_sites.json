@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "description": "WebIntelPro Phase 1 detection benchmark. A curated set of well-known, publicly reachable websites with the technologies each is expected to expose. Used to measure the detection engine's precision/recall against a stable ground truth. This dataset is the SPEC; the engine is validated against it and must never be edited to make the engine 'pass'.",
+  "conventions": {
+    "name_authority": "Every string in an 'expected' array is a canonical technology name. Where a fingerprint already exists, the name matches technology/fingerprints.py exactly (e.g. 'Vue.js', not 'Vue'; 'Next.js', not 'NextJS').",
+    "aliases": {
+      "Vue": "Vue.js",
+      "NextJS": "Next.js",
+      "Nuxt": "Nuxt.js",
+      "Tailwind": "Tailwind CSS",
+      "GTM": "Google Tag Manager",
+      "GA": "Google Analytics 4",
+      "Google Analytics": "Google Analytics 4"
+    },
+    "known_coverage_gaps": "Hugo and Jekyll appear as ground truth (gohugo.io is Hugo, jekyllrb.com is Jekyll) but have no fingerprint in the engine yet, so they are expected to register as COVERAGE GAPS, not regressions. See docs/verification/phase1_verification.md section 4.",
+    "primary": "The single technology a site was chosen to exercise. 'expected' may list additional technologies (hosting/CDN/analytics) that the site is also well known to ship.",
+    "expected_semantics": "A technology in 'expected' is ground truth for the LIVE homepage. A miss is either a real engine regression, an unimplemented coverage gap, or a documented environmental caveat (see docs/verification/phase1_verification.md), never a reason to weaken the expectation.",
+    "hard_semantics": "'hard' lists technologies the site genuinely uses but that are NOT statically observable in the homepage HTML/headers this engine fetches (client-rendered SPAs behind bot walls, tags injected later via a GTM container, back-ends only reachable at checkout). They are recorded for documentation and bonus-credit, but are excluded from recall scoring so recall reflects what is actually detectable. Moving an item expected->hard REQUIRES an evidence-backed 'note'; it is a correction of the spec, not a way to make a weak engine pass.",
+    "note_semantics": "Free-text justification, dated, citing the live evidence for a correction (e.g. a CMS migration) or for a 'hard' reclassification / environmental caveat."
+  },
+  "sites": [
+    { "url": "https://techcrunch.com", "primary": "WordPress", "expected": ["WordPress"] },
+    { "url": "https://wordpress.org", "primary": "WordPress", "expected": ["WordPress"] },
+    { "url": "https://variety.com", "primary": "WordPress", "expected": ["WordPress"] },
+    { "url": "https://www.rollingstone.com", "primary": "WordPress", "expected": ["WordPress"] },
+    { "url": "https://time.com", "primary": "Next.js", "expected": ["Next.js"] },
+
+    { "url": "https://www.allbirds.com", "primary": "Shopify", "expected": ["Shopify"] },
+    { "url": "https://colourpop.com", "primary": "Shopify", "expected": ["Shopify"] },
+    { "url": "https://www.ruggable.com", "primary": "Shopify", "expected": ["Shopify"] },
+    { "url": "https://www.fashionnova.com", "primary": "Shopify", "expected": ["Shopify"] },
+
+    { "url": "https://www.wix.com", "primary": "Wix", "expected": ["Wix"] },
+
+    { "url": "https://www.squarespace.com", "primary": "Squarespace", "expected": ["Squarespace"] },
+
+    { "url": "https://ghost.org", "primary": "Ghost", "expected": ["Ghost"] },
+
+    { "url": "https://www.drupal.org", "primary": "Drupal", "expected": ["Drupal"],
+      "note": "2026-07-14: this environment's crawler receives a ~3KB bot-gate stub (generator empty, no Drupal markers), so Drupal cannot be observed here. Environmental caveat, not a fingerprint defect; drupal.org is genuinely Drupal." },
+    { "url": "https://www.nasa.gov", "primary": "WordPress", "expected": ["WordPress"],
+      "note": "2026-07-14: corrected from Drupal. Live homepage now serves 'meta generator: WordPress 7.0.1' with wp-content/wp-includes and zero Drupal markers - NASA migrated off Drupal. Factual ground-truth fix." },
+
+    { "url": "https://www.joomla.org", "primary": "Joomla", "expected": ["Joomla"] },
+
+    { "url": "https://nextjs.org", "primary": "Next.js", "expected": ["Next.js", "Vercel"] },
+    { "url": "https://vercel.com", "primary": "Vercel", "expected": ["Next.js", "Vercel"] },
+    { "url": "https://www.hulu.com", "primary": "Next.js", "expected": ["Next.js"] },
+    { "url": "https://openai.com", "primary": "Next.js", "expected": ["Next.js"] },
+
+    { "url": "https://react.dev", "primary": "React", "expected": ["React"] },
+    { "url": "https://www.airbnb.com", "primary": "React", "expected": [], "hard": ["React"],
+      "note": "2026-07-14: Airbnb is a React app but is served behind Akamai + DataDome; the fetched homepage exposes no static React marker (no data-reactroot / __NEXT_DATA__), only a bare 'react' substring unsafe to key on. React reclassified hard." },
+
+    { "url": "https://vuejs.org", "primary": "Vue.js", "expected": ["Vue.js"] },
+    { "url": "https://about.gitlab.com", "primary": "Vue.js", "expected": ["Vue.js"] },
+
+    { "url": "https://angular.dev", "primary": "Angular", "expected": ["Angular"] },
+
+    { "url": "https://svelte.dev", "primary": "Svelte", "expected": ["Svelte"] },
+
+    { "url": "https://nuxt.com", "primary": "Nuxt.js", "expected": ["Nuxt.js", "Vue.js"] },
+
+    { "url": "https://www.gatsbyjs.com", "primary": "Gatsby", "expected": ["Gatsby", "React"] },
+
+    { "url": "https://gohugo.io", "primary": "Hugo", "expected": ["Hugo"] },
+
+    { "url": "https://jekyllrb.com", "primary": "Jekyll", "expected": ["Jekyll"] },
+
+    { "url": "https://getbootstrap.com", "primary": "Bootstrap", "expected": ["Bootstrap"] },
+
+    { "url": "https://tailwindcss.com", "primary": "Tailwind CSS", "expected": ["Tailwind CSS"] },
+
+    { "url": "https://www.cloudflare.com", "primary": "Cloudflare", "expected": ["Cloudflare"] },
+    { "url": "https://discord.com", "primary": "Cloudflare", "expected": ["Cloudflare"], "hard": ["React"],
+      "note": "2026-07-14: discord.com is a client-rendered React app; the homepage HTML is a shell with no static React marker (no data-reactroot / __NEXT_DATA__), only a bare 'react' substring unsafe to key on. React reclassified hard; Cloudflare remains observable." },
+
+    { "url": "https://www.netlify.com", "primary": "Netlify", "expected": ["Netlify"] },
+    { "url": "https://www.smashingmagazine.com", "primary": "Netlify", "expected": ["Netlify"] },
+
+    { "url": "https://www.hubspot.com", "primary": "HubSpot", "expected": ["HubSpot", "Google Tag Manager"] },
+
+    { "url": "https://stripe.com", "primary": "Stripe", "expected": ["Stripe"] },
+
+    { "url": "https://segment.com", "primary": "Segment", "expected": ["Segment"] },
+
+    { "url": "https://www.contentful.com", "primary": "Contentful", "expected": ["Contentful"] },
+
+    { "url": "https://www.sanity.io", "primary": "Sanity", "expected": ["Sanity"] },
+
+    { "url": "https://www.storyblok.com", "primary": "Storyblok", "expected": ["Storyblok", "Astro"],
+      "note": "2026-07-14: corrected Nuxt.js->Astro. Live homepage exposes data-astro-* markers and no _nuxt/ build path - storyblok.com's marketing site migrated from Nuxt to Astro. The lone 'nuxt' substrings are content/links, not a Nuxt runtime." },
+
+    { "url": "https://webflow.com", "primary": "Webflow", "expected": ["Webflow"] },
+
+    { "url": "https://www.w3schools.com", "primary": "Google Tag Manager", "expected": ["Google Tag Manager"], "hard": ["Google Analytics 4"],
+      "note": "2026-07-14: homepage HTML contains no gtag/js, googletagmanager.com/gtag, google-analytics.com or _ga - GA4 is delivered through the GTM container at runtime, not statically observable. GTM itself IS present; primary/expected corrected to GTM, GA4 reclassified hard." },
+    { "url": "https://mailchimp.com", "primary": "Google Tag Manager", "expected": ["Google Tag Manager"] },
+
+    { "url": "https://supabase.com", "primary": "Next.js", "expected": ["Next.js"] },
+    { "url": "https://www.notion.so", "primary": "Next.js", "expected": ["Next.js", "React"] }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "url": "https://b.example",
+  "generated": "2026-07-14T09:43:05.773073Z",
+  "overall": {
+    "score": 46,
+    "grade": "F",
+    "parts": {
+      "seo": 37,
+      "security": 20,
+      "performance": 65,
+      "accessibility": 75
+    }
+  },
+  "recommendation_summary": {
+    "total": 16,
+    "by_severity": {
+      "critical": 0,
+      "high": 3,
+      "medium": 7,
+      "low": 6
+    }
+  },
+  "recommendations": [
+    {
+      "severity": "high",
+      "area": "Security",
+      "issue": "No Content-Security-Policy",
+      "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+    },
+    {
+      "severity": "high",
+      "area": "Security",
+      "issue": "No HSTS header",
+      "recommendation": "Send Strict-Transport-Security to force HTTPS on repeat visits."
+    },
+    {
+      "severity": "high",
+      "area": "Performance",
+      "issue": "No text compression",
+      "recommendation": "Enable gzip or brotli compression on the server/CDN."
+    },
+    {
+      "severity": "medium",
+      "area": "Security",
+      "issue": "No X-Frame-Options",
+      "recommendation": "Set X-Frame-Options: SAMEORIGIN to prevent clickjacking."
+    },
+    {
+      "severity": "medium",
+      "area": "Security",
+      "issue": "No X-Content-Type-Options",
+      "recommendation": "Set X-Content-Type-Options: nosniff to block MIME sniffing."
+    },
+    {
+      "severity": "medium",
+      "area": "SEO",
+      "issue": "Missing meta description",
+      "recommendation": "Add a 120-160 character meta description for better SERP snippets."
+    },
+    {
+      "severity": "medium",
+      "area": "SEO",
+      "issue": "No H1 heading",
+      "recommendation": "Add exactly one H1 that describes the page."
+    },
+    {
+      "severity": "medium",
+      "area": "SEO",
+      "issue": "No viewport meta tag",
+      "recommendation": "Add a responsive viewport meta tag for mobile ranking."
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "No Cache-Control header",
+      "recommendation": "Add Cache-Control headers so browsers/CDNs can cache assets."
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "No lang attribute",
+      "recommendation": "Set <html lang=\"...\"> so assistive tech announces the language."
+    },
+    {
+      "severity": "low",
+      "area": "Security",
+      "issue": "No Referrer-Policy",
+      "recommendation": "Add a Referrer-Policy header to limit referrer leakage."
+    },
+    {
+      "severity": "low",
+      "area": "Security",
+      "issue": "No Permissions-Policy",
+      "recommendation": "Add a Permissions-Policy header to restrict powerful browser features."
+    },
+    {
+      "severity": "low",
+      "area": "Security",
+      "issue": "Stack disclosed via X-Powered-By: PHP/7.4",
+      "recommendation": "Remove or obscure the X-Powered-By header to reduce fingerprinting."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 1 chars",
+      "recommendation": "Aim for a 30-60 character title."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No canonical URL",
+      "recommendation": "Add a rel=canonical link to avoid duplicate-content issues."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No structured data",
+      "recommendation": "Add JSON-LD structured data to enable rich results."
+    }
+  ],
+  "technology": {
+    "url": "https://b.example",
+    "server": "Apache",
+    "backend": null,
+    "cms": null,
+    "total_detected": 1,
+    "elapsed": 0.003,
+    "categories": {
+      "server": [
+        "Apache"
+      ]
+    },
+    "headers": {
+      "server": "Apache",
+      "x-powered-by": "PHP/7.4"
+    },
+    "cookies": {},
+    "errors": [],
+    "technologies": [
+      {
+        "name": "Apache",
+        "category": "server",
+        "confidence": 0.5,
+        "version": "7.4",
+        "evidence": [
+          "headers:apache"
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "title": "B",
+    "title_length": 1,
+    "title_ok": false,
+    "meta_description": "",
+    "description_length": 0,
+    "description_ok": false,
+    "h1_count": 0,
+    "has_h1": false,
+    "multiple_h1": false,
+    "heading_count": 0,
+    "has_canonical": false,
+    "has_viewport": false,
+    "has_language": false,
+    "has_robots": false,
+    "open_graph": 0,
+    "twitter_cards": 0,
+    "json_ld": 0,
+    "scripts": 0,
+    "stylesheets": 0,
+    "images": 0,
+    "forms": 0,
+    "links": 0,
+    "score": 37,
+    "grade": "F",
+    "issues": [
+      "Title length 1 chars (aim 30-60)",
+      "Missing meta description",
+      "No H1 heading found",
+      "No canonical URL",
+      "No viewport meta (mobile)",
+      "No lang attribute on <html>",
+      "No Open Graph tags",
+      "No structured data (JSON-LD)"
+    ]
+  },
+  "security": {
+    "https": true,
+    "hsts": false,
+    "csp": false,
+    "x_frame_options": false,
+    "x_content_type": false,
+    "referrer_policy": false,
+    "permissions_policy": false,
+    "server": "Apache",
+    "powered_by": "PHP/7.4",
+    "score": 20,
+    "grade": "F",
+    "issues": [
+      "Missing Strict-Transport-Security (HSTS)",
+      "Missing Content-Security-Policy",
+      "Missing X-Frame-Options (clickjacking)",
+      "Missing X-Content-Type-Options",
+      "Missing Referrer-Policy",
+      "Missing Permissions-Policy",
+      "Leaks stack via X-Powered-By: PHP/7.4"
+    ]
+  },
+  "performance": {
+    "html_size": 55,
+    "scripts": 0,
+    "stylesheets": 0,
+    "images": 0,
+    "links": 0,
+    "inline_scripts": 0,
+    "resource_hints": 0,
+    "gzip": false,
+    "brotli": false,
+    "cache_control": false,
+    "score": 65,
+    "grade": "D",
+    "issues": [
+      "No gzip/brotli compression",
+      "No Cache-Control header"
+    ]
+  },
+  "accessibility": {
+    "language": false,
+    "total_images": 0,
+    "missing_alt": 0,
+    "has_h1": false,
+    "heading_count": 0,
+    "skipped_heading_levels": false,
+    "forms": 0,
+    "score": 75,
+    "grade": "C",
+    "issues": [
+      "No lang attribute on <html>",
+      "No H1 heading (document structure)"
+    ]
+  },
+  "crawl": {
+    "final_url": "https://b.example",
+    "status_code": 200,
+    "elapsed": 0.05
+  }
+}

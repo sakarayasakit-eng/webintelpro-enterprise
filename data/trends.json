@@ -1,0 +1,284 @@
+{
+  "https://openai.com/": [
+    {
+      "ts": "2026-07-14T10:48:08+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 82,
+      "security": 51,
+      "performance": 42,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-14T12:40:00+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 82,
+      "security": 51,
+      "performance": 42,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-14T12:43:53+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-14T12:57:04+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 16
+    },
+    {
+      "ts": "2026-07-14T13:00:45+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 16
+    },
+    {
+      "ts": "2026-07-14T13:07:38+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 15
+    },
+    {
+      "ts": "2026-07-14T13:12:35+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-14T17:35:43+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 82,
+      "security": 51,
+      "performance": 42,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-14T20:53:41+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 11
+    },
+    {
+      "ts": "2026-07-15T02:34:07+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 11
+    },
+    {
+      "ts": "2026-07-15T04:31:13+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 15
+    }
+  ],
+  "https://example.com/": [
+    {
+      "ts": "2026-07-14T20:18:13+00:00",
+      "scope": "page",
+      "overall": 59,
+      "seo": 62,
+      "security": 20,
+      "performance": 78,
+      "accessibility": 92,
+      "tech_count": 3
+    }
+  ],
+  "https://www.wikipedia.org/": [
+    {
+      "ts": "2026-07-14T20:18:37+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 81,
+      "security": 25,
+      "performance": 85,
+      "accessibility": 73,
+      "tech_count": 4
+    }
+  ],
+  "https://www.drupal.org/": [
+    {
+      "ts": "2026-07-15T04:09:58+00:00",
+      "scope": "page",
+      "overall": 70,
+      "seo": 52,
+      "security": 87,
+      "performance": 72,
+      "accessibility": 64,
+      "tech_count": 4
+    }
+  ],
+  "https://wordpress.org/": [
+    {
+      "ts": "2026-07-15T04:31:33+00:00",
+      "scope": "page",
+      "overall": 72,
+      "seo": 96,
+      "security": 42,
+      "performance": 78,
+      "accessibility": 80,
+      "tech_count": 4
+    }
+  ],
+  "https://ruggable.com/": [
+    {
+      "ts": "2026-07-15T04:31:53+00:00",
+      "scope": "page",
+      "overall": 69,
+      "seo": 100,
+      "security": 29,
+      "performance": 65,
+      "accessibility": 96,
+      "tech_count": 15
+    }
+  ],
+  "https://nextjs.org/": [
+    {
+      "ts": "2026-07-15T04:32:13+00:00",
+      "scope": "page",
+      "overall": 82,
+      "seo": 86,
+      "security": 80,
+      "performance": 75,
+      "accessibility": 90,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-15T10:56:42+00:00",
+      "scope": "page",
+      "overall": 81,
+      "seo": 86,
+      "security": 80,
+      "performance": 70,
+      "accessibility": 90,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-15T10:59:03+00:00",
+      "scope": "page",
+      "overall": 82,
+      "seo": 86,
+      "security": 80,
+      "performance": 75,
+      "accessibility": 90,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-15T10:59:38+00:00",
+      "scope": "page",
+      "overall": 82,
+      "seo": 86,
+      "security": 80,
+      "performance": 75,
+      "accessibility": 90,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-15T11:00:07+00:00",
+      "scope": "page",
+      "overall": 82,
+      "seo": 86,
+      "security": 80,
+      "performance": 75,
+      "accessibility": 90,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-15T11:00:31+00:00",
+      "scope": "page",
+      "overall": 82,
+      "seo": 86,
+      "security": 80,
+      "performance": 75,
+      "accessibility": 90,
+      "tech_count": 8
+    }
+  ],
+  "https://react.dev/": [
+    {
+      "ts": "2026-07-15T10:57:09+00:00",
+      "scope": "page",
+      "overall": 66,
+      "seo": 80,
+      "security": 35,
+      "performance": 85,
+      "accessibility": 70,
+      "tech_count": 9
+    }
+  ],
+  "https://vuejs.org/": [
+    {
+      "ts": "2026-07-15T10:57:31+00:00",
+      "scope": "page",
+      "overall": 80,
+      "seo": 86,
+      "security": 65,
+      "performance": 90,
+      "accessibility": 84,
+      "tech_count": 6
+    }
+  ],
+  "https://tailwindcss.com/": [
+    {
+      "ts": "2026-07-15T10:58:02+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 79,
+      "security": 35,
+      "performance": 90,
+      "accessibility": 59,
+      "tech_count": 13
+    }
+  ],
+  "https://vercel.com/": [
+    {
+      "ts": "2026-07-15T10:58:39+00:00",
+      "scope": "page",
+      "overall": 81,
+      "seo": 96,
+      "security": 71,
+      "performance": 70,
+      "accessibility": 90,
+      "tech_count": 8
+    }
+  ]
+}

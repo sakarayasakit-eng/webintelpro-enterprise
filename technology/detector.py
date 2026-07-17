@@ -1,0 +1,242 @@
+"""
+WebIntelPro Enterprise X
+Technology Detection Engine v5
+"""
+
+from __future__ import annotations
+
+import time
+from typing import Dict
+
+from .confidence import ConfidenceEngine
+from .fingerprints import TECH_FINGERPRINTS
+from .matcher import FingerprintMatcher
+from .models import Technology, TechnologyReport
+from .parser import HTMLParser
+from .utils import normalize_headers
+from .version import VersionEngine
+
+# Categories that map to a single "primary" field on the report.
+_PRIMARY = {"server": "server", "cms": "cms"}
+
+
+class TechnologyDetector:
+
+    MIN_CONFIDENCE = 0.30
+
+    def __init__(self):
+        self.parser = HTMLParser()
+        self.matcher = FingerprintMatcher()
+        self.confidence = ConfidenceEngine()
+        self.version = VersionEngine()
+        # Lazily-built JavaScript bundle analyzer (Phase 2A). Stays None on the
+        # default, network-free path so existing callers (and benchmark.py) are
+        # completely unaffected; only detect(analyze_js=True) constructs it.
+        self._js_analyzer = None
+        # Category lookup so an *implied* technology (one that has no direct
+        # signal on the page but is entailed by another detected tech, e.g.
+        # Next.js -> React) can be materialised with the right category.
+        self._category_by_name = {
+            rule["name"]: rule["category"] for rule in TECH_FINGERPRINTS
+        }
+
+    def detect(self, url: str, html: str = "",
+               headers: Dict[str, str] | None = None,
+               cookies: Dict[str, str] | None = None,
+               debug: bool = False,
+               analyze_js: bool = False,
+               js_config=None) -> TechnologyReport:
+        start = time.perf_counter()
+        headers = normalize_headers(headers or {})
+        cookies = cookies or {}
+
+        report = TechnologyReport(url=url)
+        report.headers = headers
+        report.cookies = cookies
+
+        parsed = self.parser.parse(html)
+        report.meta = parsed.meta
+
+        detected: Dict[str, Technology] = {}
+        # implied_name -> (best source confidence, source tech name)
+        implications: Dict[str, tuple] = {}
+
+        for rule in TECH_FINGERPRINTS:
+            matches = self.matcher.evaluate(rule, parsed, headers, cookies)
+            score = self.confidence.calculate(matches)
+            if score < self.MIN_CONFIDENCE:
+                continue
+
+            # FP guard for heuristic rules (e.g. utility-class CSS frameworks):
+            # require at least N distinct matched signals so a single generic
+            # token can't trigger a detection on its own.
+            min_ev = rule.get("min_evidence")
+            if min_ev:
+                distinct = sum(
+                    len(set(r.evidence)) for r in matches.values() if r.matched
+                )
+                if distinct < min_ev:
+                    continue
+
+            # This rule fired, so anything it entails is now supported.
+            for implied in rule.get("implies", []):
+                prev = implications.get(implied)
+                if prev is None or score > prev[0]:
+                    implications[implied] = (score, rule["name"])
+
+            tech = Technology(
+                name=rule["name"],
+                category=rule["category"],
+                confidence=score,
+                version=self._extract_version(matches),
+                evidence=self._collect_evidence(matches),
+                debug=self.confidence.breakdown(matches) if debug else None,
+            )
+
+            existing = detected.get(tech.name)
+
+            if existing is None:
+
+                detected[tech.name] = tech
+
+            else:
+
+                # Keep highest confidence
+
+                if tech.confidence > existing.confidence:
+                    existing.confidence = tech.confidence
+
+                # Keep first valid version
+
+                if existing.version is None and tech.version:
+                    existing.version = tech.version
+
+                # Merge evidence
+
+                existing.evidence.extend(tech.evidence)
+                existing.evidence = sorted(set(existing.evidence))
+
+                # Merge debug breakdowns (rule name is the same technology
+                # matched via more than one fingerprint entry)
+
+                if debug:
+                    existing.debug = {**(existing.debug or {}), **tech.debug}
+
+            # ----------------------------------------------------------
+            # Primary technology selection
+            # Always keep the highest-confidence CMS / Server
+            # ----------------------------------------------------------
+
+            field = _PRIMARY.get(rule["category"])
+
+            if field:
+
+                current = getattr(report, field)
+
+                if current is None:
+
+                     setattr(report, field, tech.name)
+
+                else:
+
+                    current_obj = detected.get(current)
+
+                    if (
+                        current_obj is None
+                        or tech.confidence > current_obj.confidence
+                     ):
+                        setattr(report, field, tech.name)
+
+        # ----------------------------------------------------------
+        # Implication pass: a detected technology can entail another that
+        # leaves no direct fingerprint of its own (meta-frameworks bundle
+        # and hash their runtime, so React/Vue markers vanish in prod).
+        # A directly-detected tech always keeps its own, stronger evidence.
+        # ----------------------------------------------------------
+        for imp_name, (src_conf, src_name) in implications.items():
+            existing = detected.get(imp_name)
+            if existing is not None:
+                continue
+            derived = round(min(src_conf, 0.95) * 0.95, 3)
+            derived = max(derived, self.MIN_CONFIDENCE)
+            detected[imp_name] = Technology(
+                name=imp_name,
+                category=self._category_by_name.get(imp_name, "javascript"),
+                confidence=derived,
+                version=None,
+                evidence=[f"implied:{src_name}"],
+            )
+
+        # ----------------------------------------------------------
+        # JavaScript bundle intelligence (Phase 2A) -- opt-in stage.
+        # Runs after headers/cookies/HTML/DOM so it only *adds* to, or
+        # reinforces, what the static pipeline already found. Disabled by
+        # default: with analyze_js=False this block is skipped entirely and
+        # detection is byte-for-byte identical to Phase 1.
+        # ----------------------------------------------------------
+        if analyze_js:
+            self._apply_js_bundles(parsed, url, detected, js_config)
+
+        for tech in detected.values():
+             tech.evidence = sorted(set(tech.evidence))
+
+        report.technologies = sorted(
+            detected.values(),
+            key=lambda t: (
+                -t.confidence,
+                t.category,
+                t.name,
+            ),
+        )
+        report.total_detected = len(report.technologies)
+        report.elapsed = round(time.perf_counter() - start, 3)
+        return report
+
+    def _apply_js_bundles(self, parsed, url, detected, js_config):
+        """Merge JavaScript-bundle detections into ``detected`` in place.
+
+        Discovers, downloads and scans the page's JS bundles via
+        :class:`technology.javascript.JSBundleAnalyzer`, then folds each
+        result into the running detection map using the same "keep highest
+        confidence, merge evidence, keep first version" rules the static
+        pipeline uses. Never raises: any failure leaves ``detected`` untouched.
+        """
+        try:
+            if self._js_analyzer is None:
+                # Imported here so the dependency (and its requests.Session)
+                # is only pulled in when the feature is actually used.
+                from .javascript import JSBundleAnalyzer
+                self._js_analyzer = JSBundleAnalyzer(
+                    confidence=self.confidence, config=js_config)
+            bundle_techs = self._js_analyzer.analyze(parsed, url)
+        except Exception:  # noqa: BLE001  -- bundle intel must fail gracefully
+            return
+
+        for tech in bundle_techs:
+            existing = detected.get(tech.name)
+            if existing is None:
+                detected[tech.name] = tech
+                continue
+            if tech.confidence > existing.confidence:
+                existing.confidence = tech.confidence
+            if existing.version is None and tech.version:
+                existing.version = tech.version
+            existing.evidence.extend(tech.evidence)
+            existing.evidence = sorted(set(existing.evidence))
+
+    def _collect_evidence(self, matches):
+        evidence = []
+        for source, result in matches.items():
+            if result.matched:
+                evidence.extend(f"{source}:{e}" for e in result.evidence)
+        return evidence
+
+    def _extract_version(self, matches):
+        for result in matches.values():
+            if not result.matched:
+                continue
+            for context in result.contexts:
+                version = self.version.extract(context)
+                if version:
+                    return version
+        return None

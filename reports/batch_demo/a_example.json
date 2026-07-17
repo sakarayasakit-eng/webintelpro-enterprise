@@ -1,0 +1,234 @@
+{
+  "url": "https://a.example",
+  "generated": "2026-07-14T09:43:05.759713Z",
+  "overall": {
+    "score": 71,
+    "grade": "C",
+    "parts": {
+      "seo": 63,
+      "security": 35,
+      "performance": 100,
+      "accessibility": 100
+    }
+  },
+  "recommendation_summary": {
+    "total": 9,
+    "by_severity": {
+      "critical": 0,
+      "high": 1,
+      "medium": 4,
+      "low": 4
+    }
+  },
+  "recommendations": [
+    {
+      "severity": "high",
+      "area": "Security",
+      "issue": "No Content-Security-Policy",
+      "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+    },
+    {
+      "severity": "medium",
+      "area": "Security",
+      "issue": "No X-Frame-Options",
+      "recommendation": "Set X-Frame-Options: SAMEORIGIN to prevent clickjacking."
+    },
+    {
+      "severity": "medium",
+      "area": "Security",
+      "issue": "No X-Content-Type-Options",
+      "recommendation": "Set X-Content-Type-Options: nosniff to block MIME sniffing."
+    },
+    {
+      "severity": "medium",
+      "area": "SEO",
+      "issue": "Missing meta description",
+      "recommendation": "Add a 120-160 character meta description for better SERP snippets."
+    },
+    {
+      "severity": "medium",
+      "area": "SEO",
+      "issue": "No viewport meta tag",
+      "recommendation": "Add a responsive viewport meta tag for mobile ranking."
+    },
+    {
+      "severity": "low",
+      "area": "Security",
+      "issue": "No Referrer-Policy",
+      "recommendation": "Add a Referrer-Policy header to limit referrer leakage."
+    },
+    {
+      "severity": "low",
+      "area": "Security",
+      "issue": "No Permissions-Policy",
+      "recommendation": "Add a Permissions-Policy header to restrict powerful browser features."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No canonical URL",
+      "recommendation": "Add a rel=canonical link to avoid duplicate-content issues."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No structured data",
+      "recommendation": "Add JSON-LD structured data to enable rich results."
+    }
+  ],
+  "technology": {
+    "url": "https://a.example",
+    "server": "Nginx",
+    "backend": null,
+    "cms": "WordPress",
+    "total_detected": 4,
+    "elapsed": 0.004,
+    "categories": {
+      "cms": [
+        "WordPress"
+      ],
+      "server": [
+        "Nginx"
+      ],
+      "security": [
+        "HSTS"
+      ],
+      "payment": [
+        "Stripe"
+      ]
+    },
+    "headers": {
+      "server": "nginx",
+      "strict-transport-security": "max-age=1",
+      "content-encoding": "gzip",
+      "cache-control": "max-age=1"
+    },
+    "cookies": {},
+    "errors": [],
+    "technologies": [
+      {
+        "name": "WordPress",
+        "category": "cms",
+        "confidence": 0.698,
+        "version": "6.4",
+        "evidence": [
+          "meta:wordpress",
+          "scripts:wp-content"
+        ]
+      },
+      {
+        "name": "Nginx",
+        "category": "server",
+        "confidence": 0.5,
+        "version": null,
+        "evidence": [
+          "headers:nginx"
+        ]
+      },
+      {
+        "name": "HSTS",
+        "category": "security",
+        "confidence": 0.5,
+        "version": null,
+        "evidence": [
+          "headers:strict-transport-security"
+        ]
+      },
+      {
+        "name": "Stripe",
+        "category": "payment",
+        "confidence": 0.45,
+        "version": "3",
+        "evidence": [
+          "scripts:js.stripe.com",
+          "scripts:stripe.com/v3"
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "title": "Site A Homepage Title Here Okay",
+    "title_length": 31,
+    "title_ok": true,
+    "meta_description": "",
+    "description_length": 0,
+    "description_ok": false,
+    "h1_count": 1,
+    "has_h1": true,
+    "multiple_h1": false,
+    "heading_count": 1,
+    "has_canonical": false,
+    "has_viewport": false,
+    "has_language": true,
+    "has_robots": false,
+    "open_graph": 0,
+    "twitter_cards": 0,
+    "json_ld": 0,
+    "scripts": 2,
+    "stylesheets": 0,
+    "images": 0,
+    "forms": 0,
+    "links": 0,
+    "score": 63,
+    "grade": "D",
+    "issues": [
+      "Missing meta description",
+      "No canonical URL",
+      "No viewport meta (mobile)",
+      "No Open Graph tags",
+      "No structured data (JSON-LD)"
+    ]
+  },
+  "security": {
+    "https": true,
+    "hsts": true,
+    "csp": false,
+    "x_frame_options": false,
+    "x_content_type": false,
+    "referrer_policy": false,
+    "permissions_policy": false,
+    "server": "nginx",
+    "powered_by": "",
+    "score": 35,
+    "grade": "F",
+    "issues": [
+      "Missing Content-Security-Policy",
+      "Missing X-Frame-Options (clickjacking)",
+      "Missing X-Content-Type-Options",
+      "Missing Referrer-Policy",
+      "Missing Permissions-Policy"
+    ]
+  },
+  "performance": {
+    "html_size": 241,
+    "scripts": 2,
+    "stylesheets": 0,
+    "images": 0,
+    "links": 0,
+    "inline_scripts": 0,
+    "resource_hints": 0,
+    "gzip": true,
+    "brotli": false,
+    "cache_control": true,
+    "score": 100,
+    "grade": "A",
+    "issues": []
+  },
+  "accessibility": {
+    "language": true,
+    "total_images": 0,
+    "missing_alt": 0,
+    "has_h1": true,
+    "heading_count": 1,
+    "skipped_heading_levels": false,
+    "forms": 0,
+    "score": 100,
+    "grade": "A",
+    "issues": []
+  },
+  "crawl": {
+    "final_url": "https://a.example",
+    "status_code": 200,
+    "elapsed": 0.05
+  }
+}

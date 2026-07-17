@@ -1,0 +1,27 @@
+"""WebIntelPro Enterprise X - Web Font / Icon Provider Fingerprints"""
+
+FINGERPRINTS = [
+    {"name": "Google Fonts", "category": "font", "headers": [], "meta": [],
+     "scripts": ["fonts.googleapis.com", "fonts.gstatic.com"],
+     "inline": ["webfont.load"], "dom": [], "cookies": [],
+     "stylesheets": ["fonts.googleapis.com"]},
+    {"name": "Adobe Fonts (Typekit)", "category": "font", "headers": [], "meta": [],
+     "scripts": ["use.typekit.net", "typekit.com"], "inline": ["typekit"], "dom": [],
+     "cookies": [], "stylesheets": ["use.typekit.net"]},
+    {"name": "Font Awesome", "category": "font", "headers": [], "meta": [],
+     "scripts": ["kit.fontawesome.com", "use.fontawesome.com"], "inline": ["fontawesome"],
+     "dom": [" fa-", "fontawesome"], "cookies": [],
+     "stylesheets": ["font-awesome", "fontawesome"]},
+    {"name": "Fonts.com", "category": "font", "headers": [], "meta": [],
+     "scripts": ["fast.fonts.net", "fonts.com"], "inline": ["mtiprojectid"], "dom": [],
+     "cookies": [], "stylesheets": ["fast.fonts.net"]},
+    {"name": "Bunny Fonts", "category": "font", "headers": [], "meta": [],
+     "scripts": ["fonts.bunny.net"], "inline": [], "dom": [], "cookies": [],
+     "stylesheets": ["fonts.bunny.net"]},
+    {"name": "Material Icons", "category": "font", "headers": [], "meta": [],
+     "scripts": [], "inline": [], "dom": ["material-icons", "material-symbols"],
+     "cookies": [], "stylesheets": ["material+icons", "material+symbols"]},
+    {"name": "Ionicons", "category": "font", "headers": [], "meta": [],
+     "scripts": ["unpkg.com/ionicons"], "inline": [], "dom": ["ion-icon"], "cookies": [],
+     "stylesheets": ["ionicons"]},
+]

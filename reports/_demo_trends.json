@@ -1,0 +1,26 @@
+{
+  "https://demo.com": [
+    {
+      "ts": "2026-07-14T10:46:39+00:00",
+      "scope": "site",
+      "overall": 61,
+      "seo": 55,
+      "security": 20,
+      "performance": 100,
+      "accessibility": 84,
+      "tech_count": 1,
+      "pages": 3
+    },
+    {
+      "ts": "2026-07-14T10:46:39+00:00",
+      "scope": "site",
+      "overall": 67,
+      "seo": 55,
+      "security": 32,
+      "performance": 100,
+      "accessibility": 84,
+      "tech_count": 1,
+      "pages": 3
+    }
+  ]
+}

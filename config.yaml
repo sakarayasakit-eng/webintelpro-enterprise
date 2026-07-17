@@ -1,0 +1,11 @@
+project:
+  name: WebIntelPro Enterprise X
+  version: '3.0'
+crawler:
+  timeout: 20
+  max_pages: 25
+  user_agent: WebIntelPro Enterprise X/3.0
+reports:
+  output: reports
+cache:
+  ttl: 3600

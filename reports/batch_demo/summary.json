@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://a.example",
+    "status": "ok",
+    "score": 71,
+    "grade": "C",
+    "seo": 63,
+    "security": 35,
+    "performance": 100,
+    "accessibility": 100,
+    "technologies": 4,
+    "server": "Nginx",
+    "cms": "WordPress",
+    "critical": 0,
+    "high": 1
+  },
+  {
+    "url": "https://b.example",
+    "status": "ok",
+    "score": 46,
+    "grade": "F",
+    "seo": 37,
+    "security": 20,
+    "performance": 65,
+    "accessibility": 75,
+    "technologies": 1,
+    "server": "Apache",
+    "cms": "",
+    "critical": 0,
+    "high": 3
+  }
+]

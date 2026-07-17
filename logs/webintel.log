@@ -1,0 +1,15 @@
+2026-07-11 13:42:18,458 | INFO | Logger working successfully
+2026-07-11 13:46:48,722 | INFO | Crawling https://example.com
+2026-07-11 13:46:49,969 | INFO | Discovered 1 pages
+2026-07-11 13:49:06,522 | INFO | Starting analysis
+2026-07-11 13:49:06,528 | INFO | Crawling https://example.com
+2026-07-11 13:49:07,682 | INFO | Discovered 1 pages
+2026-07-11 13:49:07,688 | INFO | Analysis completed
+2026-07-11 13:51:47,338 | INFO | Starting analysis
+2026-07-11 13:51:47,342 | INFO | Crawling https://example.com
+2026-07-11 13:51:48,083 | INFO | Discovered 1 pages
+2026-07-11 13:51:48,088 | INFO | Analysis completed
+2026-07-11 14:01:54,110 | INFO | Starting analysis
+2026-07-11 14:01:54,115 | INFO | Crawling https://example.com
+2026-07-11 14:01:55,648 | INFO | Discovered 1 pages
+2026-07-11 14:01:55,655 | INFO | Analysis completed

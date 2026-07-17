@@ -1,0 +1,20 @@
+# WebIntelPro Enterprise X - Python dependencies (Python 3.10+)
+
+# --- Core runtime (required by the CLI / detection pipeline) ---
+requests>=2.31.0          # HTTP crawling
+beautifulsoup4>=4.12.0    # HTML parsing
+PyYAML>=6.0               # config.yaml loading
+
+# --- Testing ---
+pytest>=8.0.0
+
+# --- Optional: JavaScript Bundle Intelligence (Phase 2A) ---
+# brotli>=1.1.0            # decode Brotli-encoded (br) JS bundles; without it
+#                         # the fetcher requests gzip/deflate and still works
+
+# --- Optional: extended reporting / crawling (planned features) ---
+# jinja2>=3.1.0           # richer HTML templating
+# openpyxl>=3.1.0         # Excel export
+# reportlab>=4.0.0        # PDF export
+# aiohttp>=3.9.0          # async / parallel crawling
+# selenium>=4.15.0        # JS-rendered crawling (needs a browser driver)

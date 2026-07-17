@@ -1,0 +1,32 @@
+"""WebIntelPro Enterprise X - Extra servers / CDN / hosting / security."""
+def s(name, cat, headers=(), scripts=(), inline=(), cookies=()):
+    return {"name": name, "category": cat, "headers": list(headers), "meta": [],
+            "scripts": list(scripts), "inline": list(inline), "dom": [], "cookies": list(cookies)}
+FINGERPRINTS = [
+    s("Google Cloud CDN", "cdn", headers=["x-goog-", "via:1.1 google"]),
+    s("Sucuri CDN", "cdn", headers=["x-sucuri-cache"]),
+    s("Section.io", "cdn", headers=["section-io"]),
+    s("Medianova", "cdn", headers=["mnc-cache"]),
+    s("CacheFly", "cdn", headers=["cachefly"]),
+    s("Edgio", "cdn", headers=["x-ec-", "edgio"]),
+    s("Cloudflare R2", "cdn", headers=["x-r2-"]),
+    s("Uploadcare", "cdn", scripts=["ucarecdn.com"]),
+    s("imgix", "cdn", scripts=["imgix.net"]),
+    s("Cloudinary", "cdn", scripts=["res.cloudinary.com"]),
+    s("OVHcloud", "hosting", headers=["ovh"]),
+    s("Hetzner", "hosting", headers=["hetzner"]),
+    s("Linode", "hosting", headers=["linode"]),
+    s("Scaleway", "hosting", headers=["scaleway", "scw-"]),
+    s("Contabo", "hosting", headers=["contabo"]),
+    s("Vultr", "hosting", headers=["vultr"]),
+    s("Firebase App Hosting", "hosting", headers=["x-firebase"]),
+    s("Deno Deploy", "hosting", headers=["server:deno"]),
+    s("Cloudflare mTLS", "security", headers=["cf-mitigated", "cf-connecting-ip"]),
+    s("StackHawk", "security", headers=["x-stackhawk"]),
+    s("Reblaze", "security", cookies=["rbzid"]),
+    s("F5 BIG-IP", "security", cookies=["bigipserver", "ts01"]),
+    s("Barracuda WAF", "security", headers=["barra_counter"], cookies=["barracuda_"]),
+    s("Fortinet FortiWeb", "security", cookies=["cookiesession1"]),
+    s("Wallarm", "security", headers=["x-wallarm"]),
+    s("ModSecurity", "security", headers=["mod_security", "x-mod-security"]),
+]

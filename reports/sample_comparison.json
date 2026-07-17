@@ -1,0 +1,192 @@
+{
+  "primary": "https://mysite.com",
+  "sites": [
+    {
+      "url": "https://mysite.com",
+      "primary": true,
+      "status": "ok",
+      "overall": 99,
+      "grade": "A",
+      "seo": 95,
+      "security": 100,
+      "performance": 100,
+      "accessibility": 100,
+      "technologies": [
+        "Content Security Policy",
+        "HSTS",
+        "Nginx",
+        "Stripe"
+      ],
+      "tech_count": 4,
+      "server": "Nginx",
+      "cms": "",
+      "recommendations": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    {
+      "url": "https://rival1.com",
+      "primary": false,
+      "status": "ok",
+      "overall": 42,
+      "grade": "F",
+      "seo": 37,
+      "security": 20,
+      "performance": 65,
+      "accessibility": 50,
+      "technologies": [
+        "Apache",
+        "Intercom"
+      ],
+      "tech_count": 2,
+      "server": "Apache",
+      "cms": "",
+      "recommendations": {
+        "critical": 0,
+        "high": 4,
+        "medium": 7,
+        "low": 6
+      }
+    },
+    {
+      "url": "https://rival2.com",
+      "primary": false,
+      "status": "ok",
+      "overall": 62,
+      "grade": "D",
+      "seo": 63,
+      "security": 35,
+      "performance": 65,
+      "accessibility": 100,
+      "technologies": [
+        "HSTS",
+        "Next.js",
+        "Vercel"
+      ],
+      "tech_count": 3,
+      "server": "",
+      "cms": "",
+      "recommendations": {
+        "critical": 0,
+        "high": 2,
+        "medium": 5,
+        "low": 4
+      }
+    }
+  ],
+  "dimensions": {
+    "overall": {
+      "winner": "https://mysite.com",
+      "ranking": [
+        {
+          "url": "https://mysite.com",
+          "score": 99
+        },
+        {
+          "url": "https://rival2.com",
+          "score": 62
+        },
+        {
+          "url": "https://rival1.com",
+          "score": 42
+        }
+      ]
+    },
+    "seo": {
+      "winner": "https://mysite.com",
+      "ranking": [
+        {
+          "url": "https://mysite.com",
+          "score": 95
+        },
+        {
+          "url": "https://rival2.com",
+          "score": 63
+        },
+        {
+          "url": "https://rival1.com",
+          "score": 37
+        }
+      ]
+    },
+    "security": {
+      "winner": "https://mysite.com",
+      "ranking": [
+        {
+          "url": "https://mysite.com",
+          "score": 100
+        },
+        {
+          "url": "https://rival2.com",
+          "score": 35
+        },
+        {
+          "url": "https://rival1.com",
+          "score": 20
+        }
+      ]
+    },
+    "performance": {
+      "winner": "https://mysite.com",
+      "ranking": [
+        {
+          "url": "https://mysite.com",
+          "score": 100
+        },
+        {
+          "url": "https://rival1.com",
+          "score": 65
+        },
+        {
+          "url": "https://rival2.com",
+          "score": 65
+        }
+      ]
+    },
+    "accessibility": {
+      "winner": "https://mysite.com",
+      "ranking": [
+        {
+          "url": "https://mysite.com",
+          "score": 100
+        },
+        {
+          "url": "https://rival2.com",
+          "score": 100
+        },
+        {
+          "url": "https://rival1.com",
+          "score": 50
+        }
+      ]
+    }
+  },
+  "tech_gap": {
+    "missing": [
+      "Apache",
+      "Intercom",
+      "Next.js",
+      "Vercel"
+    ],
+    "unique": [
+      "Content Security Policy",
+      "Nginx",
+      "Stripe"
+    ],
+    "competitor_tech": {
+      "https://rival1.com": [
+        "Apache",
+        "Intercom"
+      ],
+      "https://rival2.com": [
+        "HSTS",
+        "Next.js",
+        "Vercel"
+      ]
+    }
+  },
+  "winner": "https://mysite.com"
+}

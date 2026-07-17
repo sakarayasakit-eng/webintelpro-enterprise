@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebIntelPro Report - https://a.example</title>
+<style>
+  :root { font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  body { margin:0; background:#0f172a; color:#e2e8f0; }
+  .wrap { max-width:1000px; margin:0 auto; padding:32px 20px 64px; }
+  header { border-bottom:1px solid #1e293b; padding-bottom:16px; margin-bottom:24px; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .url { color:#94a3b8; font-size:13px; word-break:break-all; }
+  .hero { display:flex; align-items:center; gap:24px; margin:20px 0 8px; }
+  .score { font-size:52px; font-weight:700; line-height:1; color:#ca8a04; }
+  .parts { display:flex; gap:18px; flex-wrap:wrap; font-size:13px; color:#cbd5e1; }
+  .parts b { color:#f1f5f9; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:16px; }
+  .card-head { display:flex; justify-content:space-between; align-items:center; }
+  .card h3 { margin:0; font-size:15px; }
+  .badge { color:#fff; font-size:12px; font-weight:600; padding:3px 10px; border-radius:999px; }
+  ul { margin:12px 0 0; padding-left:18px; font-size:13px; color:#cbd5e1; }
+  li { margin:4px 0; } li.ok { color:#4ade80; list-style:none; margin-left:-18px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; font-size:13px; }
+  th,td { text-align:left; padding:7px 10px; border-bottom:1px solid #334155; vertical-align:top; }
+  th { color:#94a3b8; font-weight:600; }
+  .sev { color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:6px; }
+  .section-title { margin:28px 0 6px; font-size:15px; color:#f1f5f9; }
+  footer { margin-top:32px; color:#64748b; font-size:12px; }
+</style></head><body><div class="wrap">
+  <header><h1>WebIntelPro Enterprise X</h1><div class="url">https://a.example</div></header>
+  <div class="hero"><div class="score">71</div><div>
+    <div style="font-size:14px;color:#94a3b8;">Overall score &middot; grade C</div>
+    <div class="parts" style="margin-top:8px;">
+      <span>SEO <b>63</b></span><span>Security <b>35</b></span>
+      <span>Performance <b>100</b></span><span>Accessibility <b>100</b></span>
+    </div></div></div>
+  <div class="grid">
+    <div class="card"><div class="card-head"><h3>Technical SEO</h3>
+              <span class="badge" style="background:#ea580c">
+              63/100 &middot; D</span></div>
+              <ul><li>Missing meta description</li><li>No canonical URL</li><li>No viewport meta (mobile)</li><li>No Open Graph tags</li><li>No structured data (JSON-LD)</li></ul></div><div class="card"><div class="card-head"><h3>Security</h3>
+              <span class="badge" style="background:#dc2626">
+              35/100 &middot; F</span></div>
+              <ul><li>Missing Content-Security-Policy</li><li>Missing X-Frame-Options (clickjacking)</li><li>Missing X-Content-Type-Options</li><li>Missing Referrer-Policy</li><li>Missing Permissions-Policy</li></ul></div>
+    <div class="card"><div class="card-head"><h3>Performance</h3>
+              <span class="badge" style="background:#16a34a">
+              100/100 &middot; A</span></div>
+              <ul><li class='ok'>No issues found</li></ul></div><div class="card"><div class="card-head"><h3>Accessibility</h3>
+              <span class="badge" style="background:#16a34a">
+              100/100 &middot; A</span></div>
+              <ul><li class='ok'>No issues found</li></ul></div>
+  </div>
+  <div class="section-title">Prioritized recommendations</div>
+  <table><thead><tr><th>Severity</th><th>Area</th><th>Issue</th><th>Recommendation</th></tr></thead>
+  <tbody><tr><td><span class='sev' style='background:#ea580c'>HIGH</span></td><td>Security</td><td>No Content-Security-Policy</td><td>Add a CSP header to mitigate XSS and data-injection attacks.</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>Security</td><td>No X-Frame-Options</td><td>Set X-Frame-Options: SAMEORIGIN to prevent clickjacking.</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>Security</td><td>No X-Content-Type-Options</td><td>Set X-Content-Type-Options: nosniff to block MIME sniffing.</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>SEO</td><td>Missing meta description</td><td>Add a 120-160 character meta description for better SERP snippets.</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>SEO</td><td>No viewport meta tag</td><td>Add a responsive viewport meta tag for mobile ranking.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>Security</td><td>No Referrer-Policy</td><td>Add a Referrer-Policy header to limit referrer leakage.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>Security</td><td>No Permissions-Policy</td><td>Add a Permissions-Policy header to restrict powerful browser features.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>SEO</td><td>No canonical URL</td><td>Add a rel=canonical link to avoid duplicate-content issues.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>SEO</td><td>No structured data</td><td>Add JSON-LD structured data to enable rich results.</td></tr></tbody></table>
+  <div class="section-title">Detected technologies (4)</div>
+  <table><thead><tr><th>Technology</th><th>Category</th><th>Version</th><th>Confidence</th></tr></thead>
+  <tbody><tr><td>WordPress</td><td>cms</td><td>6.4</td><td>0.70</td></tr><tr><td>Nginx</td><td>server</td><td>-</td><td>0.50</td></tr><tr><td>HSTS</td><td>security</td><td>-</td><td>0.50</td></tr><tr><td>Stripe</td><td>payment</td><td>3</td><td>0.45</td></tr></tbody></table>
+  <footer>Generated by WebIntelPro Enterprise X on 2026-07-14 09:43 UTC</footer>
+</div></body></html>
