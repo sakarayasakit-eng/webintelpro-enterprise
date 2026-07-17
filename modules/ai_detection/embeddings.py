@@ -33,6 +33,12 @@ EMBEDDING_SERVICES: Tuple[Signature, ...] = (
     Signature("Nomic", AICategory.EMBEDDING, patterns=(
         "nomic-embed-text", "nomic-ai/nomic-embed", "nomic.atlas",
     )),
+    Signature("BGE", AICategory.EMBEDDING, patterns=(
+        "bge-large", "bge-base", "bge-small", "bge-m3", "baai/bge",
+    )),
+    Signature("Sentence Transformers", AICategory.EMBEDDING, patterns=(
+        "sentence-transformers", "sentence_transformers", "SentenceTransformer(",
+    )),
 )
 
 # ---------------------------------------------------------------------------

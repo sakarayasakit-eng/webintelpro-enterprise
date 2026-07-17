@@ -19,6 +19,7 @@ FRAMEWORKS: Tuple[Signature, ...] = (
     Signature("LangChain", AICategory.FRAMEWORK, patterns=(
         "from langchain", "langchain.chains", "langchain.chat_models",
         "@langchain/core", "@langchain/community", "ChatPromptTemplate(",
+        "langchain.com", "langchain-core", "langchain_openai", "langchain_anthropic",
     )),
     Signature("LangGraph", AICategory.FRAMEWORK, patterns=(
         "from langgraph", "langgraph.graph", "@langchain/langgraph",
@@ -26,11 +27,11 @@ FRAMEWORKS: Tuple[Signature, ...] = (
     )),
     Signature("LlamaIndex", AICategory.FRAMEWORK, patterns=(
         "from llama_index", "llama-index-core", "llamaindex.ts",
-        "VectorStoreIndex(", "VectorStoreIndex.from_documents",
+        "VectorStoreIndex(", "VectorStoreIndex.from_documents", "llamaindex.ai",
     )),
     Signature("Haystack", AICategory.FRAMEWORK, patterns=(
         "from haystack", "farm-haystack", "haystack.pipelines",
-        "haystack.nodes",
+        "haystack.nodes", "haystack.deepset.ai",
     )),
     Signature("Semantic Kernel", AICategory.FRAMEWORK, patterns=(
         "microsoft.semantickernel", "semantic-kernel", "semantic_kernel",
@@ -46,6 +47,17 @@ FRAMEWORKS: Tuple[Signature, ...] = (
     )),
     Signature("CrewAI", AICategory.FRAMEWORK, patterns=(
         "from crewai", "crewai.Agent(", "crewai.Crew(", "crewai.Task(",
+        "crewai.com",
+    )),
+    Signature("OpenAI Agents SDK", AICategory.FRAMEWORK, patterns=(
+        "openai-agents", "from agents import Agent", "@openai/agents",
+        "agents.Runner", "pip install openai-agents",
+    )),
+    Signature("Mastra", AICategory.FRAMEWORK, patterns=(
+        "mastra.ai", "@mastra/core", "new Mastra(",
+    )),
+    Signature("PydanticAI", AICategory.FRAMEWORK, patterns=(
+        "pydantic_ai", "pydantic-ai", "from pydantic_ai import", "ai.pydantic.dev",
     )),
 )
 
@@ -55,7 +67,7 @@ FRAMEWORKS: Tuple[Signature, ...] = (
 SDKS: Tuple[Signature, ...] = (
     Signature("Vercel AI SDK", AICategory.SDK, patterns=(
         "@ai-sdk/", "ai/react", "ai/rsc", "useChat(", "useCompletion(",
-        "streamText(", "generateText(",
+        "streamText(", "generateText(", "ai-sdk.dev", "vercel.ai",
     )),
     Signature("OpenAI SDK", AICategory.SDK, patterns=(
         "require('openai')", "require(\"openai\")", "from openai import OpenAI",

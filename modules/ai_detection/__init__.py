@@ -3,17 +3,20 @@ WebIntelPro Enterprise X
 AI Stack Detection (Phase 2D)
 
 An additive, opt-in detection capability that identifies a page's AI stack --
-hosted providers (OpenAI, Anthropic, Gemini, Groq, Mistral, Cohere, Together
-AI, Perplexity, xAI, DeepSeek), open-source model references (Llama, Qwen,
+hosted providers (OpenAI, Anthropic, Google Gemini, Vertex AI, Azure OpenAI,
+Groq, Mistral, Cohere, Together AI, Perplexity, Fireworks AI, OpenRouter,
+xAI, DeepSeek, Hugging Face), open-source model references (Llama, Qwen,
 Mistral/Mixtral, Gemma, Phi, Falcon, StableLM), local inference runners
 (Ollama, llama.cpp, LM Studio, LocalAI), orchestration frameworks (LangChain,
-LangGraph, LlamaIndex, Haystack, Semantic Kernel, DSPy, AutoGen, CrewAI),
-client SDKs (Vercel AI SDK, OpenAI/Anthropic/Google AI SDKs, Hugging Face JS,
-Transformers.js), vector databases (Pinecone, Weaviate, Milvus, Chroma,
-Qdrant, Redis Vector, pgvector), embedding services (OpenAI, Voyage AI,
-Cohere, Jina AI, Nomic) and AI infrastructure (Replicate, Modal, Baseten,
-RunPod, Hugging Face Inference Endpoints) -- from the HTML and JavaScript
-already fetched for it, plus response header names.
+LangGraph, LlamaIndex, Haystack, Semantic Kernel, DSPy, AutoGen, CrewAI,
+OpenAI Agents SDK, Mastra, PydanticAI), client SDKs (Vercel AI SDK,
+OpenAI/Anthropic/Google AI SDKs, Hugging Face JS, Transformers.js), vector
+databases (Pinecone, Weaviate, Milvus, Chroma, Qdrant, Redis Vector,
+pgvector, FAISS, LanceDB, Azure AI Search, Supabase Vector), embedding
+services (OpenAI, Voyage AI, Cohere, Jina AI, Nomic, BGE, Sentence
+Transformers) and AI infrastructure (Replicate, Modal, Baseten, RunPod,
+Hugging Face Inference Endpoints) -- from the HTML and JavaScript already
+fetched for it, plus response header names.
 
 Public surface
 --------------
