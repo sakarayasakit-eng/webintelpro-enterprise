@@ -15,6 +15,17 @@ _SEV_ORDER = ["critical", "high", "medium", "low"]
 _SEV_COLOR = {"critical": "#dc2626", "high": "#ea580c",
               "medium": "#ca8a04", "low": "#65a30d"}
 
+# Phase 2C: display order/labels for modules.api_discovery.ApiKind buckets,
+# mirroring ApiDiscoveryReport.to_dict()'s grouped keys.
+_API_KIND_ORDER = ["rest", "graphql", "openapi", "websocket", "sse",
+                   "json", "jsonrpc", "xmlrpc", "trpc", "grpc_web"]
+_API_KIND_LABELS = {
+    "rest": "REST", "graphql": "GraphQL", "openapi": "Swagger/OpenAPI",
+    "websocket": "WebSocket", "sse": "SSE", "json": "JSON",
+    "jsonrpc": "JSON-RPC", "xmlrpc": "XML-RPC", "trpc": "tRPC",
+    "grpc_web": "gRPC-Web",
+}
+
 
 class ReportGenerator:
 
@@ -52,7 +63,8 @@ class ReportGenerator:
         else:
             L.append("  None detected.")
 
-        if any(t.debug for t in tech.technologies):
+        debug_mode = any(t.debug for t in tech.technologies)
+        if debug_mode:
             L.append("")
             L.append("-" * 64)
             L.append("DETECTION EVIDENCE (debug)")
@@ -67,6 +79,40 @@ class ReportGenerator:
                     patterns = ", ".join(info["patterns"][:5])
                     L.append(f"      {source:12} weight {info['weight']:.2f}  "
                              f"matched: {patterns}{extra}")
+
+        api = tech.api_discovery
+        if api is not None:
+            L.append("")
+            L.append("-" * 64)
+            flags = []
+            if api.get("probed"):
+                flags.append("probed")
+            if api.get("truncated"):
+                flags.append("truncated")
+            suffix = f"  ({', '.join(flags)})" if flags else ""
+            L.append(f"API DISCOVERY ({api['total_findings']}){suffix}")
+            L.append("-" * 64)
+            if api["total_findings"]:
+                for kind in _API_KIND_ORDER:
+                    findings = api.get(kind) or []
+                    if not findings:
+                        continue
+                    L.append(f"  {_API_KIND_LABELS.get(kind, kind)} ({len(findings)}):")
+                    for f in findings:
+                        reach = ""
+                        if f.get("reachable") is not None:
+                            status = f" {f['http_status']}" if f.get("http_status") else ""
+                            reach = ("  [reachable" if f["reachable"] else "  [unreachable") \
+                                    + f"{status}]"
+                        L.append(f"    - {f['name']}  confidence {f['confidence']:.2f}"
+                                 f"  source {f['source']}{reach}")
+                        if debug_mode:
+                            for ev in f.get("evidence", []):
+                                L.append(f"        evidence: {ev}")
+            else:
+                L.append("  No API surface discovered.")
+            if api.get("errors"):
+                L.append(f"  errors: {', '.join(api['errors'])}")
 
         def section(title, data):
             L.append("")
