@@ -27,7 +27,7 @@ class AnalysisEngine:
                  use_cache: bool = False, site_checks: bool = False,
                  debug: bool = False, analyze_js: bool = False,
                  analyze_runtime: bool = False, analyze_api: bool = False,
-                 analyze_ai_stack: bool = False):
+                 analyze_ai_stack: bool = False, analyze_auth: bool = False):
         self.crawler = WebCrawler(timeout=timeout, user_agent=user_agent)
         self.detector = TechnologyDetector()
         self.seo = TechnicalSEOAnalyzer()
@@ -55,6 +55,12 @@ class AnalysisEngine:
         # vector databases, embedding services, infrastructure) from HTML/JS/
         # headers. Off by default; network-free, always.
         self.analyze_ai_stack = analyze_ai_stack
+        # Phase 2E: when True, detection additionally identifies the page's
+        # authentication architecture (providers, identity providers,
+        # protocols, security features) from HTML/JS/headers/cookies. Off by
+        # default; network-free, always -- no browser automation, no login,
+        # no credentials, no brute force.
+        self.analyze_auth = analyze_auth
 
     def analyze(self, url: str, html: str = "", headers: dict | None = None,
                 cookies: dict | None = None, crawl=None) -> dict:
@@ -69,7 +75,8 @@ class AnalysisEngine:
                                            debug=self.debug, analyze_js=self.analyze_js,
                                            analyze_runtime=self.analyze_runtime,
                                            analyze_api=self.analyze_api,
-                                           analyze_ai_stack=self.analyze_ai_stack)
+                                           analyze_ai_stack=self.analyze_ai_stack,
+                                           analyze_auth=self.analyze_auth)
         parsed = self.detector.parser.parse(html)
 
         seo = self.seo.analyze(parsed, url)

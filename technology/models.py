@@ -67,6 +67,14 @@ class TechnologyReport:
     # default path, so to_dict() output is unchanged when the stage is off.
     ai_stack: Optional[Dict[str, object]] = None
 
+    # Populated only when TechnologyDetector.detect(analyze_auth=True):
+    # structured authentication & identity detection intelligence
+    # (providers, identity providers, protocols, security features) as
+    # produced by modules.auth_detection.AuthDetectionReport.to_dict().
+    # Stays None on the default path, so to_dict() output is unchanged when
+    # the stage is off.
+    authentication: Optional[Dict[str, object]] = None
+
     def add(self, technology: Technology) -> None:
         self.technologies.append(technology)
 
@@ -106,4 +114,5 @@ class TechnologyReport:
             **({"runtime": self.runtime} if self.runtime else {}),
             **({"api_discovery": self.api_discovery} if self.api_discovery else {}),
             **({"ai_stack": self.ai_stack} if self.ai_stack else {}),
+            **({"authentication": self.authentication} if self.authentication else {}),
         }

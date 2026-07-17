@@ -62,6 +62,15 @@ class ConfidenceEngine:
     # existing "headers" key below rather than a new one, since it is
     # literally the same kind of signal the core engine already scores.
     "ai_evidence": 0.45,
+    # Provider/protocol/security-feature evidence mined from HTML/JS text
+    # (Phase 2E authentication & identity intelligence). Weighed like
+    # "ai_evidence"/"api_evidence": an SDK import, a known IdP host, or an
+    # OAuth/OIDC/SAML protocol marker is direct, if passive, evidence. Only
+    # findings from the auth-detection stage use this source key. Header-name
+    # and cookie-name evidence from that same stage reuse the existing
+    # "headers"/"cookies" keys below rather than new ones, since they are
+    # literally the same kind of signal the core engine already scores.
+    "auth_evidence": 0.45,
     "meta": 0.45,
     "stylesheets": 0.40,
     "inline": 0.35,

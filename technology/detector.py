@@ -46,6 +46,9 @@ class TechnologyDetector:
         # Lazily-built AI stack detector (Phase 2D). Same contract again:
         # stays None unless detect(analyze_ai_stack=True) asks for it.
         self._ai_stack_detector = None
+        # Lazily-built auth detector (Phase 2E). Same contract again: stays
+        # None unless detect(analyze_auth=True) asks for it.
+        self._auth_detector = None
         # Category lookup so an *implied* technology (one that has no direct
         # signal on the page but is entailed by another detected tech, e.g.
         # Next.js -> React) can be materialised with the right category.
@@ -64,10 +67,12 @@ class TechnologyDetector:
                analyze_api: bool = False,
                api_config=None,
                analyze_ai_stack: bool = False,
-               ai_stack_config=None) -> TechnologyReport:
+               ai_stack_config=None,
+               analyze_auth: bool = False,
+               auth_config=None) -> TechnologyReport:
         """Detect the technologies behind ``url``.
 
-        The static pipeline (headers/cookies/HTML/DOM) always runs. Four
+        The static pipeline (headers/cookies/HTML/DOM) always runs. Five
         opt-in stages may then *add* to it, and are skipped entirely when off:
 
         * ``analyze_js``      - Phase 2A: download and scan JS bundle contents.
@@ -84,8 +89,14 @@ class TechnologyDetector:
           databases, embedding services, infrastructure) from HTML/JS/headers,
           and attach structured findings to ``report.ai_stack``. Network-free,
           always.
+        * ``analyze_auth``    - Phase 2E: passively identify the page's
+          authentication architecture (providers, identity providers,
+          protocols, security features) from HTML/JS/headers/cookies, and
+          attach structured findings to ``report.authentication``.
+          Network-free, always -- no browser automation, no login, no
+          credentials, no brute force.
 
-        With all four flags False, detection is byte-for-byte identical to
+        With all five flags False, detection is byte-for-byte identical to
         Phase 1.
         """
         start = time.perf_counter()
@@ -252,6 +263,17 @@ class TechnologyDetector:
         if analyze_ai_stack:
             self._apply_ai_detection(parsed, url, headers, detected, report, ai_stack_config)
 
+        # ----------------------------------------------------------
+        # Authentication & identity intelligence (Phase 2E) -- opt-in stage.
+        # Reads HTML/JS/headers/cookies already present on the page for
+        # auth providers, identity providers, protocols and security
+        # features, independently of the other opt-in stages. Like them it
+        # only adds to what came before, and with analyze_auth=False it is
+        # skipped entirely, leaving Phase 1 behaviour byte-for-byte intact.
+        # ----------------------------------------------------------
+        if analyze_auth:
+            self._apply_auth_detection(parsed, url, headers, cookies, detected, report, auth_config)
+
         for tech in detected.values():
              tech.evidence = sorted(set(tech.evidence))
 
@@ -381,6 +403,35 @@ class TechnologyDetector:
         for tech in analysis.technologies:
             self._merge_detection(detected, tech)
         report.ai_stack = analysis.report.to_dict()
+
+    def _apply_auth_detection(self, parsed, url, headers, cookies, detected, report, auth_config):
+        """Merge auth-detection findings into ``detected`` and attach the report.
+
+        Runs :class:`modules.auth_detection.AuthDetector` over the page's
+        HTML/JS/header/cookie surface, folds any technologies it identifies
+        into the running detection map with the same merge rules the other
+        stages use, and stores the structured findings (providers, identity
+        providers, protocols, security features) on
+        ``report.authentication``. Never raises: any failure leaves both the
+        detection map and the report untouched.
+        """
+        try:
+            if self._auth_detector is None:
+                # Imported here so the sub-system is only loaded when used.
+                from modules.auth_detection import AuthDetector
+                self._auth_detector = AuthDetector(
+                    confidence=self.confidence, config=auth_config)
+            analysis = self._auth_detector.analyze(parsed, url, headers, cookies)
+        except Exception:  # noqa: BLE001 -- auth detection must fail gracefully
+            # See _apply_js_bundles: degrade gracefully, but leave a trace so a
+            # permanently broken stage is distinguishable from a clean no-op.
+            logger.warning("Auth detection failed for %s; continuing "
+                           "without auth intelligence", url, exc_info=True)
+            return
+
+        for tech in analysis.technologies:
+            self._merge_detection(detected, tech)
+        report.authentication = analysis.report.to_dict()
 
     @staticmethod
     def _merge_detection(detected, tech):

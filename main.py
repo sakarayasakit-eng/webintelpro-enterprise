@@ -83,6 +83,15 @@ def parse_args(argv=None):
                         "(LangChain, ...), SDKs, vector databases, embedding "
                         "services, infrastructure (Phase 2D; reads HTML/JS/"
                         "headers only, no extra requests)")
+    p.add_argument("--auth-detection", action="store_true",
+                   help="Also identify the page's authentication "
+                        "architecture -- providers (Auth0, Clerk, Firebase "
+                        "Auth, ...), identity providers (Okta, Azure Entra "
+                        "ID, Keycloak), protocols (OAuth2, OIDC, SAML, JWT, "
+                        "PKCE), security features (CSRF, MFA, passkeys, ...) "
+                        "(Phase 2E; passively reads HTML/JS/headers/cookies "
+                        "only -- no browser automation, no login, no "
+                        "credentials, no brute force, no extra requests)")
     return p.parse_args(argv)
 
 
@@ -127,7 +136,8 @@ def _run_single(url, args) -> int:
                             analyze_js=args.js_bundles,
                             analyze_runtime=args.runtime_analysis,
                             analyze_api=args.api_discovery,
-                            analyze_ai_stack=args.ai_detection)
+                            analyze_ai_stack=args.ai_detection,
+                            analyze_auth=args.auth_detection)
     reporter = ReportGenerator()
     try:
         result = engine.analyze_url(url)
