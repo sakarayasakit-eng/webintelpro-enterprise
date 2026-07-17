@@ -43,6 +43,9 @@ class TechnologyDetector:
         # Lazily-built API discovery orchestrator (Phase 2C). Same contract
         # again: stays None unless detect(analyze_api=True) asks for it.
         self._api_discoverer = None
+        # Lazily-built AI stack detector (Phase 2D). Same contract again:
+        # stays None unless detect(analyze_ai_stack=True) asks for it.
+        self._ai_stack_detector = None
         # Category lookup so an *implied* technology (one that has no direct
         # signal on the page but is entailed by another detected tech, e.g.
         # Next.js -> React) can be materialised with the right category.
@@ -59,10 +62,12 @@ class TechnologyDetector:
                analyze_runtime: bool = False,
                runtime_config=None,
                analyze_api: bool = False,
-               api_config=None) -> TechnologyReport:
+               api_config=None,
+               analyze_ai_stack: bool = False,
+               ai_stack_config=None) -> TechnologyReport:
         """Detect the technologies behind ``url``.
 
-        The static pipeline (headers/cookies/HTML/DOM) always runs. Three
+        The static pipeline (headers/cookies/HTML/DOM) always runs. Four
         opt-in stages may then *add* to it, and are skipped entirely when off:
 
         * ``analyze_js``      - Phase 2A: download and scan JS bundle contents.
@@ -74,8 +79,13 @@ class TechnologyDetector:
           from HTML/JS, and attach structured findings to
           ``report.api_discovery``. Network-free unless ``api_config`` opts
           into reachability probing.
+        * ``analyze_ai_stack`` - Phase 2D: identify the page's AI stack
+          (providers, open-source models, local AI, frameworks, SDKs, vector
+          databases, embedding services, infrastructure) from HTML/JS/headers,
+          and attach structured findings to ``report.ai_stack``. Network-free,
+          always.
 
-        With all three flags False, detection is byte-for-byte identical to
+        With all four flags False, detection is byte-for-byte identical to
         Phase 1.
         """
         start = time.perf_counter()
@@ -230,6 +240,18 @@ class TechnologyDetector:
         if analyze_api:
             self._apply_api_discovery(parsed, url, headers, detected, report, api_config)
 
+        # ----------------------------------------------------------
+        # AI stack detection (Phase 2D) -- opt-in stage.
+        # Reads HTML/JS/headers already present on the page for AI providers,
+        # open-source models, local AI, frameworks, SDKs, vector databases,
+        # embedding services and infrastructure, independently of the other
+        # opt-in stages. Like them it only adds to what came before, and with
+        # analyze_ai_stack=False it is skipped entirely, leaving Phase 1
+        # behaviour byte-for-byte intact.
+        # ----------------------------------------------------------
+        if analyze_ai_stack:
+            self._apply_ai_detection(parsed, url, headers, detected, report, ai_stack_config)
+
         for tech in detected.values():
              tech.evidence = sorted(set(tech.evidence))
 
@@ -330,6 +352,35 @@ class TechnologyDetector:
         for tech in analysis.technologies:
             self._merge_detection(detected, tech)
         report.api_discovery = analysis.report.to_dict()
+
+    def _apply_ai_detection(self, parsed, url, headers, detected, report, ai_stack_config):
+        """Merge AI-stack detections into ``detected`` and attach the report.
+
+        Runs :class:`modules.ai_detection.AIStackDetector` over the page's
+        HTML/JS/header surface, folds any technologies it identifies into the
+        running detection map with the same merge rules the other stages
+        use, and stores the structured findings (providers, open-source
+        models, local AI, frameworks, SDKs, vector databases, embedding
+        services, infrastructure) on ``report.ai_stack``. Never raises: any
+        failure leaves both the detection map and the report untouched.
+        """
+        try:
+            if self._ai_stack_detector is None:
+                # Imported here so the sub-system is only loaded when used.
+                from modules.ai_detection import AIStackDetector
+                self._ai_stack_detector = AIStackDetector(
+                    confidence=self.confidence, config=ai_stack_config)
+            analysis = self._ai_stack_detector.analyze(parsed, url, headers)
+        except Exception:  # noqa: BLE001 -- AI stack detection must fail gracefully
+            # See _apply_js_bundles: degrade gracefully, but leave a trace so a
+            # permanently broken stage is distinguishable from a clean no-op.
+            logger.warning("AI stack detection failed for %s; continuing "
+                           "without AI stack intelligence", url, exc_info=True)
+            return
+
+        for tech in analysis.technologies:
+            self._merge_detection(detected, tech)
+        report.ai_stack = analysis.report.to_dict()
 
     @staticmethod
     def _merge_detection(detected, tech):

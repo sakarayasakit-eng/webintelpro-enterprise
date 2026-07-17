@@ -26,6 +26,19 @@ _API_KIND_LABELS = {
     "grpc_web": "gRPC-Web",
 }
 
+# Phase 2D: display order/labels for modules.ai_detection.AICategory buckets,
+# mirroring AIDetectionReport.to_dict()'s grouped keys.
+_AI_CATEGORY_ORDER = ["providers", "open_source_models", "local_ai",
+                      "frameworks", "sdks", "vector_databases",
+                      "embedding_services", "infrastructure"]
+_AI_CATEGORY_LABELS = {
+    "providers": "Providers", "open_source_models": "Open Source Models",
+    "local_ai": "Local AI", "frameworks": "Frameworks", "sdks": "SDKs",
+    "vector_databases": "Vector Databases",
+    "embedding_services": "Embedding Services",
+    "infrastructure": "Infrastructure",
+}
+
 
 class ReportGenerator:
 
@@ -113,6 +126,32 @@ class ReportGenerator:
                 L.append("  No API surface discovered.")
             if api.get("errors"):
                 L.append(f"  errors: {', '.join(api['errors'])}")
+
+        ai_stack = tech.ai_stack
+        if ai_stack is not None:
+            L.append("")
+            L.append("-" * 64)
+            flags = ["truncated"] if ai_stack.get("truncated") else []
+            suffix = f"  ({', '.join(flags)})" if flags else ""
+            L.append(f"AI STACK ({ai_stack['total_findings']}){suffix}")
+            L.append("-" * 64)
+            if ai_stack["total_findings"]:
+                for cat in _AI_CATEGORY_ORDER:
+                    findings = ai_stack.get(cat) or []
+                    if not findings:
+                        continue
+                    L.append(f"  {_AI_CATEGORY_LABELS.get(cat, cat)} ({len(findings)}):")
+                    for f in findings:
+                        ver = f"  v{f['version']}" if f.get("version") else ""
+                        L.append(f"    - {f['name']}  confidence {f['confidence']:.2f}"
+                                 f"{ver}  source {'+'.join(f['sources'])}")
+                        if debug_mode:
+                            for ev in f.get("evidence", []):
+                                L.append(f"        evidence: {ev}")
+            else:
+                L.append("  No AI stack detected.")
+            if ai_stack.get("errors"):
+                L.append(f"  errors: {', '.join(ai_stack['errors'])}")
 
         def section(title, data):
             L.append("")

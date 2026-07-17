@@ -26,7 +26,8 @@ class AnalysisEngine:
     def __init__(self, timeout: int = 20, user_agent: str = "",
                  use_cache: bool = False, site_checks: bool = False,
                  debug: bool = False, analyze_js: bool = False,
-                 analyze_runtime: bool = False, analyze_api: bool = False):
+                 analyze_runtime: bool = False, analyze_api: bool = False,
+                 analyze_ai_stack: bool = False):
         self.crawler = WebCrawler(timeout=timeout, user_agent=user_agent)
         self.detector = TechnologyDetector()
         self.seo = TechnicalSEOAnalyzer()
@@ -49,6 +50,11 @@ class AnalysisEngine:
         # SSE) from HTML/JS. Off by default; network-free unless reachability
         # probing is separately configured on the API discovery config.
         self.analyze_api = analyze_api
+        # Phase 2D: when True, detection additionally identifies the page's AI
+        # stack (providers, open-source models, local AI, frameworks, SDKs,
+        # vector databases, embedding services, infrastructure) from HTML/JS/
+        # headers. Off by default; network-free, always.
+        self.analyze_ai_stack = analyze_ai_stack
 
     def analyze(self, url: str, html: str = "", headers: dict | None = None,
                 cookies: dict | None = None, crawl=None) -> dict:
@@ -62,7 +68,8 @@ class AnalysisEngine:
         technology = self.detector.detect(url, html, headers, cookies,
                                            debug=self.debug, analyze_js=self.analyze_js,
                                            analyze_runtime=self.analyze_runtime,
-                                           analyze_api=self.analyze_api)
+                                           analyze_api=self.analyze_api,
+                                           analyze_ai_stack=self.analyze_ai_stack)
         parsed = self.detector.parser.parse(html)
 
         seo = self.seo.analyze(parsed, url)

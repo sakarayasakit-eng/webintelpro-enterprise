@@ -59,6 +59,14 @@ class TechnologyReport:
     # default path, so to_dict() output is unchanged when the stage is off.
     api_discovery: Optional[Dict[str, object]] = None
 
+    # Populated only when TechnologyDetector.detect(analyze_ai_stack=True):
+    # structured AI-stack detection intelligence (providers, open-source
+    # models, local AI, frameworks, SDKs, vector databases, embedding
+    # services, infrastructure) as produced by
+    # modules.ai_detection.AIDetectionReport.to_dict(). Stays None on the
+    # default path, so to_dict() output is unchanged when the stage is off.
+    ai_stack: Optional[Dict[str, object]] = None
+
     def add(self, technology: Technology) -> None:
         self.technologies.append(technology)
 
@@ -97,4 +105,5 @@ class TechnologyReport:
             ],
             **({"runtime": self.runtime} if self.runtime else {}),
             **({"api_discovery": self.api_discovery} if self.api_discovery else {}),
+            **({"ai_stack": self.ai_stack} if self.ai_stack else {}),
         }

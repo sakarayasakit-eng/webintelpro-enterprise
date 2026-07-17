@@ -76,6 +76,13 @@ def parse_args(argv=None):
                         "XML-RPC/tRPC/gRPC-Web), WebSocket, SSE (Phase 2C; "
                         "reads HTML/JS only, no extra requests unless "
                         "reachability probing is separately configured)")
+    p.add_argument("--ai-detection", action="store_true",
+                   help="Also identify the page's AI stack -- providers "
+                        "(OpenAI, Anthropic, Gemini, ...), open-source "
+                        "models, local AI (Ollama, ...), frameworks "
+                        "(LangChain, ...), SDKs, vector databases, embedding "
+                        "services, infrastructure (Phase 2D; reads HTML/JS/"
+                        "headers only, no extra requests)")
     return p.parse_args(argv)
 
 
@@ -119,7 +126,8 @@ def _run_single(url, args) -> int:
                             site_checks=True, debug=args.debug,
                             analyze_js=args.js_bundles,
                             analyze_runtime=args.runtime_analysis,
-                            analyze_api=args.api_discovery)
+                            analyze_api=args.api_discovery,
+                            analyze_ai_stack=args.ai_detection)
     reporter = ReportGenerator()
     try:
         result = engine.analyze_url(url)

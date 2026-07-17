@@ -54,6 +54,14 @@ class ConfidenceEngine:
     # "api_evidence" via the same noisy-OR calculation when both fire for the
     # same endpoint (text reference AND a live probe).
     "api_probe": 0.65,
+    # Provider/framework/SDK evidence mined from HTML/JS text (Phase 2D AI
+    # stack detection). Weighed like "api_evidence": an SDK import, a known
+    # API host, or a hyphenated model-name string is direct, if passive,
+    # evidence. Only findings from the AI-stack detection stage use this
+    # source key. Header-name evidence from that same stage reuses the
+    # existing "headers" key below rather than a new one, since it is
+    # literally the same kind of signal the core engine already scores.
+    "ai_evidence": 0.45,
     "meta": 0.45,
     "stylesheets": 0.40,
     "inline": 0.35,
