@@ -70,6 +70,12 @@ def parse_args(argv=None):
                         "globals, hydration, API endpoints, runtime config, "
                         "state management, PWA (Phase 2B; no browser, no "
                         "extra requests)")
+    p.add_argument("--api-discovery", action="store_true",
+                   help="Also discover the page's API surface -- REST/JSON "
+                        "endpoints, GraphQL, Swagger/OpenAPI, RPC (JSON-RPC/"
+                        "XML-RPC/tRPC/gRPC-Web), WebSocket, SSE (Phase 2C; "
+                        "reads HTML/JS only, no extra requests unless "
+                        "reachability probing is separately configured)")
     return p.parse_args(argv)
 
 
@@ -112,7 +118,8 @@ def _run_single(url, args) -> int:
     engine = AnalysisEngine(timeout=args.timeout, use_cache=args.cache,
                             site_checks=True, debug=args.debug,
                             analyze_js=args.js_bundles,
-                            analyze_runtime=args.runtime_analysis)
+                            analyze_runtime=args.runtime_analysis,
+                            analyze_api=args.api_discovery)
     reporter = ReportGenerator()
     try:
         result = engine.analyze_url(url)

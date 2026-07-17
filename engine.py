@@ -26,7 +26,7 @@ class AnalysisEngine:
     def __init__(self, timeout: int = 20, user_agent: str = "",
                  use_cache: bool = False, site_checks: bool = False,
                  debug: bool = False, analyze_js: bool = False,
-                 analyze_runtime: bool = False):
+                 analyze_runtime: bool = False, analyze_api: bool = False):
         self.crawler = WebCrawler(timeout=timeout, user_agent=user_agent)
         self.detector = TechnologyDetector()
         self.seo = TechnicalSEOAnalyzer()
@@ -44,6 +44,11 @@ class AnalysisEngine:
         # JavaScript runtime surface (no browser, no extra requests) and
         # attaches structured findings. Off by default.
         self.analyze_runtime = analyze_runtime
+        # Phase 2C: when True, detection additionally discovers the page's
+        # API surface (REST/JSON, GraphQL, Swagger/OpenAPI, RPC, WebSocket,
+        # SSE) from HTML/JS. Off by default; network-free unless reachability
+        # probing is separately configured on the API discovery config.
+        self.analyze_api = analyze_api
 
     def analyze(self, url: str, html: str = "", headers: dict | None = None,
                 cookies: dict | None = None, crawl=None) -> dict:
@@ -56,7 +61,8 @@ class AnalysisEngine:
 
         technology = self.detector.detect(url, html, headers, cookies,
                                            debug=self.debug, analyze_js=self.analyze_js,
-                                           analyze_runtime=self.analyze_runtime)
+                                           analyze_runtime=self.analyze_runtime,
+                                           analyze_api=self.analyze_api)
         parsed = self.detector.parser.parse(html)
 
         seo = self.seo.analyze(parsed, url)

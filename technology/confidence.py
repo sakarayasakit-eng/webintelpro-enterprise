@@ -42,6 +42,18 @@ class ConfidenceEngine:
     # existing HTML/header/cookie scoring is untouched. (Weaker, inferred
     # runtime findings are graded through the existing "inline" weight.)
     "js_runtime": 0.50,
+    # Endpoint/client-library evidence mined from HTML/JS text (Phase 2C API
+    # discovery). Weighed like "js_bundle"/"js_runtime": a fetch() call site
+    # or an Apollo/Socket.IO marker is direct, if passive, evidence. Only
+    # findings from the API discovery stage use this source key.
+    "api_evidence": 0.45,
+    # Live-confirmed reachability of a candidate endpoint (Phase 2C, opt-in
+    # probing only). A non-404 HTTP response -- more so a body confirmed to
+    # be an actual Swagger/OpenAPI document -- is stronger, direct proof than
+    # any text inference, so it sits above "headers". Combines with
+    # "api_evidence" via the same noisy-OR calculation when both fire for the
+    # same endpoint (text reference AND a live probe).
+    "api_probe": 0.65,
     "meta": 0.45,
     "stylesheets": 0.40,
     "inline": 0.35,

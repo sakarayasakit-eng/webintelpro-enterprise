@@ -5,6 +5,7 @@ Technology Detection Engine v5
 
 from __future__ import annotations
 
+import logging
 import time
 from typing import Dict
 
@@ -15,6 +16,8 @@ from .models import Technology, TechnologyReport
 from .parser import HTMLParser
 from .utils import normalize_headers
 from .version import VersionEngine
+
+logger = logging.getLogger("webintelpro.detector")
 
 # Categories that map to a single "primary" field on the report.
 _PRIMARY = {"server": "server", "cms": "cms"}
@@ -37,6 +40,9 @@ class TechnologyDetector:
         # the bundle analyzer above: stays None unless detect(analyze_runtime=
         # True) asks for it, so the default path is untouched.
         self._runtime_analyzer = None
+        # Lazily-built API discovery orchestrator (Phase 2C). Same contract
+        # again: stays None unless detect(analyze_api=True) asks for it.
+        self._api_discoverer = None
         # Category lookup so an *implied* technology (one that has no direct
         # signal on the page but is entailed by another detected tech, e.g.
         # Next.js -> React) can be materialised with the right category.
@@ -51,18 +57,26 @@ class TechnologyDetector:
                analyze_js: bool = False,
                js_config=None,
                analyze_runtime: bool = False,
-               runtime_config=None) -> TechnologyReport:
+               runtime_config=None,
+               analyze_api: bool = False,
+               api_config=None) -> TechnologyReport:
         """Detect the technologies behind ``url``.
 
-        The static pipeline (headers/cookies/HTML/DOM) always runs. Two opt-in
-        stages may then *add* to it, and are skipped entirely when off:
+        The static pipeline (headers/cookies/HTML/DOM) always runs. Three
+        opt-in stages may then *add* to it, and are skipped entirely when off:
 
         * ``analyze_js``      - Phase 2A: download and scan JS bundle contents.
         * ``analyze_runtime`` - Phase 2B: read the page's runtime surface
           (globals, hydration payloads, embedded JSON) without a browser, and
           attach structured findings to ``report.runtime``.
+        * ``analyze_api``     - Phase 2C: discover the page's API surface
+          (REST/JSON endpoints, GraphQL, Swagger/OpenAPI, RPC, WebSocket, SSE)
+          from HTML/JS, and attach structured findings to
+          ``report.api_discovery``. Network-free unless ``api_config`` opts
+          into reachability probing.
 
-        With both flags False, detection is byte-for-byte identical to Phase 1.
+        With all three flags False, detection is byte-for-byte identical to
+        Phase 1.
         """
         start = time.perf_counter()
         headers = normalize_headers(headers or {})
@@ -205,6 +219,17 @@ class TechnologyDetector:
         if analyze_runtime:
             self._apply_runtime(parsed, url, detected, report, runtime_config)
 
+        # ----------------------------------------------------------
+        # API discovery (Phase 2C) -- opt-in stage.
+        # Reads HTML/JS already present on the page for REST/GraphQL/
+        # Swagger/RPC/WebSocket/SSE surface, independently of the runtime
+        # stage above. Like the other opt-in stages it only adds to what
+        # came before, and with analyze_api=False it is skipped entirely,
+        # leaving Phase 1 behaviour byte-for-byte intact.
+        # ----------------------------------------------------------
+        if analyze_api:
+            self._apply_api_discovery(parsed, url, headers, detected, report, api_config)
+
         for tech in detected.values():
              tech.evidence = sorted(set(tech.evidence))
 
@@ -238,6 +263,11 @@ class TechnologyDetector:
                     confidence=self.confidence, config=js_config)
             bundle_techs = self._js_analyzer.analyze(parsed, url)
         except Exception:  # noqa: BLE001  -- bundle intel must fail gracefully
+            # Degrade gracefully but never silently: without this the whole
+            # stage can fail permanently while every health signal (exit code,
+            # tests, benchmark recall) stays green.
+            logger.warning("JS bundle analysis failed for %s; continuing "
+                           "without bundle intelligence", url, exc_info=True)
             return
 
         for tech in bundle_techs:
@@ -262,11 +292,44 @@ class TechnologyDetector:
                     confidence=self.confidence, config=runtime_config)
             analysis = self._runtime_analyzer.analyze(parsed, url)
         except Exception:  # noqa: BLE001 -- runtime intel must fail gracefully
+            # See _apply_js_bundles: degrade gracefully, but leave a trace so a
+            # permanently broken stage is distinguishable from a clean no-op.
+            logger.warning("Runtime analysis failed for %s; continuing without "
+                           "runtime intelligence", url, exc_info=True)
             return
 
         for tech in analysis.technologies:
             self._merge_detection(detected, tech)
         report.runtime = analysis.report.to_dict()
+
+    def _apply_api_discovery(self, parsed, url, headers, detected, report, api_config):
+        """Merge API discovery detections into ``detected`` and attach the report.
+
+        Runs :class:`modules.api_discovery.ApiDiscoverer` over the page's
+        HTML/JS surface, folds any technologies it identifies into the
+        running detection map with the same merge rules the other stages
+        use, and stores the structured findings (REST/JSON endpoints,
+        GraphQL, Swagger/OpenAPI, RPC, WebSocket, SSE, plus reachability when
+        probing was enabled) on ``report.api_discovery``. Never raises: any
+        failure leaves both the detection map and the report untouched.
+        """
+        try:
+            if self._api_discoverer is None:
+                # Imported here so the sub-system is only loaded when used.
+                from modules.api_discovery import ApiDiscoverer
+                self._api_discoverer = ApiDiscoverer(
+                    confidence=self.confidence, config=api_config)
+            analysis = self._api_discoverer.analyze(parsed, url, headers)
+        except Exception:  # noqa: BLE001 -- API discovery must fail gracefully
+            # See _apply_js_bundles: degrade gracefully, but leave a trace so a
+            # permanently broken stage is distinguishable from a clean no-op.
+            logger.warning("API discovery failed for %s; continuing without "
+                           "API discovery intelligence", url, exc_info=True)
+            return
+
+        for tech in analysis.technologies:
+            self._merge_detection(detected, tech)
+        report.api_discovery = analysis.report.to_dict()
 
     @staticmethod
     def _merge_detection(detected, tech):

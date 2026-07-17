@@ -51,6 +51,14 @@ class TechnologyReport:
     # default path, so to_dict() output is unchanged when the stage is off.
     runtime: Optional[Dict[str, object]] = None
 
+    # Populated only when TechnologyDetector.detect(analyze_api=True):
+    # structured API discovery intelligence (REST/JSON endpoints, GraphQL,
+    # Swagger/OpenAPI, RPC, WebSocket, SSE -- plus reachability when probing
+    # was enabled) as produced by
+    # modules.api_discovery.ApiDiscoveryReport.to_dict(). Stays None on the
+    # default path, so to_dict() output is unchanged when the stage is off.
+    api_discovery: Optional[Dict[str, object]] = None
+
     def add(self, technology: Technology) -> None:
         self.technologies.append(technology)
 
@@ -88,4 +96,5 @@ class TechnologyReport:
                 for tech in self.technologies
             ],
             **({"runtime": self.runtime} if self.runtime else {}),
+            **({"api_discovery": self.api_discovery} if self.api_discovery else {}),
         }
