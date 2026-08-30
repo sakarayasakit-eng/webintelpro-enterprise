@@ -10,6 +10,16 @@ from __future__ import annotations
 
 SEVERITY_RANK = {"critical": 0, "high": 1, "medium": 2, "low": 3}
 
+# Confidence levels for the false-positive-control policy (see modules docs):
+#   confirmed - directly observed in a response header, DOM attribute, or
+#               other unambiguous machine-readable signal.
+#   likely    - inferred from strong but indirect evidence.
+#   possible  - a heuristic signal that correlates with the issue but can
+#               have legitimate explanations (e.g. templated content).
+#   unknown   - cannot be determined with the data this tool has access to;
+#               listed for completeness, not as a finding.
+CONFIDENCE_RANK = {"confirmed": 0, "likely": 1, "possible": 2, "unknown": 3}
+
 
 class IntelligenceEngine:
 
@@ -17,9 +27,9 @@ class IntelligenceEngine:
                   technology=None) -> list:
         recs: list = []
 
-        def add(sev, area, issue, fix):
+        def add(sev, area, issue, fix, confidence="confirmed"):
             recs.append({"severity": sev, "area": area, "issue": issue,
-                         "recommendation": fix})
+                         "recommendation": fix, "confidence": confidence})
 
         # ---- Security ----
         if not security.get("https"):
@@ -98,8 +108,9 @@ class IntelligenceEngine:
             add("low", "SEO", "No structured data",
                 "Add JSON-LD structured data to enable rich results.")
         if seo.get("thin_content"):
-            add("low", "SEO", "Thin page content",
-                "Add more substantive text content for search relevance.")
+            add("low", "SEO", "Thin page content (low word count)",
+                "Add more substantive text content for search relevance.",
+                confidence="possible")
 
         # ---- Performance ----
         if not performance.get("gzip") and not performance.get("brotli"):
@@ -120,7 +131,7 @@ class IntelligenceEngine:
         if performance.get("redirects", 0) >= 2:
             add("low", "Performance", f"Redirect chain ({performance['redirects']} hops)",
                 "Point links directly at the final URL to avoid redirect latency.")
-        if performance.get("http_version") in ("1.0", "1.1"):
+        if performance.get("http_version_reliable") and performance.get("http_version") in ("1.0", "1.1"):
             add("low", "Performance", f"Legacy HTTP/{performance['http_version']}",
                 "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery.")
 
@@ -156,18 +167,20 @@ class IntelligenceEngine:
     def site_recommendations(self, site: dict) -> list:
         """Recommendations derived from live site checks (robots/sitemap/TLS)."""
         recs = []
-        def add(sev, area, issue, fix):
+        def add(sev, area, issue, fix, confidence="confirmed"):
             recs.append({"severity": sev, "area": area, "issue": issue,
-                         "recommendation": fix})
+                         "recommendation": fix, "confidence": confidence})
         robots = site.get("robots", {})
         sitemap = site.get("sitemap", {})
         tls = site.get("tls", {})
         if robots and not robots.get("exists"):
             add("low", "SEO", "No robots.txt",
-                "Add a robots.txt to guide crawlers and reference your sitemap.")
+                "Add a robots.txt to guide crawlers and reference your sitemap.",
+                confidence="confirmed")
         if sitemap and not sitemap.get("exists"):
-            add("low", "SEO", "No sitemap.xml",
-                "Publish an XML sitemap and reference it from robots.txt.")
+            add("low", "SEO", "No sitemap.xml (not found at the discovered location)",
+                "Publish an XML sitemap and reference it from robots.txt.",
+                confidence="likely")
         if tls.get("checked"):
             days = tls.get("expires_in_days")
             if days is not None:

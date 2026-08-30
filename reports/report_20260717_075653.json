@@ -1,0 +1,372 @@
+{
+  "url": "https://github.com/",
+  "generated": "2026-07-17T14:56:53.955326Z",
+  "overall": {
+    "score": 71,
+    "grade": "C",
+    "parts": {
+      "seo": 80,
+      "security": 77,
+      "performance": 57,
+      "accessibility": 70
+    }
+  },
+  "recommendation_summary": {
+    "total": 12,
+    "by_severity": {
+      "critical": 0,
+      "high": 1,
+      "medium": 4,
+      "low": 7
+    }
+  },
+  "recommendations": [
+    {
+      "severity": "high",
+      "area": "Accessibility",
+      "issue": "17/24 images missing alt text",
+      "recommendation": "Add descriptive alt attributes (empty alt for decorative images)."
+    },
+    {
+      "severity": "medium",
+      "area": "Security",
+      "issue": "CSP allows unsafe-inline / unsafe-eval",
+      "recommendation": "Tighten the CSP; remove unsafe-inline/unsafe-eval and use nonces or hashes."
+    },
+    {
+      "severity": "medium",
+      "area": "Security",
+      "issue": "1 cookie(s) missing security flags",
+      "recommendation": "Set Secure, HttpOnly and SameSite on session/sensitive cookies."
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "High script count (73)",
+      "recommendation": "Bundle, defer, or code-split scripts to reduce blocking requests."
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "1 form field(s) without a label",
+      "recommendation": "Associate a <label> (or aria-label) with every form control."
+    },
+    {
+      "severity": "low",
+      "area": "Security",
+      "issue": "No Permissions-Policy",
+      "recommendation": "Add a Permissions-Policy header to restrict powerful browser features."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 61 chars",
+      "recommendation": "Aim for a 30-60 character title."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Multiple H1 headings (4)",
+      "recommendation": "Use a single H1 per page for a clear document outline."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No structured data",
+      "recommendation": "Add JSON-LD structured data to enable rich results."
+    },
+    {
+      "severity": "low",
+      "area": "Performance",
+      "issue": "Many third-party resources (124)",
+      "recommendation": "Audit third-party scripts; lazy-load or remove non-essential ones."
+    },
+    {
+      "severity": "low",
+      "area": "Performance",
+      "issue": "Legacy HTTP/1.1",
+      "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No sitemap.xml",
+      "recommendation": "Publish an XML sitemap and reference it from robots.txt."
+    }
+  ],
+  "technology": {
+    "url": "https://github.com/",
+    "server": null,
+    "backend": null,
+    "cms": "Contentful",
+    "total_detected": 8,
+    "elapsed": 1.387,
+    "categories": {
+      "hosting": [
+        "GitHub Pages",
+        "Microsoft Azure"
+      ],
+      "security": [
+        "Content Security Policy",
+        "HSTS"
+      ],
+      "javascript": [
+        "React",
+        "Turbo"
+      ],
+      "cms": [
+        "Contentful"
+      ],
+      "font": [
+        "Ionicons"
+      ]
+    },
+    "headers": {
+      "date": "Fri, 17 Jul 2026 14:56:48 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "vary": "X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With, Accept-Language, Sec-Fetch-Site,Accept-Encoding, Accept, X-Requested-With",
+      "content-language": "en-US",
+      "etag": "W/\"d8624f0501cf4493af1c44467e5b8be7\"",
+      "cache-control": "max-age=0, private, must-revalidate",
+      "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+      "x-frame-options": "deny",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "0",
+      "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+      "content-security-policy": "default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com wss://production-copilot-host.webpubsub.azure.com edge.fullstory.com rs.fullstory.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com www.youtube-nocookie.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com explore-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com images.ctfassets.net/8aevphvgewt8/; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com assets.ctfassets.net/8aevphvgewt8/ videos.ctfassets.net/8aevphvgewt8/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/",
+      "server": "github.com",
+      "content-encoding": "gzip",
+      "accept-ranges": "bytes",
+      "set-cookie": "_gh_sess=b%2FfzDOf1TBhc48fWh8RBlPl44MyUJwdpvWu5DodtzBJ7rV%2BnZNy2eOs%2FbDDMV031Ft%2Bbhbe7V%2FyWrSThxmoGvYAkhMPrxkE1n6o8%2F9fYi%2F9tL19D%2B6NbQcDS8X8cOzFq0AOxiam2f156HloQWdhreXRymupE%2FHUO%2BoR6kAY2stodPfqv6dExpAdohrYd4KU%2BSR712X2xAlW3we2YBkibHP2knGq%2FRQgunCbG7lRGHN5IJ2MxBoo0XUKJ5ws2F8qgpJbpMXpw2IfoZKUklAeHEw%3D%3D--eVjDO1zpX1TWQcn3--7gvplyNW%2BIbeEKWVuXaEqQ%3D%3D; path=/; HttpOnly; secure; SameSite=Lax, _octo=GH1.1.677552677.1784300210; expires=Sat, 17 Jul 2027 14:56:50 GMT; domain=.github.com; path=/; secure; SameSite=Lax, logged_in=no; expires=Sat, 17 Jul 2027 14:56:50 GMT; domain=.github.com; path=/; HttpOnly; secure; SameSite=Lax",
+      "x-github-request-id": "4CA0:CD1B8:68BA7:741F8:6A5A42B2",
+      "transfer-encoding": "chunked"
+    },
+    "cookies": {
+      "_gh_sess": "b%2FfzDOf1TBhc48fWh8RBlPl44MyUJwdpvWu5DodtzBJ7rV%2BnZNy2eOs%2FbDDMV031Ft%2Bbhbe7V%2FyWrSThxmoGvYAkhMPrxkE1n6o8%2F9fYi%2F9tL19D%2B6NbQcDS8X8cOzFq0AOxiam2f156HloQWdhreXRymupE%2FHUO%2BoR6kAY2stodPfqv6dExpAdohrYd4KU%2BSR712X2xAlW3we2YBkibHP2knGq%2FRQgunCbG7lRGHN5IJ2MxBoo0XUKJ5ws2F8qgpJbpMXpw2IfoZKUklAeHEw%3D%3D--eVjDO1zpX1TWQcn3--7gvplyNW%2BIbeEKWVuXaEqQ%3D%3D",
+      "_octo": "GH1.1.677552677.1784300210",
+      "logged_in": "no"
+    },
+    "errors": [],
+    "technologies": [
+      {
+        "name": "GitHub Pages",
+        "category": "hosting",
+        "confidence": 0.6,
+        "version": null,
+        "evidence": [
+          "headers:server:github.com"
+        ]
+      },
+      {
+        "name": "Microsoft Azure",
+        "category": "hosting",
+        "confidence": 0.6,
+        "version": null,
+        "evidence": [
+          "headers:azure"
+        ]
+      },
+      {
+        "name": "Content Security Policy",
+        "category": "security",
+        "confidence": 0.6,
+        "version": null,
+        "evidence": [
+          "headers:content-security-policy"
+        ]
+      },
+      {
+        "name": "HSTS",
+        "category": "security",
+        "confidence": 0.6,
+        "version": null,
+        "evidence": [
+          "headers:strict-transport-security"
+        ]
+      },
+      {
+        "name": "React",
+        "category": "javascript",
+        "confidence": 0.5,
+        "version": null,
+        "evidence": [
+          "scripts:react"
+        ]
+      },
+      {
+        "name": "Contentful",
+        "category": "cms",
+        "confidence": 0.3,
+        "version": null,
+        "evidence": [
+          "html:ctfassets.net"
+        ]
+      },
+      {
+        "name": "Ionicons",
+        "category": "font",
+        "confidence": 0.3,
+        "version": null,
+        "evidence": [
+          "dom:ion-icon"
+        ]
+      },
+      {
+        "name": "Turbo",
+        "category": "javascript",
+        "confidence": 0.3,
+        "version": null,
+        "evidence": [
+          "dom:data-turbo"
+        ]
+      }
+    ],
+    "ai_stack": {
+      "url": "https://github.com/",
+      "total_findings": 0,
+      "elapsed": 0.093,
+      "truncated": false,
+      "errors": [],
+      "providers": [],
+      "open_source_models": [],
+      "local_ai": [],
+      "frameworks": [],
+      "sdks": [],
+      "vector_databases": [],
+      "embedding_services": [],
+      "infrastructure": []
+    },
+    "authentication": {
+      "url": "https://github.com/",
+      "total_findings": 0,
+      "elapsed": 0.052,
+      "truncated": false,
+      "errors": [],
+      "providers": [],
+      "identity_providers": [],
+      "protocols": [],
+      "security_features": []
+    }
+  },
+  "seo": {
+    "title": "GitHub \u00b7 Change is constant. GitHub keeps you ahead. \u00b7 GitHub",
+    "title_length": 61,
+    "title_ok": false,
+    "meta_description": "Join the world's most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.",
+    "description_length": 186,
+    "description_ok": false,
+    "h1_count": 4,
+    "has_h1": true,
+    "multiple_h1": true,
+    "heading_count": 30,
+    "has_canonical": true,
+    "canonical_absolute": true,
+    "has_viewport": true,
+    "has_language": true,
+    "has_robots": false,
+    "noindex": false,
+    "nofollow": false,
+    "open_graph": 7,
+    "og_complete": true,
+    "twitter_cards": 5,
+    "has_twitter_card": true,
+    "json_ld": 0,
+    "hreflang": 8,
+    "word_count": 8020,
+    "thin_content": false,
+    "scripts": 73,
+    "stylesheets": 27,
+    "images": 24,
+    "forms": 5,
+    "links": 143,
+    "score": 80,
+    "grade": "B",
+    "issues": [
+      "Title length 61 chars (aim 30-60)",
+      "Meta description 186 chars (aim 120-160)",
+      "Multiple H1 headings (4)",
+      "No structured data (JSON-LD)"
+    ]
+  },
+  "security": {
+    "https": true,
+    "hsts": true,
+    "csp": true,
+    "x_frame_options": true,
+    "x_content_type": true,
+    "referrer_policy": true,
+    "permissions_policy": false,
+    "server": "github.com",
+    "powered_by": "",
+    "hsts_max_age": 31536000,
+    "hsts_subdomains": true,
+    "csp_unsafe": true,
+    "insecure_cookies": [
+      "_octo (missing HttpOnly)"
+    ],
+    "mixed_content": 0,
+    "score": 77,
+    "grade": "C",
+    "issues": [
+      "Missing Permissions-Policy",
+      "CSP uses unsafe-inline",
+      "1 cookie(s) missing security flags"
+    ]
+  },
+  "performance": {
+    "html_size": 577222,
+    "scripts": 73,
+    "stylesheets": 27,
+    "images": 24,
+    "links": 143,
+    "inline_scripts": 6,
+    "resource_hints": 8,
+    "iframes": 0,
+    "gzip": true,
+    "brotli": false,
+    "cache_control": true,
+    "third_party": 124,
+    "total_resources": 124,
+    "ttfb": 0.707,
+    "http_version": "1.1",
+    "redirects": 0,
+    "score": 57,
+    "grade": "F",
+    "issues": [
+      "Many external scripts (73)",
+      "Many stylesheets (27)",
+      "Many third-party resources (124)",
+      "Legacy HTTP/1.1 (no HTTP/2+)",
+      "Elevated TTFB (0.71s)"
+    ]
+  },
+  "accessibility": {
+    "language": true,
+    "total_images": 24,
+    "missing_alt": 17,
+    "has_h1": true,
+    "heading_count": 30,
+    "skipped_heading_levels": false,
+    "forms": 5,
+    "inputs": 7,
+    "unlabelled_inputs": 1,
+    "has_main": true,
+    "landmark_count": 6,
+    "aria_count": 291,
+    "skip_link": true,
+    "links_without_text": 0,
+    "buttons_without_text": 2,
+    "score": 70,
+    "grade": "C",
+    "issues": [
+      "17/24 images missing alt text",
+      "1 form field(s) without a label",
+      "2 button(s) without discernible text"
+    ]
+  },
+  "crawl": {
+    "final_url": "https://github.com/",
+    "status_code": 200,
+    "elapsed": 0.707233
+  }
+}

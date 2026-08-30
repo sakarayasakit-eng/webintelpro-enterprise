@@ -632,6 +632,180 @@ class ReportGenerator:
         with open(path, "w", encoding="utf-8") as f:
             f.write(doc)
 
+    # ================================================================= diff
+    def diff_console_str(self, d: dict) -> str:
+        L = []
+        bar = "=" * 72
+        L.append(bar)
+        mode_label = "Site-wide" if d["mode"] == "site" else "Single-page"
+        L.append(f"  WebIntelPro Enterprise X  -  Scan Diff ({mode_label})")
+        L.append(bar)
+        L.append(f"Before : {d['before_url']}")
+        L.append(f"After  : {d['after_url']}")
+        L.append("")
+        L.append(f"{'DIMENSION':14} {'BEFORE':>7} {'AFTER':>7} {'DELTA':>7}")
+        L.append("-" * 72)
+        for dim, sc in d["scores"].items():
+            delta = sc["delta"]
+            sign = "+" if isinstance(delta, (int, float)) and delta >= 0 else ""
+            L.append(f"{dim:14} {str(sc['before']):>7} {str(sc['after']):>7} "
+                     f"{sign}{delta if delta is not None else '?':>6}")
+
+        if d["mode"] == "site":
+            p = d["pages"]
+            L.append("")
+            L.append(f"Pages ok: {p['before_ok']} -> {p['after_ok']}   "
+                     f"crawled: {p['before_crawled']} -> {p['after_crawled']}")
+
+        tech = d["technologies"]
+        L.append("")
+        L.append(f"TECHNOLOGIES  +{len(tech['added'])} / -{len(tech['removed'])}  "
+                 f"({tech['unchanged_count']} unchanged)")
+        for t in tech["added"]:
+            name = t if isinstance(t, str) else t["name"]
+            flag = "  [near detection threshold -- may be noise]" \
+                if isinstance(t, dict) and t.get("near_threshold") else ""
+            L.append(f"  + {name}{flag}")
+        for t in tech["removed"]:
+            name = t if isinstance(t, str) else t["name"]
+            flag = "  [near detection threshold -- may be noise]" \
+                if isinstance(t, dict) and t.get("near_threshold") else ""
+            L.append(f"  - {name}{flag}")
+        for c in tech.get("confidence_changed", []):
+            L.append(f"  ~ {c['name']}  confidence {c['confidence_before']:.2f} -> "
+                     f"{c['confidence_after']:.2f} ({c['delta']:+.2f})")
+
+        if d["mode"] == "page":
+            headers = d["security_headers"]
+            L.append("")
+            L.append(f"SECURITY HEADERS ({len(headers)} changed)")
+            for h in headers:
+                L.append(f"  {h['header']}: {h['change']} "
+                         f"({h['before']} -> {h['after']})")
+
+        recs = d["recommendations"]
+        L.append("")
+        L.append(f"RECOMMENDATIONS  +{len(recs['new'])} new / "
+                 f"-{len(recs['resolved'])} resolved  "
+                 f"({len(recs['severity_changed'])} severity changed)")
+        for r in recs["new"]:
+            L.append(f"  + [{r['severity'].upper()}] {r['area']}: {r['issue']}")
+        for r in recs["resolved"]:
+            L.append(f"  - [{r['severity'].upper()}] {r['area']}: {r['issue']}")
+        for c in recs["severity_changed"]:
+            L.append(f"  ~ {c['area']}: {c['issue']}  "
+                     f"{c['severity_before']} -> {c['severity_after']}")
+
+        if d["mode"] == "page":
+            opt = d["optional_fields"]
+            shown = {k: v for k, v in opt.items() if v.get("status") != "absent_both"}
+            if shown:
+                L.append("")
+                L.append("PHASE 2 FIELDS (ai_stack / api_discovery / authentication / runtime)")
+                for field, v in shown.items():
+                    if v["status"] in ("added_field", "removed_field"):
+                        L.append(f"  {field}: {v['status']} -- {v['note']}")
+                    else:
+                        L.append(f"  {field}: +{len(v['added'])} / -{len(v['removed'])} "
+                                 f"({len(v['confidence_changed'])} confidence changed)")
+        else:
+            sc = d.get("site_checks", {})
+            if sc.get("status") == "compared":
+                L.append("")
+                L.append("SITE CHECKS")
+                L.append(f"  robots.txt exists: {sc['robots_exists']['before']} -> "
+                         f"{sc['robots_exists']['after']}")
+                L.append(f"  sitemap exists   : {sc['sitemap_exists']['before']} -> "
+                         f"{sc['sitemap_exists']['after']}")
+                L.append(f"  TLS protocol     : {sc['tls_protocol']['before']} -> "
+                         f"{sc['tls_protocol']['after']}")
+            v = d.get("vitals", {})
+            if v.get("status") == "compared" and v.get("ratings"):
+                L.append("")
+                L.append("CORE WEB VITALS (start page)")
+                for metric, r in v["ratings"].items():
+                    L.append(f"  {metric.upper()}: {r['before']} -> {r['after']}")
+
+        L.append(bar)
+        return "\n".join(L)
+
+    def diff_console(self, d: dict) -> None:
+        print(self.diff_console_str(d))
+
+    def diff_json(self, d: dict) -> str:
+        return json.dumps(d, indent=2)
+
+    def save_diff_json(self, d: dict, path: str) -> None:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(self.diff_json(d))
+
+    def save_diff_html(self, d: dict, path: str) -> None:
+        esc = lambda x: _html.escape(str(x))
+
+        score_rows = "".join(
+            f"<tr><td>{esc(dim)}</td><td>{esc(sc['before'])}</td><td>{esc(sc['after'])}</td>"
+            f"<td style='{'color:#4ade80' if (sc['delta'] or 0) >= 0 else 'color:#f87171'}'>"
+            f"{'+' if (sc['delta'] or 0) >= 0 else ''}{esc(sc['delta'])}</td></tr>"
+            for dim, sc in d["scores"].items())
+
+        tech = d["technologies"]
+        def tech_name(t):
+            return t if isinstance(t, str) else t["name"]
+        added_li = "".join(f"<li>+ {esc(tech_name(t))}</li>" for t in tech["added"]) or "<li class='ok'>none</li>"
+        removed_li = "".join(f"<li>- {esc(tech_name(t))}</li>" for t in tech["removed"]) or "<li class='ok'>none</li>"
+
+        recs = d["recommendations"]
+        new_li = "".join(
+            f"<li>[{esc(r['severity'].upper())}] {esc(r['area'])}: {esc(r['issue'])}</li>"
+            for r in recs["new"]) or "<li class='ok'>none</li>"
+        resolved_li = "".join(
+            f"<li>[{esc(r['severity'].upper())}] {esc(r['area'])}: {esc(r['issue'])}</li>"
+            for r in recs["resolved"]) or "<li class='ok'>none</li>"
+
+        headers_html = ""
+        if d["mode"] == "page":
+            hdr_rows = "".join(
+                f"<tr><td>{esc(h['header'])}</td><td>{esc(h['change'])}</td>"
+                f"<td>{esc(h['before'])} -&gt; {esc(h['after'])}</td></tr>"
+                for h in d["security_headers"]) or "<tr><td colspan='3'>No changes</td></tr>"
+            headers_html = f"""
+ <h2>Security headers</h2>
+ <table><thead><tr><th>Header</th><th>Change</th><th>Before -&gt; After</th></tr></thead>
+ <tbody>{hdr_rows}</tbody></table>"""
+
+        doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebIntelPro Diff - {esc(d['before_url'])}</title>
+<style>
+ body{{margin:0;background:#0f172a;color:#e2e8f0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;}}
+ .wrap{{max-width:1000px;margin:0 auto;padding:32px 20px 64px;}} h1{{font-size:20px;}}
+ h2{{font-size:15px;margin-top:26px;}} table{{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px;}}
+ th,td{{text-align:left;padding:7px 10px;border-bottom:1px solid #334155;}} th{{color:#94a3b8;}}
+ .cols{{display:grid;grid-template-columns:1fr 1fr;gap:16px;}}
+ .card{{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:16px;}}
+ ul{{margin:8px 0 0;padding-left:18px;font-size:13px;}} li.ok{{color:#4ade80;list-style:none;margin-left:-18px;}}
+ footer{{margin-top:28px;color:#64748b;font-size:12px;}}
+</style></head><body><div class="wrap">
+ <h1>Scan Diff ({esc('Site-wide' if d['mode'] == 'site' else 'Single-page')})</h1>
+ <div style="color:#94a3b8;font-size:13px;">{esc(d['before_url'])} &rarr; {esc(d['after_url'])}</div>
+ <h2>Scores</h2>
+ <table><thead><tr><th>Dimension</th><th>Before</th><th>After</th><th>Delta</th></tr></thead>
+ <tbody>{score_rows}</tbody></table>
+ <h2>Technologies</h2>
+ <div class="cols">
+   <div class="card"><b>Added</b><ul>{added_li}</ul></div>
+   <div class="card"><b>Removed</b><ul>{removed_li}</ul></div>
+ </div>{headers_html}
+ <h2>Recommendations</h2>
+ <div class="cols">
+   <div class="card"><b>New</b><ul>{new_li}</ul></div>
+   <div class="card"><b>Resolved</b><ul>{resolved_li}</ul></div>
+ </div>
+ <footer>Generated by WebIntelPro Enterprise X on {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}</footer>
+</div></body></html>"""
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(doc)
+
     # ============================================================ site crawl
     def site_console_str(self, site: dict) -> str:
         L = []
@@ -664,8 +838,86 @@ class ReportGenerator:
         L.append("")
         L.append("TOP RECURRING ISSUES")
         for r in site["recommendations"][:10]:
+            dist = r.get("distribution")
+            dist_s = f"  [count range {dist['min']}-{dist['max']}]" if dist else ""
             L.append(f"  [{r['severity'].upper():8}] {r['area']}: {r['issue']}"
-                     f"  (on {r['pages_affected']} page(s))")
+                     f"  (on {r['pages_affected']} page(s)){dist_s}")
+
+        rel = site.get("crawl_reliability", {})
+        if rel:
+            L.append("")
+            L.append(f"CRAWL RELIABILITY  attempted {rel.get('attempted', 0)}  |  "
+                     f"successful {rel.get('successful', 0)}  |  failed {rel.get('failed', 0)}")
+            for e in rel.get("errors", [])[:10]:
+                L.append(f"  [FAILED] {e['url']} -- {e.get('error_detail', e.get('status',''))}")
+
+        dup = site.get("duplicate_content", {})
+        if dup:
+            s = dup.get("summary", {})
+            L.append("")
+            L.append(f"DUPLICATE / NEAR-DUPLICATE CONTENT (heuristic, k-shingle Jaccard)")
+            L.append(f"  clusters found: {s.get('clusters_found', 0)}  "
+                     f"(HIGH {s.get('high_risk_clusters', 0)}, "
+                     f"MEDIUM {s.get('medium_risk_clusters', 0)}, "
+                     f"LOW {s.get('low_risk_clusters', 0)})  "
+                     f"pages in a cluster: {s.get('pages_in_any_cluster', 0)}/{s.get('total_pages_analyzed', 0)}")
+            for c in dup.get("clusters", [])[:5]:
+                L.append(f"    [{c['risk']}] {c['size']} pages, {c['similarity_pct']}% similar, "
+                         f"template: {c['template_guess']}")
+
+        idx = site.get("indexability", {})
+        if idx:
+            qv = idx.get("query_variants", {})
+            L.append("")
+            L.append(f"INDEXABILITY  unique normalized paths: {qv.get('unique_normalized_paths', 0)} "
+                     f"vs {qv.get('pages_analyzed', 0)} pages crawled  |  "
+                     f"paths with query variants: {qv.get('paths_with_query_variants', 0)}")
+            for g in qv.get("groups", [])[:5]:
+                L.append(f"    [{g['risk']}] {g['path']}  {g['variant_count']} variants  -- {g['note']}")
+            can = idx.get("canonicals", {})
+            L.append(f"  canonicals: {can.get('self_canonical_count', 0)} self, "
+                     f"{can.get('points_elsewhere_count', 0)} point elsewhere, "
+                     f"{can.get('no_canonical_count', 0)} missing, "
+                     f"{len(can.get('unreciprocated_canonicals', []))} unreciprocated")
+
+        ads = site.get("adsense_readiness", {})
+        if ads:
+            L.append("")
+            L.append("MONETIZATION / ADSENSE READINESS -- OBSERVABLE RISK FACTORS ONLY")
+            L.append(f"  {ads.get('disclaimer', '')}")
+            for f in ads.get("factors", []):
+                L.append(f"    [{f['severity'].upper()}] {f['factor']}: {f['detail']} "
+                         f"(confidence: {f['confidence']})")
+
+        # Present only when SiteCrawler(site_checks=True) was used -- see
+        # sitecrawl.py: run once for the whole crawl, not once per page.
+        sc = site.get("site_checks")
+        if sc:
+            L.append("")
+            L.append("SITE CHECKS")
+            rb = sc.get("robots", {}); sm = sc.get("sitemap", {}); tls = sc.get("tls", {})
+            L.append(f"  robots.txt : {'found' if rb.get('exists') else 'missing'}"
+                     f" ({rb.get('disallow', 0)} disallow rules)")
+            L.append(f"  sitemap    : {'found' if sm.get('exists') else 'missing'}"
+                     f" ({sm.get('urls', 0)} URLs)")
+            if tls.get("checked"):
+                exp = tls.get("expires_in_days")
+                L.append(f"  TLS        : {tls.get('protocol','')}"
+                         + (f", cert expires in {exp} days" if exp is not None else ""))
+
+        # Present only when SiteCrawler(measure_vitals=True) was used --
+        # measures the start URL only (see sitecrawl.py's __init__ comment).
+        v = site.get("vitals")
+        if v:
+            L.append("")
+            L.append("CORE WEB VITALS (start page only)")
+            if not v.get("available"):
+                L.append(f"  unavailable - {v.get('reason','')}")
+            else:
+                for k, m in v["metrics"].items():
+                    unit = "" if k == "cls" else "ms"
+                    L.append(f"  {k.upper():5}: {m['value']}{unit}  ({m['rating']})")
+
         L.append(bar)
         return "\n".join(L)
 
@@ -690,6 +942,56 @@ class ReportGenerator:
             f"<tr><td>{esc(r['severity'].upper())}</td><td>{esc(r['area'])}</td>"
             f"<td>{esc(r['issue'])}</td><td>{r['pages_affected']}</td></tr>"
             for r in site["recommendations"][:25]) or "<tr><td colspan='4'>None</td></tr>"
+
+        dup = site.get("duplicate_content", {})
+        dup_rows = "".join(
+            f"<tr><td>{c['risk']}</td><td>{c['size']}</td><td>{c['similarity_pct']}%</td>"
+            f"<td>{esc(c['template_guess'])}</td><td>{esc(c['confidence'])}</td></tr>"
+            for c in dup.get("clusters", [])[:25]) or "<tr><td colspan='5'>No clusters found</td></tr>"
+
+        idx = site.get("indexability", {})
+        qv_rows = "".join(
+            f"<tr><td>{g['risk']}</td><td>{esc(g['path'])}</td><td>{g['variant_count']}</td>"
+            f"<td>{esc(g['note'])}</td></tr>"
+            for g in idx.get("query_variants", {}).get("groups", [])[:25]
+        ) or "<tr><td colspan='4'>No query-parameter variant groups found</td></tr>"
+
+        ads = site.get("adsense_readiness", {})
+        ads_rows = "".join(
+            f"<tr><td>{f['severity'].upper()}</td><td>{esc(f['factor'])}</td>"
+            f"<td>{esc(f['detail'])}</td><td>{esc(f['confidence'])}</td></tr>"
+            for f in ads.get("factors", [])
+        ) or "<tr><td colspan='4'>No risk factors flagged</td></tr>"
+
+        rel = site.get("crawl_reliability", {})
+
+        sc = site.get("site_checks") or {}
+        site_checks_html = ""
+        if sc:
+            rb = sc.get("robots", {}); sm = sc.get("sitemap", {}); tls = sc.get("tls", {})
+            exp = tls.get("expires_in_days")
+            site_checks_html = f"""
+ <h2>Site checks</h2>
+ <div class="avg">robots.txt <b>{'found' if rb.get('exists') else 'missing'}</b>
+   ({rb.get('disallow', 0)} disallow rules) &middot;
+   sitemap <b>{'found' if sm.get('exists') else 'missing'}</b> ({sm.get('urls', 0)} URLs)
+   {f" &middot; TLS {esc(tls.get('protocol',''))}, cert expires in {exp} days" if tls.get('checked') and exp is not None else ''}</div>"""
+
+        v = site.get("vitals") or {}
+        vitals_html = ""
+        if v:
+            if not v.get("available"):
+                vitals_html = f"""
+ <h2>Core Web Vitals (start page only)</h2>
+ <div class="note">unavailable - {esc(v.get('reason',''))}</div>"""
+            else:
+                metrics_row = "".join(
+                    f"<td>{k.upper()}: {m['value']}{'' if k == 'cls' else 'ms'} ({m['rating']})</td>"
+                    for k, m in v["metrics"].items())
+                vitals_html = f"""
+ <h2>Core Web Vitals (start page only)</h2>
+ <table><tbody><tr>{metrics_row}</tr></tbody></table>"""
+
         doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WebIntelPro Site Report - {esc(site['start_url'])}</title>
@@ -699,10 +1001,12 @@ class ReportGenerator:
  h2{{font-size:15px;margin-top:26px;}} table{{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px;}}
  th,td{{text-align:left;padding:7px 10px;border-bottom:1px solid #334155;}} th{{color:#94a3b8;}}
  .avg{{font-size:14px;color:#cbd5e1;margin-top:8px;}} .avg b{{color:#f1f5f9;}}
+ .note{{color:#94a3b8;font-size:12px;margin-top:6px;}}
  footer{{margin-top:28px;color:#64748b;font-size:12px;}}
 </style></head><body><div class="wrap">
  <h1>Site-wide Report</h1>
- <div style="color:#94a3b8;font-size:13px;">{esc(site['start_url'])} &middot; {site['pages_ok']} pages analyzed</div>
+ <div style="color:#94a3b8;font-size:13px;">{esc(site['start_url'])} &middot; {site['pages_ok']} pages analyzed
+   &middot; crawl reliability: {rel.get('successful', 0)}/{rel.get('attempted', 0)} successful</div>
  <div class="avg">Averages &middot; Overall <b>{a['overall']}</b> | SEO <b>{a['seo']}</b> |
    Security <b>{a['security']}</b> | Performance <b>{a['performance']}</b> | Accessibility <b>{a['accessibility']}</b></div>
  <h2>Pages</h2>
@@ -711,6 +1015,17 @@ class ReportGenerator:
  <h2>Recurring issues</h2>
  <table><thead><tr><th>Severity</th><th>Area</th><th>Issue</th><th>Pages</th></tr></thead>
  <tbody>{recs}</tbody></table>
+ <h2>Duplicate / near-duplicate content clusters</h2>
+ <div class="note">Heuristic (k-shingle Jaccard similarity on visible body text). Not a certainty.</div>
+ <table><thead><tr><th>Risk</th><th>Pages</th><th>Similarity</th><th>Template guess</th><th>Confidence</th></tr></thead>
+ <tbody>{dup_rows}</tbody></table>
+ <h2>Query-parameter URL variants</h2>
+ <table><thead><tr><th>Risk</th><th>Path</th><th>Variants</th><th>Note</th></tr></thead>
+ <tbody>{qv_rows}</tbody></table>
+ <h2>Monetization / AdSense readiness -- observable risk factors</h2>
+ <div class="note">{esc(ads.get('disclaimer', ''))}</div>
+ <table><thead><tr><th>Severity</th><th>Factor</th><th>Detail</th><th>Confidence</th></tr></thead>
+ <tbody>{ads_rows}</tbody></table>{site_checks_html}{vitals_html}
  <footer>Generated by WebIntelPro Enterprise X on {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}</footer>
 </div></body></html>"""
         with open(path, "w", encoding="utf-8") as f:

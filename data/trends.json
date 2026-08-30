@@ -149,6 +149,46 @@
       "performance": 52,
       "accessibility": 88,
       "tech_count": 14
+    },
+    {
+      "ts": "2026-07-17T14:46:30+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 82,
+      "security": 51,
+      "performance": 42,
+      "accessibility": 88,
+      "tech_count": 17
+    },
+    {
+      "ts": "2026-07-17T14:47:13+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 82,
+      "security": 51,
+      "performance": 42,
+      "accessibility": 88,
+      "tech_count": 17
+    },
+    {
+      "ts": "2026-07-17T14:55:29+00:00",
+      "scope": "page",
+      "overall": 65,
+      "seo": 82,
+      "security": 51,
+      "performance": 47,
+      "accessibility": 88,
+      "tech_count": 14
+    },
+    {
+      "ts": "2026-07-17T14:56:17+00:00",
+      "scope": "page",
+      "overall": 66,
+      "seo": 82,
+      "security": 51,
+      "performance": 52,
+      "accessibility": 88,
+      "tech_count": 17
     }
   ],
   "https://example.com/": [
@@ -331,6 +371,76 @@
       "performance": 57,
       "accessibility": 70,
       "tech_count": 9
+    },
+    {
+      "ts": "2026-07-17T14:54:34+00:00",
+      "scope": "page",
+      "overall": 71,
+      "seo": 80,
+      "security": 77,
+      "performance": 57,
+      "accessibility": 70,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-17T14:55:47+00:00",
+      "scope": "page",
+      "overall": 71,
+      "seo": 80,
+      "security": 77,
+      "performance": 57,
+      "accessibility": 70,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-17T14:56:35+00:00",
+      "scope": "page",
+      "overall": 73,
+      "seo": 80,
+      "security": 77,
+      "performance": 62,
+      "accessibility": 70,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-17T14:56:53+00:00",
+      "scope": "page",
+      "overall": 71,
+      "seo": 80,
+      "security": 77,
+      "performance": 57,
+      "accessibility": 70,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-17T14:57:12+00:00",
+      "scope": "page",
+      "overall": 71,
+      "seo": 80,
+      "security": 77,
+      "performance": 57,
+      "accessibility": 70,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-17T14:57:31+00:00",
+      "scope": "page",
+      "overall": 73,
+      "seo": 80,
+      "security": 77,
+      "performance": 62,
+      "accessibility": 70,
+      "tech_count": 8
+    },
+    {
+      "ts": "2026-07-17T14:57:51+00:00",
+      "scope": "page",
+      "overall": 73,
+      "seo": 80,
+      "security": 77,
+      "performance": 62,
+      "accessibility": 70,
+      "tech_count": 8
     }
   ],
   "https://petstore.swagger.io/": [
@@ -367,6 +477,225 @@
       "performance": 48,
       "accessibility": 70,
       "tech_count": 9
+    }
+  ],
+  "https://www.anthropic.com/": [
+    {
+      "ts": "2026-07-17T14:47:54+00:00",
+      "scope": "page",
+      "overall": 70,
+      "seo": 89,
+      "security": 47,
+      "performance": 78,
+      "accessibility": 72,
+      "tech_count": 12
+    }
+  ],
+  "https://www.perplexity.ai/": [
+    {
+      "ts": "2026-07-17T14:51:10+00:00",
+      "scope": "page",
+      "overall": 80,
+      "seo": 70,
+      "security": 85,
+      "performance": 95,
+      "accessibility": 64,
+      "tech_count": 6
+    }
+  ],
+  "https://mistral.ai/": [
+    {
+      "ts": "2026-07-17T14:51:30+00:00",
+      "scope": "page",
+      "overall": 85,
+      "seo": 90,
+      "security": 95,
+      "performance": 82,
+      "accessibility": 66,
+      "tech_count": 12
+    }
+  ],
+  "https://cohere.com/": [
+    {
+      "ts": "2026-07-17T14:51:50+00:00",
+      "scope": "page",
+      "overall": 74,
+      "seo": 100,
+      "security": 55,
+      "performance": 57,
+      "accessibility": 89,
+      "tech_count": 11
+    },
+    {
+      "ts": "2026-07-17T14:52:20+00:00",
+      "scope": "page",
+      "overall": 72,
+      "seo": 100,
+      "security": 55,
+      "performance": 52,
+      "accessibility": 89,
+      "tech_count": 11
+    }
+  ],
+  "https://huggingface.co/": [
+    {
+      "ts": "2026-07-17T14:52:41+00:00",
+      "scope": "page",
+      "overall": 67,
+      "seo": 87,
+      "security": 40,
+      "performance": 73,
+      "accessibility": 74,
+      "tech_count": 10
+    }
+  ],
+  "https://clerk.com/": [
+    {
+      "ts": "2026-07-17T14:53:06+00:00",
+      "scope": "page",
+      "overall": 72,
+      "seo": 95,
+      "security": 55,
+      "performance": 55,
+      "accessibility": 90,
+      "tech_count": 15
+    },
+    {
+      "ts": "2026-07-17T14:54:59+00:00",
+      "scope": "page",
+      "overall": 72,
+      "seo": 95,
+      "security": 55,
+      "performance": 55,
+      "accessibility": 90,
+      "tech_count": 15
+    }
+  ],
+  "https://auth0.com/": [
+    {
+      "ts": "2026-07-17T14:53:30+00:00",
+      "scope": "page",
+      "overall": 82,
+      "seo": 100,
+      "security": 85,
+      "performance": 57,
+      "accessibility": 86,
+      "tech_count": 18
+    }
+  ],
+  "https://supabase.com/": [
+    {
+      "ts": "2026-07-17T14:53:50+00:00",
+      "scope": "page",
+      "overall": 64,
+      "seo": 90,
+      "security": 35,
+      "performance": 55,
+      "accessibility": 84,
+      "tech_count": 6
+    }
+  ],
+  "https://www.okta.com/": [
+    {
+      "ts": "2026-07-17T14:54:11+00:00",
+      "scope": "page",
+      "overall": 77,
+      "seo": 100,
+      "security": 62,
+      "performance": 77,
+      "accessibility": 73,
+      "tech_count": 17
+    }
+  ],
+  "https://fincalcyou.com/": [
+    {
+      "ts": "2026-08-08T07:30:49+00:00",
+      "scope": "page",
+      "overall": 84,
+      "seo": 89,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "tech_count": 3
+    }
+  ],
+  "https://fincalcyou.com": [
+    {
+      "ts": "2026-08-08T07:50:24+00:00",
+      "scope": "site",
+      "overall": 87,
+      "seo": 95,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 89,
+      "tech_count": 3,
+      "pages": 299
+    },
+    {
+      "ts": "2026-08-08T08:12:15+00:00",
+      "scope": "site",
+      "overall": 87,
+      "seo": 96,
+      "security": 80,
+      "performance": 86,
+      "accessibility": 88,
+      "tech_count": 3,
+      "pages": 145
+    },
+    {
+      "ts": "2026-08-08T08:20:11+00:00",
+      "scope": "site",
+      "overall": 88,
+      "seo": 96,
+      "security": 80,
+      "performance": 88,
+      "accessibility": 88,
+      "tech_count": 3,
+      "pages": 131
+    },
+    {
+      "ts": "2026-08-08T08:32:21+00:00",
+      "scope": "site",
+      "overall": 87,
+      "seo": 95,
+      "security": 80,
+      "performance": 86,
+      "accessibility": 89,
+      "tech_count": 3,
+      "pages": 300
+    },
+    {
+      "ts": "2026-08-08T08:55:21+00:00",
+      "scope": "site",
+      "overall": 87,
+      "seo": 97,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 89,
+      "tech_count": 3,
+      "pages": 100
+    },
+    {
+      "ts": "2026-08-08T09:19:07+00:00",
+      "scope": "site",
+      "overall": 87,
+      "seo": 95,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 89,
+      "tech_count": 3,
+      "pages": 296
+    },
+    {
+      "ts": "2026-08-08T12:19:45+00:00",
+      "scope": "site",
+      "overall": 90,
+      "seo": 95,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 98,
+      "tech_count": 3,
+      "pages": 300
     }
   ]
 }

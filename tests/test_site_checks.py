@@ -8,7 +8,7 @@ def test_site_recs_missing_robots_sitemap():
     recs = IntelligenceEngine().site_recommendations(site)
     issues = [r["issue"] for r in recs]
     assert "No robots.txt" in issues
-    assert "No sitemap.xml" in issues
+    assert any(i.startswith("No sitemap.xml") for i in issues)
 
 
 def test_site_recs_expiring_cert():

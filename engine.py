@@ -90,7 +90,7 @@ class AnalysisEngine:
         rec_summary = self.intelligence.summarize(recommendations)
 
         return {
-            "url": url, "technology": technology,
+            "url": url, "technology": technology, "parsed": parsed,
             "seo": seo, "security": security, "performance": performance,
             "accessibility": accessibility, "overall": overall,
             "recommendations": recommendations, "recommendation_summary": rec_summary,

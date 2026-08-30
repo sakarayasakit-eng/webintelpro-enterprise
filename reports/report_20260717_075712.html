@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebIntelPro Report - https://github.com/</title>
+<style>
+  :root { font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  body { margin:0; background:#0f172a; color:#e2e8f0; }
+  .wrap { max-width:1000px; margin:0 auto; padding:32px 20px 64px; }
+  header { border-bottom:1px solid #1e293b; padding-bottom:16px; margin-bottom:24px; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .url { color:#94a3b8; font-size:13px; word-break:break-all; }
+  .hero { display:flex; align-items:center; gap:24px; margin:20px 0 8px; }
+  .score { font-size:52px; font-weight:700; line-height:1; color:#ca8a04; }
+  .parts { display:flex; gap:18px; flex-wrap:wrap; font-size:13px; color:#cbd5e1; }
+  .parts b { color:#f1f5f9; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:16px; }
+  .card-head { display:flex; justify-content:space-between; align-items:center; }
+  .card h3 { margin:0; font-size:15px; }
+  .badge { color:#fff; font-size:12px; font-weight:600; padding:3px 10px; border-radius:999px; }
+  ul { margin:12px 0 0; padding-left:18px; font-size:13px; color:#cbd5e1; }
+  li { margin:4px 0; } li.ok { color:#4ade80; list-style:none; margin-left:-18px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; font-size:13px; }
+  th,td { text-align:left; padding:7px 10px; border-bottom:1px solid #334155; vertical-align:top; }
+  th { color:#94a3b8; font-weight:600; }
+  .sev { color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:6px; }
+  .section-title { margin:28px 0 6px; font-size:15px; color:#f1f5f9; }
+  footer { margin-top:32px; color:#64748b; font-size:12px; }
+</style></head><body><div class="wrap">
+  <header><h1>WebIntelPro Enterprise X</h1><div class="url">https://github.com/</div></header>
+  <div class="hero"><div class="score">71</div><div>
+    <div style="font-size:14px;color:#94a3b8;">Overall score &middot; grade C</div>
+    <div class="parts" style="margin-top:8px;">
+      <span>SEO <b>80</b></span><span>Security <b>77</b></span>
+      <span>Performance <b>57</b></span><span>Accessibility <b>70</b></span>
+    </div></div></div>
+  <div class="grid">
+    <div class="card"><div class="card-head"><h3>Technical SEO</h3>
+              <span class="badge" style="background:#65a30d">
+              80/100 &middot; B</span></div>
+              <ul><li>Title length 61 chars (aim 30-60)</li><li>Meta description 186 chars (aim 120-160)</li><li>Multiple H1 headings (4)</li><li>No structured data (JSON-LD)</li></ul></div><div class="card"><div class="card-head"><h3>Security</h3>
+              <span class="badge" style="background:#ca8a04">
+              77/100 &middot; C</span></div>
+              <ul><li>Missing Permissions-Policy</li><li>CSP uses unsafe-inline</li><li>1 cookie(s) missing security flags</li></ul></div>
+    <div class="card"><div class="card-head"><h3>Performance</h3>
+              <span class="badge" style="background:#dc2626">
+              57/100 &middot; F</span></div>
+              <ul><li>Many external scripts (73)</li><li>Many stylesheets (27)</li><li>Many third-party resources (124)</li><li>Legacy HTTP/1.1 (no HTTP/2+)</li><li>Elevated TTFB (0.78s)</li></ul></div><div class="card"><div class="card-head"><h3>Accessibility</h3>
+              <span class="badge" style="background:#ca8a04">
+              70/100 &middot; C</span></div>
+              <ul><li>17/24 images missing alt text</li><li>1 form field(s) without a label</li><li>2 button(s) without discernible text</li></ul></div>
+  </div>
+  <div class="section-title">Prioritized recommendations</div>
+  <table><thead><tr><th>Severity</th><th>Area</th><th>Issue</th><th>Recommendation</th></tr></thead>
+  <tbody><tr><td><span class='sev' style='background:#ea580c'>HIGH</span></td><td>Accessibility</td><td>17/24 images missing alt text</td><td>Add descriptive alt attributes (empty alt for decorative images).</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>Security</td><td>CSP allows unsafe-inline / unsafe-eval</td><td>Tighten the CSP; remove unsafe-inline/unsafe-eval and use nonces or hashes.</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>Security</td><td>1 cookie(s) missing security flags</td><td>Set Secure, HttpOnly and SameSite on session/sensitive cookies.</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>Performance</td><td>High script count (73)</td><td>Bundle, defer, or code-split scripts to reduce blocking requests.</td></tr><tr><td><span class='sev' style='background:#ca8a04'>MEDIUM</span></td><td>Accessibility</td><td>1 form field(s) without a label</td><td>Associate a &lt;label&gt; (or aria-label) with every form control.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>Security</td><td>No Permissions-Policy</td><td>Add a Permissions-Policy header to restrict powerful browser features.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>SEO</td><td>Title length 61 chars</td><td>Aim for a 30-60 character title.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>SEO</td><td>Multiple H1 headings (4)</td><td>Use a single H1 per page for a clear document outline.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>SEO</td><td>No structured data</td><td>Add JSON-LD structured data to enable rich results.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>Performance</td><td>Many third-party resources (124)</td><td>Audit third-party scripts; lazy-load or remove non-essential ones.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>Performance</td><td>Legacy HTTP/1.1</td><td>Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery.</td></tr><tr><td><span class='sev' style='background:#65a30d'>LOW</span></td><td>SEO</td><td>No sitemap.xml</td><td>Publish an XML sitemap and reference it from robots.txt.</td></tr></tbody></table>
+  <div class="section-title">Detected technologies (8)</div>
+  <table><thead><tr><th>Technology</th><th>Category</th><th>Version</th><th>Confidence</th></tr></thead>
+  <tbody><tr><td>GitHub Pages</td><td>hosting</td><td>-</td><td>0.60</td></tr><tr><td>Microsoft Azure</td><td>hosting</td><td>-</td><td>0.60</td></tr><tr><td>Content Security Policy</td><td>security</td><td>-</td><td>0.60</td></tr><tr><td>HSTS</td><td>security</td><td>-</td><td>0.60</td></tr><tr><td>React</td><td>javascript</td><td>-</td><td>0.50</td></tr><tr><td>Contentful</td><td>cms</td><td>-</td><td>0.30</td></tr><tr><td>Ionicons</td><td>font</td><td>-</td><td>0.30</td></tr><tr><td>Turbo</td><td>javascript</td><td>-</td><td>0.30</td></tr></tbody></table>
+  <div class="section-title">Authentication (0)</div>
+  <table><thead><tr><th>Category</th><th>Name</th><th>Confidence</th><th>Source</th></tr></thead>
+  <tbody><tr><td colspan='4'>No authentication architecture detected</td></tr></tbody></table>
+  <footer>Generated by WebIntelPro Enterprise X on 2026-07-17 14:57 UTC</footer>
+</div></body></html>

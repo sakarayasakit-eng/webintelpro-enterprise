@@ -21,3 +21,9 @@ htmlcov/
 # OS
 Thumbs.db
 .DS_Store
+
+# Local Claude Code tool settings (machine-specific permissions/paths)
+.claude/
+
+# Runtime logs
+logs/*.log

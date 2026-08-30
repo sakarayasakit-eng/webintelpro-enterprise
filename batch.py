@@ -17,8 +17,20 @@ from reporter import ReportGenerator
 
 class BatchScanner:
 
-    def __init__(self, timeout: int = 20, use_cache: bool = True):
-        self.engine = AnalysisEngine(timeout=timeout, use_cache=use_cache)
+    def __init__(self, timeout: int = 20, use_cache: bool = True, debug: bool = False,
+                 site_checks: bool = False,
+                 analyze_js: bool = False, analyze_runtime: bool = False,
+                 analyze_api: bool = False, analyze_ai_stack: bool = False,
+                 analyze_auth: bool = False):
+        # scan() calls engine.analyze_url() per URL, which already reads all
+        # of these off the engine instance -- same fix shape as
+        # CompetitorComparison.__init__ (see the comment there for why no
+        # special-casing is needed and why the defaults are all False).
+        self.engine = AnalysisEngine(
+            timeout=timeout, use_cache=use_cache, debug=debug, site_checks=site_checks,
+            analyze_js=analyze_js, analyze_runtime=analyze_runtime,
+            analyze_api=analyze_api, analyze_ai_stack=analyze_ai_stack,
+            analyze_auth=analyze_auth)
         self.reporter = ReportGenerator()
 
     def scan(self, urls: list, out_dir: str = "reports/batch",

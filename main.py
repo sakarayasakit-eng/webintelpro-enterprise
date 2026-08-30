@@ -10,6 +10,9 @@ Batch:
 Compare:
     python main.py mysite.com --vs rival1.com rival2.com
     python main.py mysite.com --vs rival.com -f html -o reports/compare
+Diff two saved scans (single-page or site-wide, same target):
+    python main.py --diff reports/before.json reports/after.json
+    python main.py --diff before.json after.json -f html -o reports/diff
 Cache:
     python main.py example.com --cache
     python main.py --clear-cache
@@ -18,6 +21,7 @@ Cache:
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
 from datetime import datetime
@@ -44,6 +48,12 @@ def parse_args(argv=None):
     p.add_argument("urls", nargs="*", help="One or more website URLs")
     p.add_argument("--vs", nargs="+", metavar="URL",
                    help="Competitor URLs to compare against the primary URL")
+    p.add_argument("--diff", nargs=2, metavar=("BEFORE_JSON", "AFTER_JSON"),
+                   help="Diff two previously-saved JSON reports (both "
+                        "single-page, or both site-wide) for the same "
+                        "target and show what changed -- technologies, "
+                        "scores, security headers, recommendations. Takes "
+                        "no URL; operates entirely on the two saved files.")
     p.add_argument("--crawl", type=int, metavar="N",
                    help="Crawl up to N same-domain pages (site-wide analysis)")
     p.add_argument("--history", action="store_true",
@@ -102,6 +112,11 @@ def main(argv=None) -> int:
         from core.cache import CrawlCache
         print(f"Cleared {CrawlCache().clear()} cached crawl(s).")
         return 0
+
+    if args.diff:
+        if not args.quiet:
+            banner()
+        return _run_diff(args.diff[0], args.diff[1], args)
 
     urls = list(args.urls)
     if args.input:
@@ -165,7 +180,15 @@ def _run_batch(urls, args) -> int:
     formats = ["json", "html"] if args.format in ("console", "all") else [args.format]
     out_dir = args.output or "reports/batch"
     print(f"\nBatch scanning {len(urls)} sites -> {out_dir}\n")
-    res = BatchScanner(timeout=args.timeout, use_cache=args.cache).scan(
+    # site_checks=True unconditionally, matching _run_single's precedent
+    # (robots.txt/sitemap/TLS were never gated behind a flag there either).
+    res = BatchScanner(timeout=args.timeout, use_cache=args.cache,
+                       site_checks=True, debug=args.debug,
+                       analyze_js=args.js_bundles,
+                       analyze_runtime=args.runtime_analysis,
+                       analyze_api=args.api_discovery,
+                       analyze_ai_stack=args.ai_detection,
+                       analyze_auth=args.auth_detection).scan(
         urls, out_dir=out_dir, formats=formats)
     print(f"{'URL':40} {'SCORE':>6} {'GRADE':>6}  STATUS")
     print("-" * 70)
@@ -183,8 +206,15 @@ def _run_compare(primary, args) -> int:
     from compare import CompetitorComparison
     if not args.quiet:
         print(f"\nComparing {primary} vs {', '.join(args.vs)}\n")
-    cmp = CompetitorComparison(timeout=args.timeout,
-                               use_cache=args.cache).compare(primary, args.vs)
+    # site_checks=True unconditionally, matching _run_single's precedent
+    # (robots.txt/sitemap/TLS were never gated behind a flag there either).
+    cmp = CompetitorComparison(timeout=args.timeout, use_cache=args.cache,
+                               site_checks=True, debug=args.debug,
+                               analyze_js=args.js_bundles,
+                               analyze_runtime=args.runtime_analysis,
+                               analyze_api=args.api_discovery,
+                               analyze_ai_stack=args.ai_detection,
+                               analyze_auth=args.auth_detection).compare(primary, args.vs)
     reporter = ReportGenerator()
     if args.format in ("console", "all", "excel", "pdf"):
         reporter.comparison_console(cmp)
@@ -203,8 +233,19 @@ def _run_site(url, args) -> int:
     from sitecrawl import SiteCrawler
     if not args.quiet:
         print(f"\nSite crawl: {url} (up to {args.crawl} pages)\n")
+    # site_checks=True unconditionally, matching _run_single's precedent
+    # (robots.txt/sitemap/TLS were never gated behind a flag there either);
+    # SiteCrawler runs it once for the whole crawl, not once per page (see
+    # sitecrawl.py). measure_vitals=args.vitals measures Core Web Vitals for
+    # the start URL only (see sitecrawl.py's __init__ comment for why).
     site = SiteCrawler(max_pages=args.crawl, timeout=args.timeout,
-                       use_cache=args.cache).crawl_site(url)
+                       use_cache=args.cache, site_checks=True, debug=args.debug,
+                       measure_vitals=args.vitals,
+                       analyze_js=args.js_bundles,
+                       analyze_runtime=args.runtime_analysis,
+                       analyze_api=args.api_discovery,
+                       analyze_ai_stack=args.ai_detection,
+                       analyze_auth=args.auth_detection).crawl_site(url)
     from trends import TrendTracker
     TrendTracker().record_site(site)
     reporter = ReportGenerator()
@@ -216,6 +257,32 @@ def _run_site(url, args) -> int:
     if args.format in ("json", "all"):
         path = _resolve(args.output, "json", url, prefix="site")
         reporter.save_site_json(site, path); print(f"[saved] site JSON -> {path}")
+    return 0
+
+
+def _run_diff(before_path, after_path, args) -> int:
+    from diff import diff_files, DiffError
+    if not args.quiet:
+        print(f"\nDiffing {before_path} -> {after_path}\n")
+    try:
+        d = diff_files(before_path, after_path)
+    except DiffError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
+    except (FileNotFoundError, json.JSONDecodeError) as exc:
+        print(f"error: could not load report(s): {type(exc).__name__}: {exc}",
+              file=sys.stderr)
+        return 2
+
+    reporter = ReportGenerator()
+    if args.format in ("console", "all", "excel", "pdf"):
+        reporter.diff_console(d)
+    if args.format in ("html", "all"):
+        path = _resolve(args.output, "html", before_path, prefix="diff")
+        reporter.save_diff_html(d, path); print(f"[saved] diff HTML -> {path}")
+    if args.format in ("json", "all"):
+        path = _resolve(args.output, "json", before_path, prefix="diff")
+        reporter.save_diff_json(d, path); print(f"[saved] diff JSON -> {path}")
     return 0
 
 

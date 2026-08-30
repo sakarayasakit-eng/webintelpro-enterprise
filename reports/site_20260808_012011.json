@@ -1,0 +1,6312 @@
+{
+  "start_url": "https://fincalcyou.com",
+  "pages_crawled": 300,
+  "pages_ok": 131,
+  "pages": [
+    {
+      "url": "https://fincalcyou.com",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 89,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "5 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 65 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages",
+      "status": "ok",
+      "overall": 91,
+      "grade": "A",
+      "seo": 100,
+      "security": 80,
+      "performance": 95,
+      "accessibility": 90,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "1 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        },
+        {
+          "severity": "low",
+          "area": "Accessibility",
+          "issue": "Skipped heading levels",
+          "recommendation": "Keep headings sequential (h1 -> h2 -> h3) for screen readers."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 96,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.27s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/retirement-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 96,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.26s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/rent-vs-buy-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 96,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/education-loan-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 96,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 96,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 92,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "2 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator",
+      "status": "ok",
+      "overall": 90,
+      "grade": "A",
+      "seo": 98,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 96,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "1 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/uae-financial-calculators",
+      "status": "ok",
+      "overall": 90,
+      "grade": "A",
+      "seo": 96,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/pakistan-financial-calculators",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 89,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/indonesia-financial-calculators",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 89,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/nigeria-financial-calculators",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 89,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 62 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/about",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 90,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 92,
+      "technologies": [
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No Open Graph tags",
+          "recommendation": "Add Open Graph tags for better social sharing."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        },
+        {
+          "severity": "low",
+          "area": "Accessibility",
+          "issue": "No landmark regions",
+          "recommendation": "Use <main>, <nav>, <header>, <footer> for screen-reader navigation."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/methodology",
+      "status": "ok",
+      "overall": 92,
+      "grade": "A",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/editorial-policy",
+      "status": "ok",
+      "overall": 90,
+      "grade": "A",
+      "seo": 96,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/privacy",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 83,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 92,
+      "technologies": [
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 25 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No Open Graph tags",
+          "recommendation": "Add Open Graph tags for better social sharing."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No structured data",
+          "recommendation": "Add JSON-LD structured data to enable rich results."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        },
+        {
+          "severity": "low",
+          "area": "Accessibility",
+          "issue": "No landmark regions",
+          "recommendation": "Use <main>, <nav>, <header>, <footer> for screen-reader navigation."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/terms",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 83,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 92,
+      "technologies": [
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 27 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No Open Graph tags",
+          "recommendation": "Add Open Graph tags for better social sharing."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No structured data",
+          "recommendation": "Add JSON-LD structured data to enable rich results."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        },
+        {
+          "severity": "low",
+          "area": "Accessibility",
+          "issue": "No landmark regions",
+          "recommendation": "Use <main>, <nav>, <header>, <footer> for screen-reader navigation."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/contact",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 90,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 92,
+      "technologies": [
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No Open Graph tags",
+          "recommendation": "Add Open Graph tags for better social sharing."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No structured data",
+          "recommendation": "Add JSON-LD structured data to enable rich results."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        },
+        {
+          "severity": "low",
+          "area": "Accessibility",
+          "issue": "No landmark regions",
+          "recommendation": "Use <main>, <nav>, <header>, <footer> for screen-reader navigation."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-locations",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 90,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.35s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "No structured data",
+          "recommendation": "Add JSON-LD structured data to enable rich results."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/where-home-loans-are-cheapest-2026",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 89,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.42s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/where-banks-take-the-biggest-cut-2026",
+      "status": "ok",
+      "overall": 90,
+      "grade": "A",
+      "seo": 96,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 100,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/how-much-house-can-i-afford",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 89,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "5 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/how-much-do-i-need-to-retire",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.59s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "5 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/embed",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 96,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "12 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/access-bank-loan-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.32s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/adcb-mortgage-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.42s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/al-rajhi-home-finance-calculator",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.25s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/alinma-home-finance-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.58s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/anz-home-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/bank-of-america-mortgage-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/barclays-mortgage-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.41s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/bca-kpr-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.37s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/brac-bank-home-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/bri-kpr-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.43s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/btn-kpr-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.46s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/cba-home-loan-calculator",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.75s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 62 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/chase-mortgage-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.49s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/cimb-home-loan-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.37s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/city-bank-home-loan-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.40s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/credito-hipotecario-mexico",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.39s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/dbbl-home-loan-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 65 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/dib-mortgage-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 66 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/emirates-nbd-mortgage-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fab-mortgage-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 74 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/financiamento-imobiliario-brasil",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/gtbank-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/halifax-mortgage-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.44s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/hbl-home-financing-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.59s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-finance-calculator-bahrain",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-finance-calculator-kuwait",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.59s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-finance-calculator-qatar",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.38s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-finance-calculator-saudi-arabia",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (2.06s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-australia",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-bangladesh",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.38s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 62 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-kenya",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-malaysia",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-philippines",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 67 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-singapore",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-south-africa",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-thailand",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-calculator-vietnam",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/home-loan-emi-pakistan",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/housing-loan-calculator-sri-lanka",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/hsbc-uk-mortgage-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/konut-kredisi-hesaplama",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/kpr-calculator-indonesia",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/loan-calculator-nigeria",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mandiri-kpr-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/maybank-home-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mcb-home-financing-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/meezan-home-financing-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mera-pakistan-mera-ghar-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-canada",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.43s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-china",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-egypt",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-eurozone",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.23s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-hong-kong",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-japan",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-new-zealand",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-russia",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-south-korea",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-taiwan",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-uae",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-uk",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/mortgage-calculator-usa",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/nab-home-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/nationwide-mortgage-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/natwest-mortgage-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/pag-ibig-housing-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/public-bank-home-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/rbc-mortgage-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.55s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/rhb-home-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/rocket-mortgage-mortgage-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/santander-uk-mortgage-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.39s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/scotiabank-mortgage-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.34s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/snb-home-finance-calculator",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.84s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 73 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/td-canada-mortgage-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/uba-loan-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/wells-fargo-mortgage-calculator",
+      "status": "ok",
+      "overall": 89,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/westpac-home-loan-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.27s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zenith-bank-loan-calculator",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 88,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.29s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "3 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/bank-alfalah-car-finance-calculator",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 66 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-finance-calculator-bahrain",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 62 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-finance-calculator-qatar",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.20s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-finance-calculator-saudi-arabia",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 67 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-finance-calculator-uk",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-australia",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-bangladesh",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 65 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-brazil",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.33s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-canada",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.61s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-china",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.68s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-egypt",
+      "status": "ok",
+      "overall": 88,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-eurozone",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 67 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-hong-kong",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (2.67s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-indonesia",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.46s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-japan",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.28s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-kenya",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 100,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.35s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-kuwait",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.48s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-malaysia",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.46s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-mexico",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-new-zealand",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.50s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 66 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-nigeria",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.82s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 62 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-pakistan",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.33s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 63 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-philippines",
+      "status": "ok",
+      "overall": 87,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 90,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 70 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-russia",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.27s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 61 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-singapore",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.69s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-south-korea",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.32s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 66 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-sri-lanka",
+      "status": "ok",
+      "overall": 86,
+      "grade": "B",
+      "seo": 93,
+      "security": 80,
+      "performance": 85,
+      "accessibility": 85,
+      "technologies": [
+        "Google Fonts",
+        "HSTS",
+        "Netlify"
+      ],
+      "recommendations": [
+        {
+          "severity": "high",
+          "area": "Security",
+          "issue": "No Content-Security-Policy",
+          "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks."
+        },
+        {
+          "severity": "medium",
+          "area": "Performance",
+          "issue": "Slow TTFB (1.59s)",
+          "recommendation": "Reduce server response time (caching, DB tuning, edge rendering)."
+        },
+        {
+          "severity": "medium",
+          "area": "Accessibility",
+          "issue": "4 form field(s) without a label",
+          "recommendation": "Associate a <label> (or aria-label) with every form control."
+        },
+        {
+          "severity": "low",
+          "area": "SEO",
+          "issue": "Title length 64 chars",
+          "recommendation": "Aim for a 30-60 character title."
+        },
+        {
+          "severity": "low",
+          "area": "Performance",
+          "issue": "Legacy HTTP/1.1",
+          "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery."
+        }
+      ]
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-taiwan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-thailand",
+      "status": "error: SSLError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-uae",
+      "status": "error: SSLError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-usa",
+      "status": "error: SSLError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator-vietnam",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/hbl-car-finance-calculator",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/meezan-car-finance-calculator",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/tasit-kredisi-hesaplama",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/ubl-car-finance-calculator",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/vehicle-finance-south-africa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-australia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-bahrain",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-bangladesh",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-brazil",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-canada",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-china",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-egypt",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-eurozone",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-hong-kong",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-indonesia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-japan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-kenya",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-kuwait",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-malaysia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-mexico",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-new-zealand",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-nigeria",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-pakistan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-philippines",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-qatar",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-russia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-saudi-arabia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-singapore",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-south-africa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-south-korea",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-sri-lanka",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-taiwan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-thailand",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-turkey",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-uae",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-uk",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-usa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sip-calculator-vietnam",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-australia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-bahrain",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-bangladesh",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-brazil",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-canada",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-china",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-egypt",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-eurozone",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-hong-kong",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-indonesia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-japan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-kenya",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-kuwait",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-malaysia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-mexico",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-new-zealand",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-nigeria",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-pakistan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-philippines",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-qatar",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-russia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-saudi-arabia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-singapore",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-south-africa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-south-korea",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-sri-lanka",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-taiwan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-thailand",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-turkey",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-uae",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-uk",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-usa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/fixed-deposit-calculator-vietnam",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/retirement-calculator-uae",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/retirement-calculator-uk",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/retirement-calculator-usa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/education-loan-calculator-pakistan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/education-loan-calculator-philippines",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/education-loan-calculator-uk",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/education-loan-calculator-usa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/rent-vs-buy-calculator-uae",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/rent-vs-buy-calculator-uk",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/rent-vs-buy-calculator-usa",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-2026",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-bahrain",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-bangladesh",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-egypt",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-indonesia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-kenya",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-kuwait",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-malaysia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-nigeria",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-pakistan",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-qatar",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-saudi-arabia",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-turkey",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/zakat-calculator-uae",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/aed-to-pkr-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/eur-to-try-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/gbp-to-bdt-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/gbp-to-ngn-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/gbp-to-pkr-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/sar-to-pkr-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-bdt-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-egp-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-kes-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-lkr-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-mxn-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-ngn-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-php-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-pkr-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-try-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/usd-to-vnd-converter",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/glossary",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-amortization",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-compound-interest",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-down-payment",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-emi",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-fixed-deposit",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-foir",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-ijarah",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-ltv",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-moratorium",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-murabaha",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-mutual-fund",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-nisab",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-repo-rate",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-sip",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/what-is-zakat",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/central-bank-rates-2026",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/pages/how-to-calculate-emi",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=USD&tab=emi&amount=350000&rate=6.5&years=30",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=USD&tab=car",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=USD&tab=sip&amount=10000&rate=10&years=15",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=USD&tab=fd&amount=100000&rate=4&years=5",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?tab=retire",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?tab=rentbuy",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?tab=edu",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?tab=islamic",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-austin-tx",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-miami-fl",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-dallas-tx",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-phoenix-az",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-atlanta-ga",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-nashville-tn",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-denver-co",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-charlotte-nc",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-tampa-fl",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/dscr-calculator-las-vegas-nv",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?tab=afford",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?tab=emi",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?tab=goal",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=NGN&tab=emi&amount=10000000&rate=29.5&years=5",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=AED&tab=emi&amount=1500000&rate=6.25&years=25",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=SAR&tab=emi&amount=1000000&rate=6.25&years=25",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=SAR&tab=emi&amount=1000000&rate=6.3&years=25",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=AUD&tab=emi&amount=600000&rate=6.05&years=30",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=USD&tab=emi&amount=400000&rate=6.55&years=30",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=GBP&tab=emi&amount=300000&rate=4.5&years=25",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=IDR&tab=emi&amount=1000000000&rate=9.39&years=20",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=BDT&tab=emi&amount=5000000&rate=13&years=15",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=IDR&tab=emi&amount=1000000000&rate=10&years=20",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=IDR&tab=emi&amount=1000000000&rate=8.04&years=20",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=AUD&tab=emi&amount=600000&rate=6&years=30",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=USD&tab=emi&amount=400000&rate=6.5&years=30",
+      "status": "error: ConnectionError"
+    },
+    {
+      "url": "https://fincalcyou.com/?cur=MYR&tab=emi&amount=500000&rate=4.4&years=30",
+      "status": "error: ConnectionError"
+    }
+  ],
+  "averages": {
+    "overall": 88,
+    "seo": 96,
+    "security": 80,
+    "performance": 88,
+    "accessibility": 88
+  },
+  "worst": {
+    "overall": {
+      "url": "https://fincalcyou.com",
+      "score": 86
+    },
+    "seo": {
+      "url": "https://fincalcyou.com/privacy",
+      "score": 83
+    },
+    "security": {
+      "url": "https://fincalcyou.com",
+      "score": 80
+    },
+    "performance": {
+      "url": "https://fincalcyou.com/pages/car-loan-calculator",
+      "score": 85
+    },
+    "accessibility": {
+      "url": "https://fincalcyou.com",
+      "score": 85
+    }
+  },
+  "technologies": [
+    "Google Fonts",
+    "HSTS",
+    "Netlify"
+  ],
+  "recommendations": [
+    {
+      "severity": "high",
+      "area": "Security",
+      "issue": "No Content-Security-Policy",
+      "recommendation": "Add a CSP header to mitigate XSS and data-injection attacks.",
+      "pages_affected": 131
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "3 form field(s) without a label",
+      "recommendation": "Associate a <label> (or aria-label) with every form control.",
+      "pages_affected": 81
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "4 form field(s) without a label",
+      "recommendation": "Associate a <label> (or aria-label) with every form control.",
+      "pages_affected": 30
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.59s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 4
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "5 form field(s) without a label",
+      "recommendation": "Associate a <label> (or aria-label) with every form control.",
+      "pages_affected": 3
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.27s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 3
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.46s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 3
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "1 form field(s) without a label",
+      "recommendation": "Associate a <label> (or aria-label) with every form control.",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.35s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.42s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.32s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.37s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.43s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.39s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.38s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.33s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 2
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.26s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "2 form field(s) without a label",
+      "recommendation": "Associate a <label> (or aria-label) with every form control.",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Accessibility",
+      "issue": "12 form field(s) without a label",
+      "recommendation": "Associate a <label> (or aria-label) with every form control.",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.25s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.58s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.41s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.75s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.49s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.40s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.44s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (2.06s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.23s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.55s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.34s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.84s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.29s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.20s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.61s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.68s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (2.67s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.28s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.48s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.50s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.82s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "medium",
+      "area": "Performance",
+      "issue": "Slow TTFB (1.69s)",
+      "recommendation": "Reduce server response time (caching, DB tuning, edge rendering).",
+      "pages_affected": 1
+    },
+    {
+      "severity": "low",
+      "area": "Performance",
+      "issue": "Legacy HTTP/1.1",
+      "recommendation": "Enable HTTP/2 or HTTP/3 for multiplexed, faster delivery.",
+      "pages_affected": 131
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 61 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 15
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 64 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 9
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 63 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 8
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 62 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 5
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No Open Graph tags",
+      "recommendation": "Add Open Graph tags for better social sharing.",
+      "pages_affected": 4
+    },
+    {
+      "severity": "low",
+      "area": "Accessibility",
+      "issue": "No landmark regions",
+      "recommendation": "Use <main>, <nav>, <header>, <footer> for screen-reader navigation.",
+      "pages_affected": 4
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "No structured data",
+      "recommendation": "Add JSON-LD structured data to enable rich results.",
+      "pages_affected": 4
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 66 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 4
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 65 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 3
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 67 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 3
+    },
+    {
+      "severity": "low",
+      "area": "Accessibility",
+      "issue": "Skipped heading levels",
+      "recommendation": "Keep headings sequential (h1 -> h2 -> h3) for screen readers.",
+      "pages_affected": 1
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 25 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 1
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 27 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 1
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 74 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 1
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 73 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 1
+    },
+    {
+      "severity": "low",
+      "area": "SEO",
+      "issue": "Title length 70 chars",
+      "recommendation": "Aim for a 30-60 character title.",
+      "pages_affected": 1
+    }
+  ]
+}

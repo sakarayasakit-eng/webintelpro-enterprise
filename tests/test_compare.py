@@ -57,6 +57,36 @@ def test_comparison_structure():
     assert "Stripe" in cmp["tech_gap"]["unique"]
 
 
+def test_compare_forwards_phase2_flags_to_engine(monkeypatch):
+    """Regression test: --vs silently ignored --js-bundles/--runtime-analysis/
+    --api-discovery/--ai-detection/--auth-detection because
+    CompetitorComparison.__init__ only accepted timeout/use_cache. A site
+    carrying an OpenAI SDK signature should only be identified as using
+    OpenAI when analyze_ai_stack=True actually reaches the detector."""
+    ai_html = ("<html><head><title>AI Co</title></head><body><h1>AI Co</h1>"
+              "<script>import { OpenAI } from \"openai\"; "
+              "const c = new OpenAI({apiKey: \"sk-x\"});</script></body></html>")
+
+    def fake(self, url):
+        if url == "https://ai-primary.com":
+            html, headers = ai_html, {"Server": "nginx"}
+        else:
+            html, headers = SITES[url]
+        return CrawlResult(url=url, final_url=url, status_code=200, html=html,
+                           headers=headers, cookies={}, elapsed=0.05)
+    monkeypatch.setattr(WebCrawler, "crawl", fake)
+
+    off = CompetitorComparison(use_cache=False).compare(
+        "https://ai-primary.com", ["https://rival1.com"])
+    primary_off = next(s for s in off["sites"] if s["primary"])
+    assert "OpenAI" not in primary_off["technologies"]
+
+    on = CompetitorComparison(use_cache=False, analyze_ai_stack=True).compare(
+        "https://ai-primary.com", ["https://rival1.com"])
+    primary_on = next(s for s in on["sites"] if s["primary"])
+    assert "OpenAI" in primary_on["technologies"]
+
+
 def test_comparison_reports(tmp_path):
     cmp = CompetitorComparison(use_cache=False).compare(
         "https://mysite.com", ["https://rival1.com"])

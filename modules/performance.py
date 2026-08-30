@@ -35,6 +35,12 @@ class PerformanceAnalyzer:
         # network metadata (present only for live crawls)
         r["ttfb"] = round(getattr(crawl, "ttfb", 0.0), 3) if crawl else 0.0
         r["http_version"] = getattr(crawl, "http_version", "") if crawl else ""
+        # See crawler.CrawlResult.http_version_reliable: the requests-based
+        # transport cannot observe ALPN-negotiated HTTP/2 or HTTP/3, so this
+        # is always False today. Never score or flag an issue from
+        # http_version unless this is True -- otherwise every single site
+        # this tool ever scans gets a false "Legacy HTTP/1.1" finding.
+        r["http_version_reliable"] = bool(getattr(crawl, "http_version_reliable", False)) if crawl else False
         r["redirects"] = len(getattr(crawl, "redirect_chain", []) or []) if crawl else 0
 
         score = 100
@@ -58,7 +64,7 @@ class PerformanceAnalyzer:
             score -= 12; issues.append("No Cache-Control header")
         if r["redirects"] >= 2:
             score -= 6; issues.append(f"Redirect chain of {r['redirects']} hop(s)")
-        if r["http_version"] in ("1.0", "1.1"):
+        if r["http_version_reliable"] and r["http_version"] in ("1.0", "1.1"):
             score -= 5; issues.append(f"Legacy HTTP/{r['http_version']} (no HTTP/2+)")
         if r["ttfb"] and r["ttfb"] > 1.2:
             score -= 10; issues.append(f"Slow TTFB ({r['ttfb']:.2f}s)")

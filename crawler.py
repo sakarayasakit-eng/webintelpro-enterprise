@@ -28,6 +28,13 @@ class CrawlResult:
     ttfb: float = 0.0
     content_encoding: str = ""
     http_version: str = ""
+    # `requests`/urllib3 (via Python's stdlib http.client) never negotiates
+    # HTTP/2 or HTTP/3 over ALPN -- response.raw.version can only ever be 10
+    # or 11, regardless of what the server actually served. So http_version
+    # is NOT a reliable observation with this transport and must never be
+    # treated as confirmed evidence of "legacy HTTP/1.1". Analyzers must
+    # check this flag before drawing any conclusion from http_version.
+    http_version_reliable: bool = False
     redirect_chain: List[dict] = field(default_factory=list)
     set_cookie: List[str] = field(default_factory=list)
     error: str = ""

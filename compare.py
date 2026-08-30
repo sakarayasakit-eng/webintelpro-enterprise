@@ -15,8 +15,29 @@ _DIMENSIONS = ["overall", "seo", "security", "performance", "accessibility"]
 
 class CompetitorComparison:
 
-    def __init__(self, timeout: int = 20, use_cache: bool = True):
-        self.engine = AnalysisEngine(timeout=timeout, use_cache=use_cache)
+    def __init__(self, timeout: int = 20, use_cache: bool = True, debug: bool = False,
+                 site_checks: bool = False,
+                 analyze_js: bool = False, analyze_runtime: bool = False,
+                 analyze_api: bool = False, analyze_ai_stack: bool = False,
+                 analyze_auth: bool = False):
+        # Every site compared (primary + competitors) goes through
+        # engine.analyze_url(), which already reads all of these off the
+        # engine instance (see engine.py) -- so, unlike SiteCrawler, no
+        # special-casing is needed here: constructing AnalysisEngine with
+        # them is sufficient to fix --vs silently ignoring --js-bundles/
+        # --runtime-analysis/--api-discovery/--ai-detection/--auth-detection/
+        # site-check flags. All default False, matching single-page mode's
+        # off-by-default flags (site_checks is on unconditionally only in
+        # main.py::_run_single/_run_compare's CLI wiring, not as a class
+        # default here -- so existing offline tests that construct
+        # CompetitorComparison(use_cache=False) without these keyword
+        # arguments keep making zero live network calls beyond the mocked
+        # crawler, exactly as before this fix).
+        self.engine = AnalysisEngine(
+            timeout=timeout, use_cache=use_cache, debug=debug, site_checks=site_checks,
+            analyze_js=analyze_js, analyze_runtime=analyze_runtime,
+            analyze_api=analyze_api, analyze_ai_stack=analyze_ai_stack,
+            analyze_auth=analyze_auth)
 
     def compare(self, primary: str, competitors: list) -> dict:
         sites = []
